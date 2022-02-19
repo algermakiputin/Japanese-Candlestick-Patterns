@@ -7,24 +7,33 @@ const moduleImages = [
     require('../../assets/images/bearcandles.png'),
     require('../../assets/images/continuationcandles.png')
 ]
+const modules = require('../modules.json');
+
 const Module = (props) => {
-    
+ 
     return (
         <TouchableOpacity 
             style={styles.moduleContainer}
+            onPress={() => {
+                props.navigation.navigate('Lesson', { 
+                    title: props.title, 
+                    module:'bullish',
+                    modules: modules
+                });
+            }}
             > 
             <View style={styles.image}>
                 <Image source={moduleImages[props.image]} />
             </View>
             <View style={styles.description}>
                 <Text style={styles.lessonTitle}>{props.title}</Text>
-                <Text style={styles.lessonSub}>15 Lessons</Text>
+                <Text style={styles.lessonSub}>{Object.keys(modules[props.trend].candles).length} Lessons</Text>
             </View>
         </TouchableOpacity>
     )
 }
-const HomeScreen = () => {
-
+const HomeScreen = ({navigation}) => {
+    
     return (
         <SafeAreaView style={styles.container}>  
             <ScrollView>
@@ -52,14 +61,20 @@ const HomeScreen = () => {
                 <Module 
                     title="Bearish Reversal Patterns"
                     image={0}
+                    trend="bearish"
+                    navigation={navigation}
                 />
                 <Module 
                     title="Bullish Reversal Patterns"
                     image={1}
+                    trend="bullish"
+                    navigation={navigation}
                 />
                 <Module 
                     title="Continuation Patterns"
                     image={2}
+                    trend="continuation"
+                    navigation={navigation}
                 />
             </ScrollView>
         </SafeAreaView>

@@ -1,0 +1,174 @@
+{
+    "bullish" : {
+        "details": "Bullish reversal candlestick shows that the ongoing downtrend is coming to an end and It may begin to reverse to an uptrend ",
+        "candles" : {
+            "Long White Day" : {
+                "details" : "",
+                "image": "candles/bullish/long-white-candle.png",
+                "page": "LongWhiteDay"
+            },
+            "Hammer" : {
+                "details" : "",
+                "page": "BullishHammer"
+            },
+            "Inverted Hammer" : {
+                "page": "BullishInvertedHammer"
+            },
+            "Bullish Engulfing" : {
+                "page": "BullishEngulfing"
+            },
+            "Harami" : {
+                "page": "BullishHarami"
+            },
+            "Harami Cross": {
+                "page": "BullishHaramiCross"
+            },
+            "The Piercing Line" : {
+                "page": "BullishPiercingLine"
+            },
+            "Doji Star": {
+                "page": "BullishDojiStar"
+            },
+            "Meeting Line": {
+                "page": "BullishMeetingLine"
+            }, 
+            "Three White Soldiers" : {
+                "page": "ThreeWhiteSoldiers"
+            },
+            "Morning Star": {
+                "page": "MorningStar"
+            },
+            "Morning Star Doji":{
+                "page": "MorningStarDoji"
+            },
+            "Abandoned Baby": {
+                "page": "AbandonedBaby"
+            },
+            "Tri-Star": {
+                "page": "TriStar"
+            },
+            "Breakaway": {
+                "page": "Breakaway"
+            },
+            "Three inside up": {
+                "page": "ThreeInsideUp"
+            },
+            "Three outside Up": {
+                "page": "ThreeOutsideUp"
+            },
+            "Kicking": {
+                "page": "Kicking"
+            },
+            "Unique Three River Bottom": {
+                "page": "UniqueThreeRiverBottom"
+            },
+            "Three Stars In the South": {
+                "page": "ThreeStarInTheSouth"
+            },
+            "Concealing Baby Swallow": {
+                "page": "ConcealingSwallow"
+            },
+            "Stick Sandwich": {
+                "page": "StickSandwich"
+            },
+            "Homing Pigeon": {
+                "page": "HomingPigeon"
+            },
+            "Ladder Bottom": {
+                "page": "LadderBottom"
+            },
+            "Matching Low": {
+                "page": "MatchingLow"
+            }
+        }
+    },
+    "bearish" : {
+        "details": "A bearish reversal pattern appears at the end of an uptrend and indicates that the trend may reverse and the price will likely to fall down.",
+        "candles": {
+            "Long Black Body" : {
+                "page": "Bearish_LongBlackBody"
+            },
+            "Hanging Man": {
+                "page": "Bearish_HangingMan"
+            },
+            "Shooting Star": {
+                "page": "Bearish_ShootingStar"
+            },
+            "Belt Hold": {
+                "page": "Bearish_BeltHold"
+            },
+            "Bearish Engulfing Pattern": {
+                "page": "Bearish_EngulfingPattern" 
+            },
+            "Harami": {
+                "page": "Bearish_Harami"
+            },
+            "Harami Cross": {
+                "page": "Bearish_HaramiCross"
+            },
+            "Dark Cloud Cover": {
+                "page": "Bearish_DarkCloudCover"
+            },
+            "Doji Star": {
+                "page": "Bearish_DojiStar"
+            },
+            "Meeting Lines": {
+                "page": "Bearish_MeetingLines"
+            },
+            "Three Black Crows": {
+                "page": "Bearish_ThreeBlackCrows"
+            },
+            "Evening Star": {
+                "page": "Bearish_EveningStar"
+            },
+            "Evening Doji Star": {
+                "page": "Bearish_EveningDojiStar"
+            },
+            "Abandoned Baby": {
+                "page": "Bearish_AbandonedBaby"
+            },
+            "Tri-Star": {
+                "page": "Bearish_TriStar"
+            },
+            "Breakaway": {
+                "page": "Bearish_Breakaway"
+            },
+            "Three Inside Down": {
+                "page": "Bearish_ThreeInsideDown"
+            },
+            "Three Outside Down": {
+                "page": "Bearish_ThreeOutsideDown"
+            },
+            "Kicking": {
+                "page": "Bearish_Kicking"
+            },
+            "Latter Top": {
+                "page": "Bearish_Latter Top"
+            },
+            "Matching High": {
+                "page": "Bearish_Matching High"
+            },
+            "Upside Gap Two Crows": {
+                "page": "Bearish_UpsideGapTwoCrows"
+            },
+            "Identical Three Crows": {
+                "page": "Bearish_IdenticalThreeCrows"
+            },
+            "Deliberation": {
+                "page": "Bearish_Deliberation"
+            },
+            "Advance Block": {
+                "page": "Bearish_AdvanceBlock"
+            },
+            "Two Crows": {
+                "page": "Bearish_TwoCrows"
+            }
+        }
+    },
+    "continuation" : {
+        "details": "",
+        "candles": {
+
+        }
+    }
+}

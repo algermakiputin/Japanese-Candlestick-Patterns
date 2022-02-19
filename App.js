@@ -22,6 +22,7 @@ import {
  
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './src/Components/HomeScreen';
+import LessonScreen from './src/Components/LessonScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
  
 const Stack = createNativeStackNavigator();
@@ -49,7 +50,11 @@ const App: () => Node = () => {
           component={HomeScreen}
           options={{
             headerStyle: {
-              backgroundColor:'#fff'
+              backgroundColor:'#fff',
+              color:"#000"
+            },
+            headerTitleStyle: {
+              color:'#09101D'
             },
             title:'Candlestick Patterns', 
             headerRight:() => {return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />},
@@ -57,6 +62,19 @@ const App: () => Node = () => {
             headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
             headerShadowVisible:false,
           }}
+        />
+        <Stack.Screen 
+          name='Lesson'
+          component={LessonScreen}
+          options={{
+            headerStyle: {
+              backgroundColor:'#fff',
+              color:"#000"
+            },
+            headerTitleStyle: {
+              color:'#09101D'
+            },
+          }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
