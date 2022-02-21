@@ -23,6 +23,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './src/Components/HomeScreen';
 import LessonScreen from './src/Components/LessonScreen';
+import PatternScreen from './src/Components/PatternScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
  
 const Stack = createNativeStackNavigator();
@@ -75,6 +76,20 @@ const App: () => Node = () => {
             headerTitleStyle: {
               color:'#09101D'
             },
+          }} 
+        />
+        <Stack.Screen 
+          name='Pattern'
+          component={PatternScreen}
+          options={{
+            headerStyle: {
+              backgroundColor:'#fff',
+              color:"#000"
+            },
+            headerTitleStyle: {
+              color:'#09101D'
+            },
+            title:'Pattern Details'
           }} 
         />
       </Stack.Navigator>

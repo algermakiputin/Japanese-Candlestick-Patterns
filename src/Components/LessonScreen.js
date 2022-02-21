@@ -19,7 +19,7 @@ const Lessons = (props) => {
             elements.push(
                 <TouchableOpacity  
                     onPress={() => {
-                        navigation.navigate('LessonPage', {
+                        navigation.navigate('Pattern', {
                             title: title, 
                             module: module,  
                             pageTitle: "Bullish Candlestick Patterns",
@@ -28,14 +28,15 @@ const Lessons = (props) => {
                             modules:modules 
                         }); 
                     }}
-                    style={styles.lessonWrapper} 
                     key={key}>
-                    <View style={styles.imageWrapper}>
-                        <Image style={styles.image} source={require('../../assets/images/image.png')} />
-                    </View>
-                    <View style={styles.descriptionWrapper}>
-                        <Text style={styles.lessonHeader}>{key}</Text>
-                        <Text style={styles.lessonSub}>White candlesticks represent a positive increase in a security's price during the observed period of time.</Text>
+                    <View style={styles.lessonWrapper} >
+                        <View style={styles.imageWrapper}>
+                            <Image style={styles.image} source={require('../../assets/images/image.png')} />
+                        </View>
+                        <View style={styles.descriptionWrapper}>
+                            <Text style={styles.lessonHeader}>{key}</Text>
+                            <Text style={styles.lessonSub}>White candlesticks represent a positive increase in a security's price during the observed period of time.</Text>
+                        </View>
                     </View>
                 </TouchableOpacity>
             );
@@ -53,22 +54,24 @@ const LessonScreen = ({navigation,route}) => {
         navigation.setOptions({title: title});
     })
     return (
-        <ScrollView style={styles.container}>
-             <TextInput 
-                style={styles.searchBar} 
-                placeholder='Search...'  
-                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
-                underlineColor='transparent'
-                onChangeText={(value) => { setSearch(value) }}
+        <ScrollView>
+            <View style={styles.container}>
+                <TextInput 
+                    style={styles.searchBar} 
+                    placeholder='Search...'  
+                    theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
+                    underlineColor='transparent'
+                    onChangeText={(value) => { setSearch(value) }}
+                    />
+                <Text style={styles.heading}>{title}</Text>
+                <Text style={styles.p}>{details}</Text>
+                <Lessons 
+                    search={search} 
+                    module={module}
+                    modules={modules}
+                    navigation={navigation}
                 />
-            <Text style={styles.heading}>{title}</Text>
-            <Text style={styles.p}>{details}</Text>
-            <Lessons 
-                search={search} 
-                module={module}
-                modules={modules}
-                navigation={navigation}
-            />
+            </View>
         </ScrollView>
     );
 }
@@ -91,20 +94,36 @@ const styles = StyleSheet.create({
         marginBottom:10
     },
     lessonWrapper: {
+        borderRadius:20,
+        padding:20, 
+        backgroundColor:'#fff',
         display:'flex',
         flexDirection:'row', 
-        justifyContent:'center',
+        justifyContent:'flex-start',
         alignItems:'center',
-        marginBottom:15,
+        marginBottom:20, 
+        width:'100%',
+        shadowColor:'rgba(90, 108, 234, 0.5)',
+        shadowOffset:{width:0,height:1},
+        elevation:24, 
         borderWidth:1,
-        borderColor:'#F4F6F9',
-        padding:20
-
+        shadowRadius:16,
+        borderColor:'#F4F6F9'
     },
-    imageWrapper: { 
-        flex:1
+    lessonHeader: {
+        fontFamily:'SourceSansPro-SemiBold',
+        lineHeight:36
+    },
+    p: {
+        marginBottom:25
+    },  
+    imageWrapper: {  
+        width:65,
+        marginRight:10
     },
     descriptionWrapper: {
-        flex:3
+        width:'auto',
+        flex:1
+       
     } 
 });
