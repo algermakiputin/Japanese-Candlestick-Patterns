@@ -35,47 +35,49 @@ const Module = (props) => {
 const HomeScreen = ({navigation}) => {
     
     return (
-        <SafeAreaView style={styles.container}>  
-            <ScrollView>
-                <LinearGradient 
-                    start={{x:0.1,y:1}} 
-                    end={{x:1,y:0}}
-                    colors={['#8250D5', '#304FFE']} 
-                    style={styles.linearGradient}
-                >
-                <View style={styles.flexContainer}>
-                    <View style={styles.flexItem}>
-                        <Image source={require('../../assets/images/stockbg.png')} />
+        <SafeAreaView >  
+            <ScrollView >
+                <View style={styles.container}>
+                    <LinearGradient 
+                        start={{x:0.1,y:1}} 
+                        end={{x:1,y:0}}
+                        colors={['#8250D5', '#304FFE']} 
+                        style={styles.linearGradient}
+                    >
+                    <View style={styles.flexContainer}>
+                        <View style={styles.flexItem}>
+                            <Image source={require('../../assets/images/stockbg.png')} />
+                        </View>
+                        <View style={styles.flexItem}>
+                            <Text style={styles.hl}>Trade Smarter</Text> 
+                            <Text style={styles.hl}>Trade Better</Text> 
+                            <TouchableOpacity>
+                                <Text style={styles.btn}>Learn Now</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                    <View style={styles.flexItem}>
-                        <Text style={styles.hl}>Trade Smarter</Text> 
-                        <Text style={styles.hl}>Trade Better</Text> 
-                        <TouchableOpacity>
-                            <Text style={styles.btn}>Learn Now</Text>
-                        </TouchableOpacity>
-                    </View>
+                    </LinearGradient>
+                    <Text style={styles.lessonsHeading}>All Lessons</Text>
+                    <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
+                    <Module 
+                        title="Bearish Reversal Patterns"
+                        image={0}
+                        trend="bearish"
+                        navigation={navigation}
+                    />
+                    <Module 
+                        title="Bullish Reversal Patterns"
+                        image={1}
+                        trend="bullish"
+                        navigation={navigation}
+                    />
+                    <Module 
+                        title="Continuation Patterns"
+                        image={2}
+                        trend="continuation"
+                        navigation={navigation}
+                    />
                 </View>
-                </LinearGradient>
-                <Text style={styles.lessonsHeading}>All Lessons</Text>
-                <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
-                <Module 
-                    title="Bearish Reversal Patterns"
-                    image={0}
-                    trend="bearish"
-                    navigation={navigation}
-                />
-                <Module 
-                    title="Bullish Reversal Patterns"
-                    image={1}
-                    trend="bullish"
-                    navigation={navigation}
-                />
-                <Module 
-                    title="Continuation Patterns"
-                    image={2}
-                    trend="continuation"
-                    navigation={navigation}
-                />
             </ScrollView>
         </SafeAreaView>
     )
@@ -83,7 +85,7 @@ const HomeScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-        padding:20
+        padding:20 
     },
     linearGradient: {
         borderRadius:20,
@@ -115,7 +117,7 @@ const styles = StyleSheet.create({
     },
     flexItem: {
         width:'50%',
-        padding:20
+        padding:20,
     },
     lessonsHeading: { 
         color:'#394452',
@@ -141,9 +143,10 @@ const styles = StyleSheet.create({
         alignItems:'center',
         marginBottom:20, 
         shadowColor:'rgba(90, 108, 234, 0.5)',
-        shadowOffset:{width:0,height:0},
-        elevation:1, 
+        shadowOffset:{width:0,height:1},
+        elevation:24, 
         borderWidth:1,
+        shadowRadius:16,
         borderColor:'#F4F6F9'
     },
     image: {

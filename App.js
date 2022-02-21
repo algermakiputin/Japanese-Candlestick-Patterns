@@ -29,7 +29,8 @@ const Stack = createNativeStackNavigator();
 const customTextProps = { 
   style: { 
     fontFamily: 'SourceSansPro-Regular',
-    color:'#09101D'
+    color:'#09101D',
+    fontSize:18
   }
 }
 setCustomText(customTextProps);
