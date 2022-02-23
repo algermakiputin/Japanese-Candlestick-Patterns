@@ -24,7 +24,7 @@ const Lessons = (props) => {
                             module: module,  
                             pageTitle: "Bullish Candlestick Patterns",
                             level: 2,
-                            pattern:pattern,
+                            page:pattern.page,
                             modules:modules 
                         }); 
                     }}

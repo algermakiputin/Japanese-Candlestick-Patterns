@@ -17,7 +17,8 @@ import {
   Text,
   useColorScheme,
   View,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
  
 import { NavigationContainer } from '@react-navigation/native';
@@ -59,7 +60,9 @@ const App: () => Node = () => {
               color:'#09101D'
             },
             title:'Candlestick Patterns', 
-            headerRight:() => {return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />},
+            headerRight:() => {
+              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
+            },
             headerTitleAlign: 'left',
             headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
             headerShadowVisible:false,
@@ -68,7 +71,7 @@ const App: () => Node = () => {
         <Stack.Screen 
           name='Lesson'
           component={LessonScreen}
-          options={{
+          options={({navigation}) => ({
             headerStyle: {
               backgroundColor:'#fff',
               color:"#000"
@@ -76,12 +79,33 @@ const App: () => Node = () => {
             headerTitleStyle: {
               color:'#09101D'
             },
-          }} 
+            headerShadowVisible:false,
+            headerLeft:() => {
+              return (
+                <TouchableOpacity
+                  onPress={() => {navigation.goBack(null)}}
+                >
+                  <View style={styles.imageContainer}>
+                    <Image 
+                      style={{ 
+                        margin:'auto',
+                        width:19,
+                        height:19, 
+                      }}
+                      source={require('./assets/images/back.png')} />
+                  </View>
+                </TouchableOpacity>
+              )
+            },
+            headerRight:() => {
+              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
+            }
+          })} 
         />
         <Stack.Screen 
           name='Pattern'
           component={PatternScreen}
-          options={{
+          options={({navigation}) => ({
             headerStyle: {
               backgroundColor:'#fff',
               color:"#000"
@@ -89,8 +113,29 @@ const App: () => Node = () => {
             headerTitleStyle: {
               color:'#09101D'
             },
-            title:'Pattern Details'
-          }} 
+            headerShadowVisible:false,
+            title:'Pattern Details',
+            headerLeft:() => {
+              return (
+                <TouchableOpacity
+                  onPress={() => {navigation.goBack(null)}}
+                >
+                  <View style={styles.imageContainer}>
+                    <Image 
+                      style={{ 
+                        margin:'auto',
+                        width:19,
+                        height:19
+                      }}
+                      source={require('./assets/images/back.png')} />
+                  </View>
+                </TouchableOpacity>
+              )
+            },
+            headerRight:() => {
+              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
+            }
+          })} 
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -114,6 +159,16 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  imageContainer: {
+    backgroundColor:'rgba(48, 79, 254, 0.1)',
+    height:36,
+    width:36,
+    display:'flex', 
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:9,
+    marginRight: 15
+  }
 });
 
 export default App;
