@@ -18,7 +18,7 @@ const Styles = StyleSheet.create({
         marginBottom:10
     },
     div: {
-        marginBottom:20
+       
     },
     subHeading: {
         fontSize:22,

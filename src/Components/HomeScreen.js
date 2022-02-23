@@ -17,7 +17,7 @@ const Module = (props) => {
             onPress={() => {
                 props.navigation.navigate('Lesson', { 
                     title: props.title, 
-                    module:'bullish',
+                    module:props.trend,
                     modules: modules
                 });
             }}
@@ -60,15 +60,15 @@ const HomeScreen = ({navigation}) => {
                     <Text style={styles.lessonsHeading}>All Lessons</Text>
                     <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
                     <Module 
-                        title="Bearish Reversal Patterns"
-                        image={0}
-                        trend="bearish"
-                        navigation={navigation}
-                    />
-                    <Module 
                         title="Bullish Reversal Patterns"
                         image={1}
                         trend="bullish"
+                        navigation={navigation}
+                    />
+                    <Module 
+                        title="Bearish Reversal Patterns"
+                        image={0}
+                        trend="bearish"
                         navigation={navigation}
                     />
                     <Module 
