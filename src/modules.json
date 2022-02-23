@@ -2,83 +2,111 @@
     "bullish" : {
         "details": "Bullish reversal candlestick shows that the ongoing downtrend is coming to an end and It may begin to reverse to an uptrend ",
         "candles" : {
-            "Long White Day" : {
-                "details" : "",
-                "image": "candles/bullish/long-white-candle.png",
-                "page": "LongWhiteDay"
+            "Long White Day" : { 
+                "image": "long_white_day.png",
+                "page": "LongWhiteDay",
+                "slug": "Long White Day is a one-day candlestick pattern that reflects a strong buying pressure on the market. This candlestick is generally bullish. However, its position within the broader technical picture is also important. It may show a potential turning point and suggest that prices have reached a support level after an extended decline. If it is seen after a long and significant rally, it may point to excessive bullishness, and that prices are at dangerously high levels. Still, the candlestick alone is not reliable enough to decide the direction of the markets, since it reflects only one day’s trading."
             },
             "Hammer" : {
-                "details" : "",
-                "page": "BullishHammer"
+                "image": "hammer.png", 
+                "page": "BullishHammer",
+                "slug": "A bullish hammer is a one-day candlestick pattern that signals a market turning point to bullish trends. A Hammer occurs after a stock price has been declining, suggesting that the market is attempting to reach the bottom."
             },
             "Inverted Hammer" : {
-                "page": "BullishInvertedHammer"
+                "image": "inverted_hammer.png",
+                "page": "BullishInvertedHammer",
+                "slug": "An inverted hammer indicates that buyers are putting pressure on the market and signals a potential trend reversal from a downtrend. Buyers push the prices up during the trading session, however, the sellers are also trying to push the prices down. Fortunately, the buyers take over and manage to close near the opening price. This market movement forms a candlestick with a long upper shadow with a small body. As its name entails it’s just an inverted version of the hammer candlestick pattern."
             },
             "Bullish Engulfing" : {
-                "page": "BullishEngulfing"
+                "image": "bullish_engulfing.png",
+                "page": "BullishEngulfing",
+                "slug": "This is a two day reversal pattern with bullish implications. The first day of this pattern is a red candlestick, the next day is a larger green candlestick that opens lower than the previous candle and closes above the first candle."
             },
             "Harami" : {
-                "page": "BullishHarami"
+                "image": "harami.png",
+                "page": "BullishHarami",
+                "slug": "The Bullish Harami candlestick pattern is a reversal pattern appearing at the bottom of a downtrend. The first day of this pattern is a bearish candle with a large body, the next day is a bullish candle with a small body enclosed within the body of the prior candle. As a sign of changing momentum, the small bullish candle ‘gaps’ up to open near the mid-range of the previous candle. Some investors may look at a bullish harami as a good sign that they should enter a long position on an stock."
             },
             "Harami Cross": {
-                "page": "BullishHaramiCross"
+                "image": "harami_cross.png",
+                "page": "BullishHaramiCross",
+                "slug": "Harami Cross is a two day candlestick pattern that consist of a large bearish candlestick, followed by a small doji candlestick. Bullish Harami Cross appears when the original trend and candlestick is downtrend, indicates that the price may turn up and the trend may reverse soon."
             },
             "The Piercing Line" : {
-                "page": "BullishPiercingLine"
+                "page": "BullishPiercingLine",
+                "slug": "The piercing line is a two day candlestick pattern that indicates a potential bullish reversal of trend. The first day of this pattern consist of a long red candle indicating a bearish trend, the next day it gaps down and closes the price within the middle of the previous candle body. This patterns tells us that buyers are confident to enter the market and push the prices higher, indicates a potential trend reversal."
             },
             "Doji Star": {
-                "page": "BullishDojiStar"
+                "page": "BullishDojiStar",
+                "slug": "Doji Star is a two-day candlestick pattern that appears at the bottom of a downtrend and signals a trend reversal. On the first day is a normal bearish candlestick. On the next day, the opening price should gap down, and the closing price is near to its opening price forming a Doji candle, this indicates that the market is not sure whether to continue going lower or to go higher. To trade this pattern it should be confirmed by a bullish candle on the next trading period."
             },
             "Meeting Line": {
-                "page": "BullishMeetingLine"
+                "page": "BullishMeetingLine",
+                "slug": "A bullish meeting line is a two-day candlestick pattern that appears at the bottom of a downtrend and indicates a possible trend reversal. The first day of this pattern consists of a long bearish candlestick, the next day price gaps down as the sellers are more confident that the price will continue to drop, however, the bulls begin to push the price higher and manage to close to the same price as the previous candle, this could indicate that a bearish trend may come to an end."
             }, 
             "Three White Soldiers" : {
-                "page": "ThreeWhiteSoldiers"
+                "page": "ThreeWhiteSoldiers",
+                "slug": "Three white soldiers is a 3-day candlestick pattern that represents a strong trend reversal from a bear market to a bull market. This pattern is one of the most popular patterns and should not be ignored, it helps to confirm that a market has bottomed and the market sentiment has turned positive."
             },
             "Morning Star": {
-                "page": "MorningStar"
+                "page": "MorningStar",
+                "slug": "Morning star is a three day candlestick pattern that signals a bullish trend reversal. The first candlestick of this pattern is a bearish candle indicating a bearish trend, the next day candle can be a bearish or bullish candle with a small body, indicating that the sellers and buyers has balanced out during the trading session. The third day of candle of this pattern long bullish candlestick that confirms that the trend may reverse soon. It also important to combine with other indicators to make this pattern make more meaningful."
             },
             "Morning Star Doji":{
-                "page": "MorningStarDoji"
+                "page": "MorningStarDoji",
+                "slug": "Morning Star Doji is a bullish reversal three-day candlestick pattern similar to Morning Star, the only difference is that the Morning Star Doji must contain a Doji candlestick on the second day of the pattern. The first day of this pattern is a bearish candle indicating a bearish sentiment, the second day of this pattern is the Doji candle signifying indecisive price movement. The next day the bulls come in and push the price higher forming a bearish long candle indicating a possible trend reversal."
             },
             "Abandoned Baby": {
-                "page": "AbandonedBaby"
+                "page": "AbandonedBaby",
+                "slug": "A bullish Abandoned baby is a very reliable three-price bar candlestick reversal pattern that appears after a sharp decline in price indicating bearish market sentiment. The first bar of this pattern is a long bearish candle indicating the current trend, the second bar gaps down in the direction of the primary trend, and then the next bar gaps up and pushes the price higher. After a share price advance, this pattern is usually followed by a strong upside move. As you can see"
             },
             "Tri-Star": {
-                "page": "TriStar"
+                "page": "TriStar",
+                "slug": "A bullish Tri-Star candlestick pattern consists of three consecutive Doji candlesticks that appear in a downtrend and may signal a potential trend reversal. A Doji candlestick signals traders' market indecision, that is why it is important to use other technical indicators to make this pattern more meaningful. A three consecutive Doji candlestick is rare but usually followed by a strong upside movement of price."
             },
             "Breakaway": {
-                "page": "Breakaway"
+                "page": "Breakaway",
+                "slug": "A bullish breakaway is a five-price bar pattern that signals a potential trend reversal. The first candlestick of this pattern is a large bearish candlestick indicating the current market sentiment followed by three small candlesticks that signify the bears are losing their momentum and finally buyers come into the market and pushes the price higher and forms the fifth bullish large candlestick that contains the three previous candles, which forms the bullish breakaway."
             },
             "Three inside up": {
-                "page": "ThreeInsideUp"
+                "page": "ThreeInsideUp",
+                "slug": "Bullish Three inside up is a 3 bar pattern that indicates that the current bearish trend is weakening and shows a potential trend reversal. The first candle of this pattern is a long bearish candle that shows the current trend, followed by a short green candle that opens and closes within the body of the first and the third is a bullish large candle that closes above the first candle. This type of pattern is generally short-term and may not always result in a trend reversal. That is why when using this pattern it is important to determine the overall trend, like for example during a pullback of the long-term bullish trend."
             },
             "Three outside Up": {
-                "page": "ThreeOutsideUp"
+                "page": "ThreeOutsideUp",
+                "slug": "Three outside up is a three candle reversal pattern that can be bullish or bearish depending on the formation of the chart. The bullish implication on this pattern is if the second and third candle creates two successive higher closing price. The first candle on this pattern is a bearish confirming the negative market sentiment. The second candle gaps down during the trading session, but the buyers manage to close the price higher than the previous candle. If the third candle creates a new high, this signals a buying point for traders and could signal a potential bullish reversal."
             },
             "Kicking": {
-                "page": "Kicking"
+                "page": "Kicking",
+                "slug": "Bullish Kicking is a two-bar candlestick pattern that indicates a potential trend reversal. This pattern is consists of two long opposite candlesticks separated by a price gap, the second candle is a sharp upward move representing that the sellers have been exhausted and now buyers are taking over the market, when this pattern appears at a downtrend usually suggest a change of market sentiment."
             },
             "Unique Three River Bottom": {
-                "page": "UniqueThreeRiverBottom"
+                "page": "UniqueThreeRiverBottom",
+                "slug": "As its name implies, this three-price candlestick pattern is very unique in that it extremely appears on the chart. If it appears on a bearish trend and the price moves higher after the pattern then it’s a sign of a bullish reversal. The first candle of this pattern is a long bearish candle, the second candle is a hammer with a long lower shadow and the third candle is a short green candle, its opening price must be lower than the second candle and the open and close price must stay within the range of the second candle."
             },
             "Three Stars In the South": {
-                "page": "ThreeStarInTheSouth"
+                "page": "ThreeStarInTheSouth",
+                "slug": "The three stars in the south is a bullish reversal pattern made up of three candles, and it comes up on candlestick charts. It may appear after a price fall, and it indicates that the bearishness is reducing. The pattern is very rare, it doesn’t appear easily."
             },
             "Concealing Baby Swallow": {
-                "page": "ConcealingSwallow"
+                "page": "ConcealingSwallow",
+                "slug": "The concealing baby swallow candlestick pattern is a bullish reversal pattern that appears during a downtrend. It consists of four candlesticks that give an early signal of a downtrend’s deterioration. The logic behind this pattern is that bulls respond very quickly to the first two candles occurring during a downtrend. After the first two candles, the buying pressure increases, and prices reject to decline. It results in the formation of a long bullish candle that indicates an upcoming reversal of the trend. The concealing baby swallow is a very rare but reliable trading pattern. Although it is a bit tricky to identify the concealing baby swallow, it is a very important pattern that not only tells traders about trend reversal but also sheds light on the overall behavior of the market."
             },
             "Stick Sandwich": {
-                "page": "StickSandwich"
+                "page": "StickSandwich",
+                "slug": "As its name implies this candlestick pattern resembles a sandwich on the chart. This pattern rarely appears on the chart and supposably act as a bullish reversal, but more often than not acts as a bearish continuation. The next candle after this pattern forms usually signals trader if it will continue its current trend or reverse. The first and third candles of this pattern must be in the same color and the second color is opposite from the first and second candlestick that then forms a pattern that looks like a sandwich."
             },
             "Homing Pigeon": {
-                "page": "HomingPigeon"
+                "page": "HomingPigeon",
+                "slug": "Bullish Homing Pigeon is a two candles pattern that signifies a potential turn to positive market sentiment. This pattern is consist of two bearish candle and forms in a bearish trend. The first candle of this pattern is a long bearish candle that confirms the current bearish trend. In the second candle, buying pressure begins to return which enables the second candle to stays within the range of the first candle. The buying pressure may not be enough but it holds the price and manage to close the price higher than the previous candle. This signals traders that the price is bottoming and it cannot go any lower that may result to potential trend reversal."
             },
             "Ladder Bottom": {
-                "page": "LadderBottom"
+                "page": "LadderBottom",
+                "slug": "The ladder bottom is a five candle pattern that signifies stock price is bottoming and could lead to a potential bullish reversal. This pattern is supposed to be a bullish reversal but in reality, it only works a little more than 50% of the time. Therefore, it is ideal to wait patiently for the stock price to make its move or a breakout of this pattern before you make your move."
             },
             "Matching Low": {
-                "page": "MatchingLow"
+                "page": "MatchingLow",
+                "slug": "Matching low is a two candle pattern that shows a potential bullish reversal, both candles have no lower shadow and must have equal closing price. It’s not every day you can see two candlesticks with matching low and no lower shadows. Therefore, this candlestick pattern belongs to the pattern that you rarely see on the chart. The second candle of this pattern signifies that sellers failed to close the price below the first candle, this signals that the bearish sentiment is weakening and there could be a potential price rebound. Traders could see potential in this pattern and use the previous low as support or cut loss point. As a general rule, it is ideal to wait for confirmation before acting with every pattern."
             }
         }
     },
@@ -86,82 +114,108 @@
         "details": "A bearish reversal pattern appears at the end of an uptrend and indicates that the trend may reverse and the price will likely to fall down.",
         "candles": {
             "Long Black Body" : {
-                "page": "Bearish_LongBlackBody"
+                "page": "Bearish_LongBlackBody",
+                "slug": "A long black body is usually seen as a continuation pattern of a downtrend. However, it’s also important to gain the broader sentiment of the market before taking action on this pattern. This candlestick pattern shows strong selling pressure that indicates the current trend and the price drops significantly showing that the sellers are taking control."
             },
             "Hanging Man": {
-                "page": "Bearish_HangingMan"
+                "page": "Bearish_HangingMan",
+                "slug": "Hanging man is a bearish reversal pattern that signifies a potential reversal of an uptrend. A hanging man is a one candle pattern that forms after a relative price advance. This pattern tells traders that there is a sell-off during the trading session and the bull was not able to regain control and close the price lower. This signals traders that a potential trend reversal would likely occur."
             },
             "Shooting Star": {
-                "page": "Bearish_ShootingStar"
+                "page": "Bearish_ShootingStar",
+                "slug": "A shooting star is a one candle pattern that is interpreted as a bearish reversal. The shooting star looks exactly like an Inverted Hammer pattern, but instead, it is found during an uptrend. Just like an Inverted Hammer, it is made up of a short candlestick body and a long upper shadow about thrice or more of its body size. The shooting star pattern indicates that the bear tries to push higher during the trading session but the sellers manage to take control and close the price down near its opening price. This signals traders that a potential trend reversal may occur."
             },
             "Belt Hold": {
-                "page": "Bearish_BeltHold"
+                "page": "Bearish_BeltHold",
+                "slug": "A bearish belt hold is a pattern that often signals a reversal in investor sentiment from bullish to bearish. However, the bearish belt hold is not considered very reliable as it occurs frequently and is often incorrect in predicting future share prices. As with any other candlestick charting method, more than two days of trading should be considered when making predictions about trends."
             },
             "Bearish Engulfing Pattern": {
-                "page": "Bearish_EngulfingPattern" 
+                "page": "Bearish_EngulfingPattern",
+                "slug": "The Bearish Engulfing pattern is a two-candlestick pattern that consists of an up (white or green) candlestick followed by a large down (black or red) candlestick that surrounds or “engulfs” the smaller up candle. Basically, the pattern gets its name because the second candle engulfs the first candle. The Bearish Engulfing candlestick pattern is considered to be a bearish reversal pattern, usually occurring at the top of an uptrend."
             },
             "Harami": {
-                "page": "Bearish_Harami"
+                "page": "Bearish_Harami",
+                "slug": "A bearish harami is a two candlestick pattern that suggests prices may soon reverse to the downside. The pattern consists of a long white candle followed by a small black candle. The opening and closing prices of the second candle must be contained within the body of the first candle. An uptrend precedes the formation of a bearish harami."
             },
             "Harami Cross": {
-                "page": "Bearish_HaramiCross"
+                "page": "Bearish_HaramiCross",
+                "slug": "The Bearish Harami Cross is a  two-candle bearish reversal pattern. The first candle engulfs the second one, being a Doji candle, including shadows. The Bearish Harami Cross appears in an uptrend and predicts its reversal. The patterns should be confirmed on the nearest following candles. A Doji candle appearing as the second line indicates the market indecision. Interestingly, in order to recognize the pattern as valid, its first line needs to be a long white candle, which may become an important support zone. For this reason, one should be careful when such a pattern is formed on the chart."
             },
             "Dark Cloud Cover": {
-                "page": "Bearish_DarkCloudCover"
+                "page": "Bearish_DarkCloudCover",
+                "slug": "Dark Cloud Cover is a two-candlestick pattern that is formed when a down (black or red) candle opens above the close of the prior up a white candle, then closes below the midpoint of the up candle. When you spot the Dark Cloud Cover pattern on a Japanese candlestick chart, expect a potential bearish reversal.  It is not as strong a signal as the more definitive bearish engulfing pattern. Nonetheless, dark cloud cover is important to note as a potential bearish indicator, especially if it forms on a higher time frame chart, such as a daily chart. On lower time frames, its significance is considerably reduced."
             },
             "Doji Star": {
-                "page": "Bearish_DojiStar"
+                "page": "Bearish_DojiStar",
+                "slug": "The Bearish Doji Star is a bearish reversal pattern represented by two candles. First comes a long green candle, followed by a Doji candle that opens above the body of the first one, creating a gap. It is considered a reversal signal with confirmation during the next trading day. This pattern represents how an uptrend fades out and leads to a bearish reversal. The Doji at the end of the uptrend reflects how the bears have suddenly appeared to stop the trend and, very likely, push the price down."
             },
             "Meeting Lines": {
-                "page": "Bearish_MeetingLines"
+                "page": "Bearish_MeetingLines",
+                "slug": "The Bearish Meeting Lines is a very rarely occurring candlestick pattern on the candlestick charts. Low frequency is a consequence of a very specific configuration of the candles: the first candle closes exactly on the level of the next candle. The first line of the pattern appears as a long line having a white body, whereas the second candle has a black body. The pattern is classified as a bearish reversal one. Hence, it needs to appear in an uptrend. It should be confirmed on the following candles that break out of the nearest support zone or a trendline."
             },
             "Three Black Crows": {
-                "page": "Bearish_ThreeBlackCrows"
+                "page": "Bearish_ThreeBlackCrows",
+                "slug": "The Three Black Crows pattern is the opposite of the Three Advancing White Soldiers pattern. The Three Black Crows pattern is a bearish reversal pattern that consists of three bearish candlesticks that are ominous and dark in color, hence the name. This is a moderate trend reversal pattern that should only come into consideration when it appears in a rally or an established uptrend. The Three Black Crows usually indicate a weakness in an established uptrend and the potential emergence of a downtrend."
             },
             "Evening Star": {
-                "page": "Bearish_EveningStar"
+                "page": "Bearish_EveningStar",
+                "slug": "The Evening Star pattern is viewed as a bearish reversal pattern in technical analysis. It usually occurs at the top of an uptrend. Whereas, The Morning Star is a candlestick pattern that appears at the end of the downtrend and signals upside reversal. Traders should be aware of these different trading patterns, and the Evening Star is an important one to pay attention to. As the Evening Star indicates that the uptrend is going to end, the appearance of it is a red flag to traders and gives a sign that it is time to book profits."
             },
             "Evening Doji Star": {
-                "page": "Bearish_EveningDojiStar"
+                "page": "Bearish_EveningDojiStar",
+                "slug": "An Evening Doji Star consists of a long bullish candle, followed by a Doji that gaps up, then a third bearish candle that gaps down and closes well within the body of the first candle. The evening star pattern is considered a reliable indicator that a downward trend has begun. However, it can be difficult to discern amidst the noise of stock-price data. To help identify it reliably, traders often use price oscillators and trendlines to confirm whether an evening star pattern has in fact occurred."
             },
             "Abandoned Baby": {
-                "page": "Bearish_AbandonedBaby"
+                "page": "Bearish_AbandonedBaby",
+                "slug": "The Bearish Abandoned Baby is a three-line bearish reversal candlestick pattern. Its construction is very similar to the Evening Doji Star. The only difference is that in the case of the Bearish Abandoned Baby the Doji candle gaps above the shadows of the candle lines on either side, which is not the case for the Evening Doji Star."
             },
             "Tri-Star": {
-                "page": "Bearish_TriStar"
+                "page": "Bearish_TriStar",
+                "slug": "A bearish Tri-Star pattern can form when three Doji candlesticks appear in immediate succession at the end of an extended uptrend. The first Doji candle marks indecision between bull and bear. The second Doji gaps in the direction of the leading trend. The third changes the attitude of the market once the candlestick opens in the direction opposite to the trend. Each Doji candle has a shadow, all comparatively shallow, which signifies an interim cutback in volatility."
             },
             "Breakaway": {
-                "page": "Bearish_Breakaway"
+                "page": "Bearish_Breakaway",
+                "slug": "The bearish breakaway pattern consists of five candles. It is a reversal formation that occurs during an uptrend. The first candle in the formation is long and white. The second candle is also a white candle the price opens higher creating a gap. The third candle can be both black and white but does not cut off the rise of the stock price. The fourth candle continues in the direction of the preceding trend. The fifth candlestick has a long black body, changes the direction of the trend, and continues in that direction to close the gap."
             },
             "Three Inside Down": {
-                "page": "Bearish_ThreeInsideDown"
+                "page": "Bearish_ThreeInsideDown",
+                "slug": "The Bearish Three Inside Down pattern is another name for the Confirmed Bearish Harami Pattern. It's a bearish reversal pattern. In this pattern, the first candle is a long white candle, which closes near its high. The second candle is a small black candle, which gaps away from the first candle and closes inside the body of the first candle, thus creating a harami pattern. The third candle exceeds the lows of the first two candles."
             },
             "Three Outside Down": {
-                "page": "Bearish_ThreeOutsideDown"
+                "page": "Bearish_ThreeOutsideDown",
+                "slug": "Three Outside Down Candlestick Chart Pattern is a bearish trend reversal pattern of strong reliability. It is formed at an uptrend or at a possible resistance. This pattern is just the opposite of the Three Outside Up Pattern. This pattern is a three day candlestick pattern or one can say it takes three days for this pattern to be formed. If see deeply into the pattern, its a further extension of Bearish Engulfing Candlestick pattern or its a confirmation of Bullish Engulfing Pattern."
             },
             "Kicking": {
-                "page": "Bearish_Kicking"
+                "page": "Bearish_Kicking",
+                "slug": "A bearish Kicking (also known as Kicker) pattern signals a reversal for a new downtrend. The pattern consists of two candles and highlights candles where a fast price reversal can be seen. The first candlestick is a bullish marubozu. The second day gaps down extensively and opens below the opening price of the day before. There is a gap between day one and two’s bearish candlesticks."
             },
             "Latter Top": {
-                "page": "Bearish_Latter Top"
+                "page": "Bearish_Latter Top",
+                "slug": "This is a five candlestick pattern that starts with three strong white candlesticks. The uptrend continues with the fourth higher close. The next day's gaps are lower and close much lower than the previous day or two. This may imply a bearish reversal."
             },
             "Matching High": {
-                "page": "Bearish_Matching High"
+                "page": "Bearish_Matching High",
+                "slug": "This pattern occurs when two white days appear with equal closes in an uptrend. It indicates a top has been reached, even though the new high was tested and there was no follow-through, which is indicative of a good resistance price."
             },
             "Upside Gap Two Crows": {
-                "page": "Bearish_UpsideGapTwoCrows"
+                "page": "Bearish_UpsideGapTwoCrows",
+                "slug": "The Upside Gap Two Crows pattern is a rare candlestick pattern that is similar to the evening star pattern and the engulfing pattern, but with a few significant differences. As the Evening Star pattern, the Upside Gap Two Crows pattern is a bearish top reversal pattern that consists of three candlesticks. The first candlestick in the pattern must be a bullish candlestick with a large real body and must be light in color. This bullish candlestick is followed by two smaller bearish candlesticks that almost form an engulfing pattern, except that they are both bearish and hence dark in color. The first bearish candlestick that follows the bullish candlestick must have an upside gap between its real body and the real body of the bullish candlestick, as is the case with the evening star pattern. However, the last candlestick in the pattern must open above the real body of the middle candlestick and must close below it to completely engulf the real body of the second candlestick. Where the upside-gap two crows pattern differs from the evening star pattern is in the last candlestick, which need not penetrate and close well into the real body of the first candlestick"
             },
             "Identical Three Crows": {
-                "page": "Bearish_IdenticalThreeCrows"
+                "page": "Bearish_IdenticalThreeCrows",
+                "slug": "Identical Three Crows is a three candlestick bearish reversal pattern occuring during an uptrend. The first candle is long-bodied and black. The second and third candles open at the close of the previous candle in the series."
             },
             "Deliberation": {
-                "page": "Bearish_Deliberation"
+                "page": "Bearish_Deliberation",
+                "slug": "The deliberation pattern can occur in both bull and bear markets. This pattern is formed by two long white (or green) bodies that are then followed by a small white (or green) candle. The deliberation pattern can resemble two other candlestick patterns, depending upon whether it is bullish or bearish in nature. The bearish deliberation pattern resembles the three black crows and the bullish deliberation pattern resembles the three white soldiers' formation. It is important to note that the bullish deliberation pattern is a weaker pattern and is less popular than its counterpart, the bearish deliberation pattern. Many don’t use the bullish deliberation as a true reversal pattern but rather to signify a short-term price change indicator."
             },
             "Advance Block": {
-                "page": "Bearish_AdvanceBlock"
+                "page": "Bearish_AdvanceBlock",
+                "slug": "The advance block is the name given to a candlestick trading pattern. The pattern is a three-candle bearish setup that is considered to be a reversal pattern—a suggestion that price action is about to change from what had been an upward trend to a downward trend in relatively short time frames. Some authors suggest that in practice the formation often leads to a bullish continuation instead of a reversal."
             },
             "Two Crows": {
-                "page": "Bearish_TwoCrows"
+                "page": "Bearish_TwoCrows",
+                "slug": "The two crows candlestick pattern is a bearish reversal pattern that forms during an uptrend. In the two crows pattern, the market closes lower after an opening gap up during an uptrend. It is a popular pattern that gives an early signal of uptrend deterioration and a potential reversal of the trend. "
             }
         }
     },

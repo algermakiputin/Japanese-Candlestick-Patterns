@@ -13,8 +13,9 @@ const Lessons = (props) => {
     for (var key in modules[module]['candles']) {
         
         const pattern = modules[module]['candles'][key];
+     
         const title = key;
-
+ 
         if ((key.toLocaleLowerCase()).indexOf(search.toLocaleLowerCase()) >-1) {
             elements.push(
                 <TouchableOpacity  
@@ -31,11 +32,11 @@ const Lessons = (props) => {
                     key={key}>
                     <View style={styles.lessonWrapper} >
                         <View style={styles.imageWrapper}>
-                            <Image style={styles.image} source={require('../../assets/images/image.png')} />
+                            <Image style={styles.image} source={require('../../assets/images/candles/bullish/long_white_day.png')} />
                         </View>
                         <View style={styles.descriptionWrapper}>
                             <Text style={styles.lessonHeader}>{key}</Text>
-                            <Text style={styles.lessonSub}>White candlesticks represent a positive increase in a security's price during the observed period of time.</Text>
+                            <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -114,12 +115,20 @@ const styles = StyleSheet.create({
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36
     },
+    lessonSub: {
+        fontSize:14,
+        fontFamily:'SourceSansPro-Regular'
+    },  
     p: {
         marginBottom:25
     },  
     imageWrapper: {  
         width:65,
         marginRight:10
+    },
+    image: {
+        width:60,
+        height:60
     },
     descriptionWrapper: {
         width:'auto',
