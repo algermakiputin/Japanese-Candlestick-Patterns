@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Text, TextInput, StyleSheet,TouchableOpacity, Image } from 'react-native';
-
+import Images from './candles/Images';
 
 const Lessons = (props) => {
 
@@ -9,11 +9,12 @@ const Lessons = (props) => {
     const module = props.module;
     const search = props.search;
     const navigation = props.navigation;
- 
+  
     for (var key in modules[module]['candles']) {
         
         const pattern = modules[module]['candles'][key];
-     
+        const image = Images[pattern.page]
+        
         const title = key;
  
         if ((key.toLocaleLowerCase()).indexOf(search.toLocaleLowerCase()) >-1) {
@@ -32,7 +33,7 @@ const Lessons = (props) => {
                     key={key}>
                     <View style={styles.lessonWrapper} >
                         <View style={styles.imageWrapper}>
-                            <Image style={styles.image} source={require('../../assets/images/candles/bullish/long_white_day.png')} />
+                            <Image style={styles.image} source={image} />
                         </View>
                         <View style={styles.descriptionWrapper}>
                             <Text style={styles.lessonHeader}>{key}</Text>

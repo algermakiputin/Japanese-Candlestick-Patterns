@@ -85,7 +85,7 @@
                 "slug": "As its name implies, this three-price candlestick pattern is very unique in that it extremely appears on the chart. If it appears on a bearish trend and the price moves higher after the pattern then it’s a sign of a bullish reversal. The first candle of this pattern is a long bearish candle, the second candle is a hammer with a long lower shadow and the third candle is a short green candle, its opening price must be lower than the second candle and the open and close price must stay within the range of the second candle."
             },
             "Three Stars In the South": {
-                "page": "ThreeStarInTheSouth",
+                "page": "ThreeStarsIntheSouth",
                 "slug": "The three stars in the south is a bullish reversal pattern made up of three candles, and it comes up on candlestick charts. It may appear after a price fall, and it indicates that the bearishness is reducing. The pattern is very rare, it doesn’t appear easily."
             },
             "Concealing Baby Swallow": {
@@ -190,11 +190,11 @@
                 "slug": "A bearish Kicking (also known as Kicker) pattern signals a reversal for a new downtrend. The pattern consists of two candles and highlights candles where a fast price reversal can be seen. The first candlestick is a bullish marubozu. The second day gaps down extensively and opens below the opening price of the day before. There is a gap between day one and two’s bearish candlesticks."
             },
             "Latter Top": {
-                "page": "Bearish_Latter Top",
+                "page": "Bearish_LatterTop",
                 "slug": "This is a five candlestick pattern that starts with three strong white candlesticks. The uptrend continues with the fourth higher close. The next day's gaps are lower and close much lower than the previous day or two. This may imply a bearish reversal."
             },
             "Matching High": {
-                "page": "Bearish_Matching High",
+                "page": "Bearish_MatchingHigh",
                 "slug": "This pattern occurs when two white days appear with equal closes in an uptrend. It indicates a top has been reached, even though the new high was tested and there was no follow-through, which is indicative of a good resistance price."
             },
             "Upside Gap Two Crows": {

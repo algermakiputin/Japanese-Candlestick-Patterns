@@ -88,7 +88,8 @@ const styles = StyleSheet.create({
         padding:10,
         borderWidth:1,
         paddingRight:15,
-        paddingLeft:15
+        paddingLeft:15,
+        maxWidth:200
     },
     rightNav: {
         borderRadius:20,
@@ -101,10 +102,11 @@ const styles = StyleSheet.create({
         padding:10,
         borderWidth:1,
         paddingLeft:15,
-        paddingRight:15
+        paddingRight:15,
+        maxWidth:200
     },
     text: {
         fontFamily:'SourceSansPro-SemiBold',
-        fontSize:18
+        fontSize:16
     }
 });
