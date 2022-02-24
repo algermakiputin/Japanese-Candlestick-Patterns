@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5F7F9',
         borderRadius:8,
         marginBottom:20,
-        padding:15 
+        height:50,
+        paddingLeft:15
     },
     heading: {
         fontSize:22,
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
         width:'100%',
         shadowColor:'rgba(90, 108, 234, 0.5)',
         shadowOffset:{width:0,height:1},
-        elevation:24, 
+        elevation:22, 
         borderWidth:1,
         shadowRadius:16,
         borderColor:'#F4F6F9'

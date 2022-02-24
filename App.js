@@ -18,7 +18,8 @@ import {
   useColorScheme,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Share
 } from 'react-native';
  
 import { NavigationContainer } from '@react-navigation/native';
@@ -41,6 +42,44 @@ const theme = {
     background:'#fff'
   }
 }
+
+const shareBtn = () => {
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          'The most complete candlestick pattern learning mobile app | Become a stronger trader',
+        url:
+          '',
+        title: 
+          ''
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  return (
+    <View style={styles.shareContainer}>
+      <TouchableOpacity onPress={onShare}>
+        <Image 
+          style={{width:17,opacity:0.7, height:17}} 
+          source={require('./assets/images/share.png')} />
+      </TouchableOpacity>
+    </View>
+  )
+}
+
 const App: () => Node = () => {
   
   return (
@@ -60,9 +99,7 @@ const App: () => Node = () => {
               color:'#09101D'
             },
             title:'Candlestick Patterns', 
-            headerRight:() => {
-              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
-            },
+            headerRight: shareBtn,
             headerTitleAlign: 'left',
             headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
             headerShadowVisible:false,
@@ -97,9 +134,7 @@ const App: () => Node = () => {
                 </TouchableOpacity>
               )
             },
-            headerRight:() => {
-              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
-            }
+            headerRight: shareBtn
           })} 
         />
         <Stack.Screen 
@@ -132,9 +167,7 @@ const App: () => Node = () => {
                 </TouchableOpacity>
               )
             },
-            headerRight:() => {
-              return <Image style={{marginRight:5}} source={require('./assets/images/share.png')} />
-            }
+            headerRight: shareBtn
           })} 
         />
       </Stack.Navigator>
@@ -168,6 +201,17 @@ const styles = StyleSheet.create({
     alignItems:'center',
     borderRadius:9,
     marginRight: 15
+  },
+  shareContainer: {
+   
+    backgroundColor:'rgba(48, 79, 254, 0.1)',
+    height:36,
+    width:36,
+    display:'flex', 
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:9 
+     
   }
 });
 
