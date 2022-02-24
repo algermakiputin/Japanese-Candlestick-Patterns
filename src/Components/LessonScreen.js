@@ -45,7 +45,7 @@ const Lessons = (props) => {
         }
     }      
 
-    props.setTotal(elements.length);
+    useEffect(() => {props.setTotal(elements.length);})
     return elements;
 }
 const LessonScreen = ({navigation,route}) => {
