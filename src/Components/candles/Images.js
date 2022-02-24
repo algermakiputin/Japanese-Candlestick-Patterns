@@ -1,0 +1,58 @@
+import React from "react";
+
+let Images = {};
+
+Images['LongWhiteDay'] = require('../../../assets/images/candles/bullish/long_white_day.png');
+Images['BullishHammer'] = require('../../../assets/images/candles/bullish/hammer.png');
+Images['BullishInvertedHammer'] = require('../../../assets/images/candles/bullish/inverted_hammer.png');
+Images['BullishEngulfing'] = require('../../../assets/images/candles/bullish/bullish_engulfing.png');
+Images['BullishHarami'] = require('../../../assets/images/candles/bullish/harami.png');
+Images['BullishHaramiCross'] = require('../../../assets/images/candles/bullish/harami_cross.png');
+Images['BullishPiercingLine'] = require('../../../assets/images/candles/bullish/piercing_line.png');
+Images['BullishDojiStar'] = require('../../../assets/images/candles/bullish/doji_star.png');
+Images['BullishMeetingLine'] = require('../../../assets/images/candles/bullish/meeting_line.png');
+Images['ThreeWhiteSoldiers'] = require('../../../assets/images/candles/bullish/three_white_soldiers.png');
+Images['MorningStar'] = require('../../../assets/images/candles/bullish/morning_star.png');
+Images['MorningStarDoji'] = require('../../../assets/images/candles/bullish/morning_star_doji.png');
+Images['AbandonedBaby'] = require('../../../assets/images/candles/bullish/abandoned_baby.png');
+Images['TriStar'] = require('../../../assets/images/candles/bullish/tri_star.png');
+Images['Breakaway'] = require('../../../assets/images/candles/bullish/breakaway.png');
+Images['ThreeInsideUp'] = require('../../../assets/images/candles/bullish/ThreeInsideUp.png');
+Images['ThreeOutsideUp'] = require('../../../assets/images/candles/bullish/ThreeOutsideUp.png');
+Images['Kicking'] = require('../../../assets/images/candles/bullish/Kicking.png');
+Images['UniqueThreeRiverBottom'] = require('../../../assets/images/candles/bullish/unique_three_river_bottom.png');
+Images['ThreeStarsIntheSouth'] = require('../../../assets/images/candles/bullish/three_star_in_the_south.png');
+Images['ConcealingSwallow'] = require('../../../assets/images/candles/bullish/concealing_baby_shadow.png');
+Images['StickSandwich'] = require('../../../assets/images/candles/bullish/stick_sandwhich.png');
+Images['HomingPigeon'] = require('../../../assets/images/candles/bullish/homing_pigeon.png');
+Images['LadderBottom'] = require('../../../assets/images/candles/bullish/ladder_bottom.png');
+Images['MatchingLow'] = require('../../../assets/images/candles/bullish/matching_low.png');
+
+Images['Bearish_LongBlackBody'] = require('../../../assets/images/candles/bullish/long_black_body.png');
+Images['Bearish_HangingMan'] = require('../../../assets/images/candles/bullish/hanging_man.png');
+Images['Bearish_ShootingStar'] = require('../../../assets/images/candles/bullish/shooting_star.png');
+Images['Bearish_BeltHold'] = require('../../../assets/images/candles/bullish/belt_hold.png');
+Images['Bearish_EngulfingPattern'] = require('../../../assets/images/candles/bullish/bearish_engulfing.png');
+Images['Bearish_Harami'] = require('../../../assets/images/candles/bullish/bearish_harami.png');
+Images['Bearish_HaramiCross'] = require('../../../assets/images/candles/bullish/bearish_harami_cross.png');
+Images['Bearish_DarkCloudCover'] = require('../../../assets/images/candles/bullish/dark_cloud_cover.png');
+Images['Bearish_DojiStar'] = require('../../../assets/images/candles/bullish/bearish_doji_star.png');
+Images['Bearish_ThreeBlackCrows'] = require('../../../assets/images/candles/bullish/three_black_crows.png');
+Images['Bearish_EveningStar'] = require('../../../assets/images/candles/bullish/evening_star.png');
+Images['Bearish_EveningDojiStar'] = require('../../../assets/images/candles/bullish/evening_doji_star.png');
+Images['Bearish_AbandonedBaby'] = require('../../../assets/images/candles/bullish/abandoned_baby.png');
+Images['Bearish_TriStar'] = require('../../../assets/images/candles/bullish/tri_star.png');
+Images['Bearish_Breakaway'] = require('../../../assets/images/candles/bullish/breakaway.png');
+Images['Bearish_ThreeInsideDown'] = require('../../../assets/images/candles/bullish/three_inside_down.png');
+Images['Bearish_ThreeOutsideDown'] = require('../../../assets/images/candles/bullish/three_outside_down.png');
+Images['Bearish_Kicking'] = require('../../../assets/images/candles/bullish/kicking.png');
+Images['Bearish_LatterTop'] = require('../../../assets/images/candles/bullish/latter_top.png');
+Images['Bearish_MatchingHigh'] = require('../../../assets/images/candles/bullish/matching_high.png');
+Images['Bearish_MeetingLines'] = require('../../../assets/images/candles/bullish/meeting_lines.png');
+Images['Bearish_UpsideGapTwoCrows'] = require('../../../assets/images/candles/bullish/upside_gap_two_crows.png');
+Images['Bearish_IdenticalThreeCrows'] = require('../../../assets/images/candles/bullish/identical_three_crows.png');
+Images['Bearish_Deliberation'] = require('../../../assets/images/candles/bullish/deliberation.png');
+Images['Bearish_AdvanceBlock'] = require('../../../assets/images/candles/bullish/advance_block.png');
+Images['Bearish_TwoCrows'] = require('../../../assets/images/candles/bullish/two_crows.png');
+
+export default Images;

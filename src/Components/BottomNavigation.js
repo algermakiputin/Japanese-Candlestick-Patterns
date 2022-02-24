@@ -4,7 +4,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const NextButton = ({nextName,navigation,page, title, modules, module}) => {
     
-    const nav = nextName ? <Text style={styles.rightNav}>{nextName} &raquo;</Text> : null;
+    const nav = nextName ? <View style={styles.rightNav}><Text  style={styles.text}>{nextName} &raquo;</Text></View> : null;
    
     return (
         <TouchableOpacity
@@ -22,7 +22,7 @@ const NextButton = ({nextName,navigation,page, title, modules, module}) => {
 
 const PreviousButton = ({previousName,navigation,page, title, modules, module}) => {
     
-    const nav = previousName ? <Text style={styles.leftNav}>&laquo; {previousName}</Text> : null;
+    const nav = previousName ? <View style={styles.leftNav}><Text style={styles.text}>&laquo; {previousName}</Text></View> : null;
     return (
         <TouchableOpacity
             onPress={() => {navigation.navigate('Pattern', {
@@ -79,24 +79,32 @@ const styles = StyleSheet.create({
     }, 
     leftNav: {
         borderRadius:20,
-        shadowColor:'rgba(90, 108, 234, 0.125)',
+        shadowColor:'rgba(90, 108, 234, 0.25)',
         shadowOffset:{width:0,height:1},
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
         borderColor:'#F4F6F9',
         padding:10,
-        borderWidth:1 
+        borderWidth:1,
+        paddingRight:15,
+        paddingLeft:15
     },
     rightNav: {
         borderRadius:20,
-        shadowColor:'rgba(90, 108, 234, 0.125)',
-        shadowOffset:{width:0,height:1},
+        shadowColor:'rgba(90, 108, 234, 0.25)',
+        shadowOffset:{width:1,height:1},
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
         borderColor:'#F4F6F9',
         padding:10,
-        borderWidth:1 
+        borderWidth:1,
+        paddingLeft:15,
+        paddingRight:15
+    },
+    text: {
+        fontFamily:'SourceSansPro-SemiBold',
+        fontSize:18
     }
 });

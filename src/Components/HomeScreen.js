@@ -51,7 +51,15 @@ const HomeScreen = ({navigation}) => {
                         <View style={styles.flexItem}>
                             <Text style={styles.hl}>Trade Smarter</Text> 
                             <Text style={styles.hl}>Trade Better</Text> 
-                            <TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() => {
+                                    navigation.navigate('Lesson', { 
+                                        title: "Bullish Reversal Patterns", 
+                                        module:"bullish",
+                                        modules: modules
+                                    });
+                                }}
+                            >
                                 <Text style={styles.btn}>Learn Now</Text>
                             </TouchableOpacity>
                         </View>

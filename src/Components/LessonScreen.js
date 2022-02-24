@@ -9,7 +9,7 @@ const Lessons = (props) => {
     const module = props.module;
     const search = props.search;
     const navigation = props.navigation;
-
+ 
     for (var key in modules[module]['candles']) {
         
         const pattern = modules[module]['candles'][key];
@@ -42,14 +42,16 @@ const Lessons = (props) => {
                 </TouchableOpacity>
             );
         }
-    }     
+    }      
 
+    props.setTotal(elements.length);
     return elements;
 }
 const LessonScreen = ({navigation,route}) => {
     const {title, module, modules} = route.params;
     const details = modules[module].details;
     const [search, setSearch] = useState(''); 
+    const [total, setTotal] = useState(''); 
 
     useEffect(() => {
         navigation.setOptions({title: title});
@@ -66,11 +68,14 @@ const LessonScreen = ({navigation,route}) => {
                     />
                 <Text style={styles.heading}>{title}</Text>
                 <Text style={styles.p}>{details}</Text>
+
+                <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
                 <Lessons 
                     search={search} 
                     module={module}
                     modules={modules}
                     navigation={navigation}
+                    setTotal={setTotal}
                 />
             </View>
         </ScrollView>
@@ -95,6 +100,12 @@ const styles = StyleSheet.create({
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:10
     },
+    subHeading: {
+        fontSize:22,
+        fontFamily:'SourceSansPro-SemiBold',
+        marginBottom:30,
+        marginTop:15
+    },  
     lessonWrapper: {
         borderRadius:20,
         padding:20, 
