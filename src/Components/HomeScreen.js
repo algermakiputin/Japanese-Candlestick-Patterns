@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
-
+import {
+    AdMobBanner,
+    AdMobInterstitial,
+    PublisherBanner,
+    AdMobRewarded,
+  } from 'react-native-admob'
 const moduleImages = [
     require('../../assets/images/bullcandles.png'),
     require('../../assets/images/bearcandles.png'),
@@ -33,7 +38,13 @@ const Module = (props) => {
     )
 }
 const HomeScreen = ({navigation}) => {
+     
+    AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
+    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
     
+    useEffect(() => {
+        AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+    })
     return (
         <SafeAreaView >  
             <ScrollView >
@@ -45,6 +56,7 @@ const HomeScreen = ({navigation}) => {
                         style={styles.linearGradient}
                     >
                     <View style={styles.flexContainer}>
+                   
                         <View style={styles.flexItem}>
                             <Image source={require('../../assets/images/stockbg.png')} />
                         </View>
@@ -67,6 +79,7 @@ const HomeScreen = ({navigation}) => {
                     </LinearGradient>
                     <Text style={styles.lessonsHeading}>All Lessons</Text>
                     <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
+                    
                     <Module 
                         title="Bullish Reversal Patterns"
                         image={1}
@@ -86,7 +99,14 @@ const HomeScreen = ({navigation}) => {
                         navigation={navigation}
                     />
                 </View>
+                <AdMobBanner
+                    adSize="smartBannerLandscape"
+                    adUnitID="ca-app-pub-3940256099942544/6300978111"
+                    testDevices={[AdMobBanner.simulatorId]}
+                    onAdFailedToLoad={error => console.error(error)}
+                />
             </ScrollView>
+            
         </SafeAreaView>
     )
 }

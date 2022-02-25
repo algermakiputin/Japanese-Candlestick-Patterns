@@ -1,6 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+    AdMobBanner,
+    AdMobInterstitial,
+    PublisherBanner,
+    AdMobRewarded,
+  } from 'react-native-admob'
 
 const NextButton = ({nextName,navigation,page, title, modules, module}) => {
     
@@ -40,29 +46,38 @@ const PreviousButton = ({previousName,navigation,page, title, modules, module}) 
 const BottomNavigation = ({nextName, previousName, nextPage,previousPage, navigation, title, page, module, modules}) => {
     
     return (
-        <View style={styles.container}>
-            <View style={styles.column2}> 
-                <PreviousButton 
-                    navigation={navigation}
-                    title={title}
-                    page={previousPage}
-                    module={module}
-                    modules={modules}
-                    previousPage={previousPage}
-                    previousName={previousName}
-                />
+        <SafeAreaView>
+            <View style={styles.container}>
+                <View style={styles.column2}> 
+                    <PreviousButton 
+                        navigation={navigation}
+                        title={title}
+                        page={previousPage}
+                        module={module}
+                        modules={modules}
+                        previousPage={previousPage}
+                        previousName={previousName}
+                    />
+                </View>
+                <View style={styles.column1}> 
+                    <NextButton
+                        navigation={navigation}
+                        page={nextPage}
+                        module={module}
+                        modules={modules}
+                        nextPage={nextPage}
+                        nextName={nextName}
+                    />
+                </View>
             </View>
-            <View style={styles.column1}> 
-                <NextButton
-                    navigation={navigation}
-                    page={nextPage}
-                    module={module}
-                    modules={modules}
-                    nextPage={nextPage}
-                    nextName={nextName}
+            <AdMobBanner
+                    adSize="smartBannerLandscape"
+                    adUnitID="ca-app-pub-3940256099942544/6300978111"
+                    testDevices={[AdMobBanner.simulatorId]}
+                    onAdFailedToLoad={error => console.error(error)}
                 />
-            </View>
-        </View>
+        </SafeAreaView>
+        
     );
 }
 

@@ -12,6 +12,8 @@ target 'CandlestickPatterns' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-admob', :path => '../node_modules/react-native-admob'
+
   target 'CandlestickPatternsTests' do
     inherit! :complete
     # Pods for testing
