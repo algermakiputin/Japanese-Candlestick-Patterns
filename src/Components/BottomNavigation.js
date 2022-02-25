@@ -2,10 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
-    AdMobBanner,
-    AdMobInterstitial,
-    PublisherBanner,
-    AdMobRewarded,
+    AdMobBanner 
   } from 'react-native-admob'
 
 const NextButton = ({nextName,navigation,page, title, modules, module}) => {
@@ -72,7 +69,7 @@ const BottomNavigation = ({nextName, previousName, nextPage,previousPage, naviga
             </View>
             <AdMobBanner
                     adSize="smartBannerLandscape"
-                    adUnitID="ca-app-pub-3940256099942544/6300978111"
+                    adUnitID="ca-app-pub-4118987136087583/5074181363"
                     testDevices={[AdMobBanner.simulatorId]}
                     onAdFailedToLoad={error => console.error(error)}
                 />

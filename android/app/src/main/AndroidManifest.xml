@@ -11,7 +11,7 @@
       android:allowBackup="false"
       android:theme="@style/AppTheme">
       <meta-data
-            android:name="com.google.android.gms.ads.3940256099942544~3347511713"
+            android:name="com.google.android.gms.ads.ca-app-pub-4118987136087583~6569960392"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
       <activity
         android:name=".MainActivity"

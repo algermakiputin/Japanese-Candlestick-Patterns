@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Text, TextInput, StyleSheet,TouchableOpacity, Image } from 'react-native';
 import Images from './candles/Images';
-
+import { AdMobInterstitial } from 'react-native-admob'
 const Lessons = (props) => {
 
     let elements = [];  
@@ -53,9 +53,12 @@ const LessonScreen = ({navigation,route}) => {
     const details = modules[module].details;
     const [search, setSearch] = useState(''); 
     const [total, setTotal] = useState(''); 
+    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849');
+    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
 
     useEffect(() => {
         navigation.setOptions({title: title});
+        AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
     })
     return (
         <ScrollView>

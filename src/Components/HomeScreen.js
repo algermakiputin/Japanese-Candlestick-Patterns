@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
-import {
-    AdMobBanner,
-    AdMobInterstitial,
-    PublisherBanner,
-    AdMobRewarded,
-  } from 'react-native-admob'
+import AdMobBanner from 'react-native-admob/RNAdMobBanner';
+
 const moduleImages = [
     require('../../assets/images/bullcandles.png'),
     require('../../assets/images/bearcandles.png'),
@@ -39,12 +35,6 @@ const Module = (props) => {
 }
 const HomeScreen = ({navigation}) => {
      
-    AdMobInterstitial.setAdUnitID('ca-app-pub-3940256099942544/1033173712');
-    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
-    
-    useEffect(() => {
-        AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
-    })
     return (
         <SafeAreaView >  
             <ScrollView >
@@ -101,7 +91,7 @@ const HomeScreen = ({navigation}) => {
                 </View>
                 <AdMobBanner
                     adSize="smartBannerLandscape"
-                    adUnitID="ca-app-pub-3940256099942544/6300978111"
+                    adUnitID="ca-app-pub-4118987136087583/5074181363"
                     testDevices={[AdMobBanner.simulatorId]}
                     onAdFailedToLoad={error => console.error(error)}
                 />
