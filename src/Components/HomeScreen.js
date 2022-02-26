@@ -91,8 +91,7 @@ const HomeScreen = ({navigation}) => {
                 </View>
                 <AdMobBanner
                     adSize="smartBannerLandscape"
-                    adUnitID="ca-app-pub-4118987136087583/5074181363"
-                    testDevices={[AdMobBanner.simulatorId]}
+                    adUnitID="ca-app-pub-4118987136087583/5074181363" 
                     onAdFailedToLoad={error => console.error(error)}
                 />
             </ScrollView>

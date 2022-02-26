@@ -53,8 +53,7 @@ const LessonScreen = ({navigation,route}) => {
     const details = modules[module].details;
     const [search, setSearch] = useState(''); 
     const [total, setTotal] = useState(''); 
-    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849');
-    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
 
     useEffect(() => {
         navigation.setOptions({title: title});
