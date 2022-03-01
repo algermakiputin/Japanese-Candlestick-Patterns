@@ -89,11 +89,11 @@ const HomeScreen = ({navigation}) => {
                         navigation={navigation}
                     />
                 </View>
-                {/* <AdMobBanner
+                <AdMobBanner
                     adSize="smartBannerLandscape"
                     adUnitID="ca-app-pub-4118987136087583/5074181363" 
                     onAdFailedToLoad={error => console.error(error)}
-                /> */}
+                />
             </ScrollView>
             
         </SafeAreaView>

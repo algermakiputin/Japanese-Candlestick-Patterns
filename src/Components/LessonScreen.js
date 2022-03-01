@@ -57,7 +57,7 @@ const LessonScreen = ({navigation,route}) => {
 
     useEffect(() => {
         navigation.setOptions({title: title});
-        // AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+        AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
     })
     return (
         <ScrollView>
