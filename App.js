@@ -49,21 +49,24 @@ const shareBtn = () => {
     try {
       const result = await Share.share({
         message:
-          'The most complete candlestick pattern learning mobile app | Become a stronger trader',
-        url:
-          '',
+          'The most complete candlestick pattern learning mobile app | Become a stronger trader download now! https://play.google.com/store/apps/details?id=com.candlestickpatterns',
         title: 
-          ''
-      });
-      if (result.action === Share.sharedAction) {
-        if (result.activityType) {
-          // shared with activity type of result.activityType
-        } else {
-          // shared
-        }
-      } else if (result.action === Share.dismissedAction) {
-        // dismissed
-      }
+          'Candlestick Patterns Mobile App'
+      }).then(({action, activityType}) => {
+        if(action === Share.sharedAction)
+          console.log('Share was successful');
+        else
+          console.log('Share was dismissed');
+        });
+      // if (result.action === Share.sharedAction) {
+      //   if (result.activityType) {
+      //     // shared with activity type of result.activityType
+      //   } else {
+      //     // shared
+      //   }
+      // } else if (result.action === Share.dismissedAction) {
+      //   // dismissed
+      // }
     } catch (error) {
       alert(error.message);
     }
