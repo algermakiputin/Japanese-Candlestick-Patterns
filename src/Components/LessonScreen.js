@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, View, Text, TextInput, StyleSheet,TouchableOpacity, Image } from 'react-native';
+import { ScrollView, View, Text, TextInput, StyleSheet,TouchableOpacity, Image, SafeAreaView, FlatList } from 'react-native';
 import Images from './candles/Images';
 import { AdMobInterstitial } from 'react-native-admob'
 const Lessons = (props) => {
@@ -9,8 +9,8 @@ const Lessons = (props) => {
     const module = props.module;
     const search = props.search;
     const navigation = props.navigation;
-  
-    for (var key in modules[module]['candles']) {
+    const candles = modules[module]['candles'];
+    for (var key in candles) {
         
         const pattern = modules[module]['candles'][key];
         const image = Images[pattern.page]
@@ -24,8 +24,7 @@ const Lessons = (props) => {
                         navigation.navigate('Pattern', {
                             title: title, 
                             module: module,  
-                            pageTitle: "Bullish Candlestick Patterns",
-                            level: 2,
+                            pageTitle: "Bullish Candlestick Patterns", 
                             page:pattern.page,
                             modules:modules 
                         }); 
@@ -33,7 +32,7 @@ const Lessons = (props) => {
                     key={key}
                     style={styles.lessonWrapper}> 
                     <View style={styles.imageWrapper}>
-                        <Image style={styles.image} source={image} />
+                        {/* <Image style={styles.image} source={image} /> */}
                     </View>
                     <View style={styles.descriptionWrapper}>
                         <Text style={styles.lessonHeader}>{key}</Text>
@@ -46,12 +45,47 @@ const Lessons = (props) => {
 
     useEffect(() => {props.setTotal(elements.length);})
     return elements;
+} 
+
+const ListHeader = () => {
+
+    return (
+        <SafeAreaView>
+            <TextInput 
+                style={styles.searchBar} 
+                placeholder='Search...'  
+                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
+                underlineColor='transparent'
+                onChangeText={(value) => { setSearch(value) }}
+                />
+            <Text style={styles.heading}>{title}</Text>
+            <Text style={styles.p}>{details}</Text>
+
+            <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
+        </SafeAreaView>
+    )
 }
+
+const handleSearch = (text, setSearch) => {
+    setSearch(text)
+}
+
 const LessonScreen = ({navigation,route}) => {
     const {title, module, modules} = route.params;
     const details = modules[module].details;
     const [search, setSearch] = useState(''); 
     const [total, setTotal] = useState(''); 
+    const candles = modules[module]['candles'];
+    let data = [];
+
+    for (var key in candles) {
+        if ((key.toLocaleLowerCase()).indexOf(search.toLocaleLowerCase()) >-1) {
+            data.push({
+                key: key
+            });
+        }
+    }  
+ 
     AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
 
     useEffect(() => {
@@ -59,36 +93,65 @@ const LessonScreen = ({navigation,route}) => {
         //AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
     })
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <TextInput 
-                    style={styles.searchBar} 
-                    placeholder='Search...'  
-                    theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
-                    underlineColor='transparent'
-                    onChangeText={(value) => { setSearch(value) }}
-                    />
-                <Text style={styles.heading}>{title}</Text>
-                <Text style={styles.p}>{details}</Text>
+        <SafeAreaView style={styles.container}>  
+            <FlatList
+                data={data}
+                renderItem={({item}) => {
+                    const pattern = modules[module]['candles'][item.key];
+                    const image = Images[pattern.page]
+                    return (
+                        <View style={{paddingLeft:20, paddingRight:20}}>
+                            <TouchableOpacity  
+                            onPress={() => {
+                                navigation.navigate('Pattern', {
+                                    title: item.key, 
+                                    module: module,  
+                                    pageTitle: "Bullish Candlestick Patterns", 
+                                    page:pattern.page,
+                                    modules:modules 
+                                }); 
+                            }}
+                            key={key}
+                            style={styles.lessonWrapper}> 
+                            <View style={styles.imageWrapper}>
+                                <Image style={styles.image} source={image} />
+                            </View>
+                            <View style={styles.descriptionWrapper}>
+                                <Text style={styles.lessonHeader}>{item.key}</Text>
+                                <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
+                            </View> 
+                        </TouchableOpacity>
+                        </View>
+                    );
+                }}
+                ListHeaderComponent={()=>{
+                    return (
+                        <View style={{paddingLeft:20,paddingRight:20}}>
+                            <TextInput 
+                                style={styles.searchBar} 
+                                placeholder='Search...'  
+                                placeholderTextColor='#CBCFD4'
+                                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
+                                underlineColor='transparent'
+                                onChangeText={(value) => {}}
+                                keyboardType="default" 
+                                />
+                            <Text style={styles.heading}>{title}</Text>
+                            <Text style={styles.p}>{details}</Text>
 
-                <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
-                <Lessons 
-                    search={search} 
-                    module={module}
-                    modules={modules}
-                    navigation={navigation}
-                    setTotal={setTotal}
-                />
-            </View>
-        </ScrollView>
+                            <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
+                        </View>
+                    )
+                }}
+            />
+        </SafeAreaView>
     );
 }
 
 export default LessonScreen;
 
 const styles = StyleSheet.create({
-    container: {
-        padding:20
+    container: { 
     },
     searchBar: {
         backgroundColor: '#F5F7F9',
@@ -108,7 +171,7 @@ const styles = StyleSheet.create({
         marginBottom:30,
         marginTop:15
     },  
-    lessonWrapper: {
+    lessonWrapper: { 
         borderRadius:20,
         padding:20, 
         backgroundColor:'#fff',

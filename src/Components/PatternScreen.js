@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { SafeAreaView, View, Text, ScrollView } from 'react-native';
 import Candles from './candles/Candles';
-import BottomNavigation from './BottomNavigation';
-import { useScrollToTop } from '@react-navigation/native';
+import BottomNavigation from './BottomNavigation'; 
 
 const PatternScreen = ({navigation, route}) => {
     const {page, title, modules, module } = route.params; 
