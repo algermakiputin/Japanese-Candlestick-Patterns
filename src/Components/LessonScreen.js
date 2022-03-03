@@ -1,51 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, View, Text, TextInput, StyleSheet,TouchableOpacity, Image, SafeAreaView, FlatList } from 'react-native';
+import { View, Text, TextInput, StyleSheet,TouchableOpacity, Image, SafeAreaView, FlatList } from 'react-native';
 import Images from './candles/Images';
 import { AdMobInterstitial } from 'react-native-admob'
-const Lessons = (props) => {
-
-    let elements = [];  
-    const modules = props.modules;
-    const module = props.module;
-    const search = props.search;
-    const navigation = props.navigation;
-    const candles = modules[module]['candles'];
-    for (var key in candles) {
-        
-        const pattern = modules[module]['candles'][key];
-        const image = Images[pattern.page]
-        
-        const title = key;
- 
-        if ((key.toLocaleLowerCase()).indexOf(search.toLocaleLowerCase()) >-1) {
-            elements.push(
-                <TouchableOpacity  
-                    onPress={() => {
-                        navigation.navigate('Pattern', {
-                            title: title, 
-                            module: module,  
-                            pageTitle: "Bullish Candlestick Patterns", 
-                            page:pattern.page,
-                            modules:modules 
-                        }); 
-                    }}
-                    key={key}
-                    style={styles.lessonWrapper}> 
-                    <View style={styles.imageWrapper}>
-                        {/* <Image style={styles.image} source={image} /> */}
-                    </View>
-                    <View style={styles.descriptionWrapper}>
-                        <Text style={styles.lessonHeader}>{key}</Text>
-                        <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
-                    </View> 
-                </TouchableOpacity>
-            );
-        }
-    }      
-
-    useEffect(() => {props.setTotal(elements.length);})
-    return elements;
-} 
 
 const ListHeader = () => {
 
@@ -66,7 +22,7 @@ const ListHeader = () => {
     )
 }
 
-const initData = (candles,search) => {
+const initData = (candles, search) => {
 
     let data = [];
 
@@ -77,18 +33,19 @@ const initData = (candles,search) => {
             });
         }
     } 
-
+ 
     return data;
 }
 
-const handleSearch = (setData, candles, search, setSearch) => {
+const handleSearch = (setData, candles, search, setSearch,setTotal) => {
     
-    const data = initData(candles,search);
-    setSearch(search)
-    setData(data)
+    const data = initData(candles, search);
+    setTotal(data.length);
+    setSearch(search);
+    setData(data);
 }
 
-const Header = ({title, details, search, total, setSearch, setData, candles}) => {
+const Header = ({title, details, search, total, setSearch, setData, candles, setTotal}) => {
 
     return(
         <View style={{paddingLeft:20,paddingRight:20}}>
@@ -98,7 +55,7 @@ const Header = ({title, details, search, total, setSearch, setData, candles}) =>
                 placeholderTextColor='#CBCFD4'
                 theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
                 underlineColor='transparent'
-                onChangeText={(value) => {handleSearch(setData, candles, value, setSearch)}}
+                onChangeText={(value) => {handleSearch(setData, candles, value, setSearch,setTotal)}}
                 keyboardType="default" 
                 />
             <Text style={styles.heading}>{title}</Text>
@@ -111,20 +68,25 @@ const Header = ({title, details, search, total, setSearch, setData, candles}) =>
 
 const LessonScreen = ({navigation,route}) => {
     const {title, module, modules} = route.params;
+    
     const details = modules[module].details;
-    const [search, setSearch] = useState(''); 
-    const [total, setTotal] = useState(''); 
     const candles = modules[module]['candles'];
-    const [data, setData] = useState(initData(candles,'')); 
-    
-    
+   
+    const [search, setSearch] = useState(''); 
+    const [total, setTotal] = useState();  
+    const [data, setData] = useState(); 
+     
     AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
  
     useEffect(() => {
-        navigation.setOptions({title: title});
+        const initialData = initData(candles, search);
+        setData(initialData)
+        setTotal(initialData.length)
+        // navigation.setOptions({title: title});
         //AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
         
-    })
+        
+    }, [])
     return (
         <SafeAreaView style={styles.container}>  
             <FlatList
@@ -164,6 +126,7 @@ const LessonScreen = ({navigation,route}) => {
                         setSearch={setSearch}
                         setData={setData}
                         candles={candles}
+                        setTotal={setTotal}
                     />}
             />
         </SafeAreaView>
@@ -180,7 +143,8 @@ const styles = StyleSheet.create({
         borderRadius:8,
         marginBottom:20,
         height:50,
-        paddingLeft:15
+        paddingLeft:15,
+        color:"#09101D"
     },
     heading: {
         fontSize:22,
