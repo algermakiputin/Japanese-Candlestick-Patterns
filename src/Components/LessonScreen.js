@@ -30,16 +30,15 @@ const Lessons = (props) => {
                             modules:modules 
                         }); 
                     }}
-                    key={key}>
-                    <View style={styles.lessonWrapper} >
-                        <View style={styles.imageWrapper}>
-                            <Image style={styles.image} source={image} />
-                        </View>
-                        <View style={styles.descriptionWrapper}>
-                            <Text style={styles.lessonHeader}>{key}</Text>
-                            <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
-                        </View>
+                    key={key}
+                    style={styles.lessonWrapper}> 
+                    <View style={styles.imageWrapper}>
+                        <Image style={styles.image} source={image} />
                     </View>
+                    <View style={styles.descriptionWrapper}>
+                        <Text style={styles.lessonHeader}>{key}</Text>
+                        <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
+                    </View> 
                 </TouchableOpacity>
             );
         }
@@ -57,7 +56,7 @@ const LessonScreen = ({navigation,route}) => {
 
     useEffect(() => {
         navigation.setOptions({title: title});
-        AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+        //AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
     })
     return (
         <ScrollView>
