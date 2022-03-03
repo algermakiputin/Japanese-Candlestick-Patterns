@@ -66,16 +66,8 @@ const ListHeader = () => {
     )
 }
 
-const handleSearch = (text, setSearch) => {
-    setSearch(text)
-}
+const initData = (candles,search) => {
 
-const LessonScreen = ({navigation,route}) => {
-    const {title, module, modules} = route.params;
-    const details = modules[module].details;
-    const [search, setSearch] = useState(''); 
-    const [total, setTotal] = useState(''); 
-    const candles = modules[module]['candles'];
     let data = [];
 
     for (var key in candles) {
@@ -84,13 +76,54 @@ const LessonScreen = ({navigation,route}) => {
                 key: key
             });
         }
-    }  
- 
-    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
+    } 
 
+    return data;
+}
+
+const handleSearch = (setData, candles, search, setSearch) => {
+    
+    const data = initData(candles,search);
+    setSearch(search)
+    setData(data)
+}
+
+const Header = ({title, details, search, total, setSearch, setData, candles}) => {
+
+    return(
+        <View style={{paddingLeft:20,paddingRight:20}}>
+            <TextInput 
+                style={styles.searchBar} 
+                placeholder='Search...'  
+                placeholderTextColor='#CBCFD4'
+                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
+                underlineColor='transparent'
+                onChangeText={(value) => {handleSearch(setData, candles, value, setSearch)}}
+                keyboardType="default" 
+                />
+            <Text style={styles.heading}>{title}</Text>
+            <Text style={styles.p}>{details}</Text>
+
+            <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
+        </View>
+    )
+}
+
+const LessonScreen = ({navigation,route}) => {
+    const {title, module, modules} = route.params;
+    const details = modules[module].details;
+    const [search, setSearch] = useState(''); 
+    const [total, setTotal] = useState(''); 
+    const candles = modules[module]['candles'];
+    const [data, setData] = useState(initData(candles,'')); 
+    
+    
+    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
+ 
     useEffect(() => {
         navigation.setOptions({title: title});
         //AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+        
     })
     return (
         <SafeAreaView style={styles.container}>  
@@ -102,47 +135,36 @@ const LessonScreen = ({navigation,route}) => {
                     return (
                         <View style={{paddingLeft:20, paddingRight:20}}>
                             <TouchableOpacity  
-                            onPress={() => {
-                                navigation.navigate('Pattern', {
-                                    title: item.key, 
-                                    module: module,  
-                                    pageTitle: "Bullish Candlestick Patterns", 
-                                    page:pattern.page,
-                                    modules:modules 
-                                }); 
-                            }}
-                            key={key}
-                            style={styles.lessonWrapper}> 
-                            <View style={styles.imageWrapper}>
-                                <Image style={styles.image} source={image} />
-                            </View>
-                            <View style={styles.descriptionWrapper}>
-                                <Text style={styles.lessonHeader}>{item.key}</Text>
-                                <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
-                            </View> 
-                        </TouchableOpacity>
+                                onPress={() => {
+                                    navigation.navigate('Pattern', {
+                                        title: item.key, 
+                                        module: module,  
+                                        pageTitle: "Bullish Candlestick Patterns", 
+                                        page:pattern.page,
+                                        modules:modules 
+                                    }); 
+                                }}
+                                style={styles.lessonWrapper}> 
+                                <View style={styles.imageWrapper}>
+                                    <Image style={styles.image} source={image} />
+                                </View>
+                                <View style={styles.descriptionWrapper}>
+                                    <Text style={styles.lessonHeader}>{item.key}</Text>
+                                    <Text style={styles.lessonSub}>{(pattern.slug).substring(0,76) + '...'}</Text>
+                                </View> 
+                            </TouchableOpacity>
                         </View>
                     );
                 }}
-                ListHeaderComponent={()=>{
-                    return (
-                        <View style={{paddingLeft:20,paddingRight:20}}>
-                            <TextInput 
-                                style={styles.searchBar} 
-                                placeholder='Search...'  
-                                placeholderTextColor='#CBCFD4'
-                                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
-                                underlineColor='transparent'
-                                onChangeText={(value) => {}}
-                                keyboardType="default" 
-                                />
-                            <Text style={styles.heading}>{title}</Text>
-                            <Text style={styles.p}>{details}</Text>
-
-                            <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
-                        </View>
-                    )
-                }}
+                ListHeaderComponent={<Header
+                        title={title}
+                        total={total}
+                        details={details}
+                        search={search}
+                        setSearch={setSearch}
+                        setData={setData}
+                        candles={candles}
+                    />}
             />
         </SafeAreaView>
     );
