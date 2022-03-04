@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
 import AdMobBanner from 'react-native-admob/RNAdMobBanner';
-import { AdMobInterstitial } from 'react-native-admob';
-import Introduction from './Introduction';
+import { AdMobInterstitial } from 'react-native-admob';   
+import './Global';
 
 const moduleImages = [
     require('../../assets/images/bullcandles.png'),
@@ -153,11 +153,11 @@ const styles = StyleSheet.create({
         borderRadius:25,
         color:'#fff',
         fontFamily:'SourceSansPro-SemiBold',
-        fontSize:16,
+        fontSize:global.scaleFontSize(16),
         marginTop:10
     }, 
     hl: {
-        fontSize:24,
+        fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-Bold',
         color:'#fff',
         marginBottom:2
@@ -182,13 +182,13 @@ const styles = StyleSheet.create({
     },
     lessonsHeading: { 
         color:'#394452',
-        fontSize:26,
+        fontSize:global.scaleFontSize(26),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36,
         marginBottom:22
     },
     p: { 
-        fontSize:18,
+        fontSize:global.scaleFontSize(18),
         lineHeight:24,
         marginBottom:30
     },
@@ -218,14 +218,14 @@ const styles = StyleSheet.create({
         flexWrap:'wrap'
     },
     lessonTitle: {
-        fontSize:22,
+        fontSize:global.scaleFontSize(22),
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
     
     },
     lessonSub: {
-        fontSize:14,
+        fontSize:global.scaleFontSize(14),
     }
     
 });

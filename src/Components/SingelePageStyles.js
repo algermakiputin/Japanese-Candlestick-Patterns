@@ -1,18 +1,19 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import './Global'
 
 const Styles = StyleSheet.create({
     container: {
         padding:20, 
     },  
     p: {
-        fontSize:18,
+        fontSize:global.scaleFontSize(18),
         lineHeight:24,
         color:'#000',
         marginBottom:15 
     },
     list: {
-        fontSize:18,
+        fontSize:global.scaleFontSize(18),
         lineHeight:24,
         color:'#000',
         marginBottom:10
@@ -21,7 +22,7 @@ const Styles = StyleSheet.create({
        
     },
     subHeading: {
-        fontSize:22,
+        fontSize:global.scaleFontSize(22),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:24,
         marginBottom:20 

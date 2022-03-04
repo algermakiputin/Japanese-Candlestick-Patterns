@@ -9,13 +9,8 @@
 import React from 'react';
 import type {Node} from 'react';
 import { setCustomText } from 'react-native-global-props';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
+import { 
+  StyleSheet, 
   View,
   Image,
   TouchableOpacity,
@@ -28,13 +23,14 @@ import HomeScreen from './src/Components/HomeScreen';
 import LessonScreen from './src/Components/LessonScreen';
 import Introduction from './src/Components/Introduction';
 import PatternScreen from './src/Components/PatternScreen';
+import './src/Components/Global';
  
 const Stack = createNativeStackNavigator();
 const customTextProps = { 
   style: { 
     fontFamily: 'SourceSansPro-Regular',
     color:'#09101D',
-    fontSize:18
+    fontSize:global.scaleFontSize(18)
   }
 }
 setCustomText(customTextProps);
@@ -91,7 +87,8 @@ const App: () => Node = () => {
               color:"#000"
             },
             headerTitleStyle: {
-              color:'#09101D'
+              color:'#09101D',
+              fontSize:global.scaleFontSize(22)
             },
             title:'Candlestick Patterns', 
             headerRight: shareBtn,
@@ -109,7 +106,8 @@ const App: () => Node = () => {
               color:"#000"
             },
             headerTitleStyle: {
-              color:'#09101D'
+              color:'#09101D',
+              fontSize:global.scaleFontSize(22)
             },
             headerShadowVisible:false,
             headerLeft:() => {
@@ -138,10 +136,11 @@ const App: () => Node = () => {
           options={({navigation}) => ({
             headerStyle: {
               backgroundColor:'#fff',
-              color:"#000"
+              color:"#000", 
             },
             headerTitleStyle: {
-              color:'#09101D'
+              color:'#09101D',
+              fontSize:global.scaleFontSize(22)
             },
             headerShadowVisible:false,
             title:'Pattern Details',
@@ -174,7 +173,8 @@ const App: () => Node = () => {
               color:"#000"
             },
             headerTitleStyle: {
-              color:'#09101D'
+              color:'#09101D',
+              fontSize:global.scaleFontSize(22)
             },
             headerShadowVisible:false,
             title:'Basics of candlestick chart',
@@ -209,12 +209,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
+    fontSize: global.scaleFontSize(24),
     fontWeight: '600',
   },
   sectionDescription: {
     marginTop: 8,
-    fontSize: 18,
+    fontSize: global.scaleFontSize(18),
     fontWeight: '400',
   },
   highlight: {

@@ -6,9 +6,9 @@ import Styles from "./SingelePageStyles";
 const styles = Styles;
 const Introduction = () => {
 
-    return(
-        <SafeAreaView style={styles.container}>
-            <ScrollView>
+    return( 
+        <ScrollView style={styles.container}>
+            <SafeAreaView>
             <Image style={{
                 width:'100%',
                 height:180, 
@@ -24,9 +24,13 @@ const Introduction = () => {
             {styles.bullet("Body — The candlestick body can either be red or green. The red candle body represents a stock price that closes lower than the opening price at the end of the trading session. While the green candle body represents a stock's price is pushing higher and closes greater than the opening price at the end of the trading session.")}
             {styles.bullet('Upper wick — Represents the highest price point during the trading session.')}
             {styles.bullet('Lower Wick — represents the lowest price point during the trading session.')}
-           
-            </ScrollView>
-        </SafeAreaView>
+            <Text style={styles.div} />
+            <Text style={styles.div} />
+            <Text style={styles.div} />
+            </SafeAreaView>
+        
+        </ScrollView>
+        
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, StyleSheet,TouchableOpacity, Image, SafeAreaView, FlatList } from 'react-native';
 import Images from './candles/Images'; 
- 
+import './Global';
 
 const initData = (candles, search) => {
 
@@ -62,12 +62,7 @@ const LessonScreen = ({navigation,route}) => {
     useEffect(() => {
         const initialData = initData(candles, search);
         setData(initialData)
-        setTotal(initialData.length)
-        // AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849');
-        // AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
-        // AdMobInterstitial.requestAd();
-        // AdMobInterstitial.showAd();
-        // navigation.setOptions({title: title});
+        setTotal(initialData.length) 
          
     }, [])
     return (
@@ -131,12 +126,12 @@ const styles = StyleSheet.create({
         color:"#09101D"
     },
     heading: {
-        fontSize:22,
+        fontSize:global.scaleFontSize(22),
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:10
     },
     subHeading: {
-        fontSize:22,
+        fontSize:global.scaleFontSize(22),
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:30,
         marginTop:15
@@ -160,10 +155,11 @@ const styles = StyleSheet.create({
     },
     lessonHeader: {
         fontFamily:'SourceSansPro-SemiBold',
-        lineHeight:36
+        lineHeight:36,
+        fontSize: global.scaleFontSize(18)
     },
     lessonSub: {
-        fontSize:14,
+        fontSize:global.scaleFontSize(16),
         fontFamily:'SourceSansPro-Regular'
     },  
     p: {
