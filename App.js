@@ -23,10 +23,11 @@ import {
 } from 'react-native';
  
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/Components/HomeScreen';
 import LessonScreen from './src/Components/LessonScreen';
+import Introduction from './src/Components/Introduction';
 import PatternScreen from './src/Components/PatternScreen';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
  
 const Stack = createNativeStackNavigator();
 const customTextProps = { 
@@ -57,16 +58,7 @@ const shareBtn = () => {
           console.log('Share was successful');
         else
           console.log('Share was dismissed');
-        });
-      // if (result.action === Share.sharedAction) {
-      //   if (result.activityType) {
-      //     // shared with activity type of result.activityType
-      //   } else {
-      //     // shared
-      //   }
-      // } else if (result.action === Share.dismissedAction) {
-      //   // dismissed
-      // }
+        }); 
     } catch (error) {
       alert(error.message);
     }
@@ -168,11 +160,44 @@ const App: () => Node = () => {
                       source={require('./assets/images/back.png')} />
                   </View>
                 </TouchableOpacity>
-              )
+                )
+              },
+              headerRight: shareBtn
+            })} 
+          />
+          <Stack.Screen 
+          name='Introduction'
+          component={Introduction}
+          options={({navigation}) => ({
+            headerStyle: {
+              backgroundColor:'#fff',
+              color:"#000"
             },
-            headerRight: shareBtn
-          })} 
-        />
+            headerTitleStyle: {
+              color:'#09101D'
+            },
+            headerShadowVisible:false,
+            title:'Basics of candlestick chart',
+            headerLeft:() => {
+              return (
+                <TouchableOpacity
+                  onPress={() => {navigation.goBack(null)}}
+                >
+                  <View style={styles.imageContainer}>
+                    <Image 
+                      style={{ 
+                        margin:'auto',
+                        width:19,
+                        height:19
+                      }}
+                      source={require('./assets/images/back.png')} />
+                  </View>
+                </TouchableOpacity>
+                )
+              },
+              headerRight: shareBtn
+            })} 
+          />
       </Stack.Navigator>
     </NavigationContainer>
   );

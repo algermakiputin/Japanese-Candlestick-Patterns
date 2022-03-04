@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
 import AdMobBanner from 'react-native-admob/RNAdMobBanner';
+import { AdMobInterstitial } from 'react-native-admob';
+import Introduction from './Introduction';
 
 const moduleImages = [
     require('../../assets/images/bullcandles.png'),
@@ -16,6 +18,11 @@ const Module = (props) => {
         <TouchableOpacity 
             style={styles.moduleContainer}
             onPress={() => {
+                
+                if (props.showAd == true) {
+                    AdMobInterstitial.showAd(); 
+                }
+                    
                 props.navigation.navigate('Lesson', { 
                     title: props.title, 
                     module:props.trend,
@@ -33,7 +40,33 @@ const Module = (props) => {
         </TouchableOpacity>
     )
 }
+
+const IntroductionModule = (props) => {
+
+    return (
+        <TouchableOpacity 
+            style={styles.moduleContainer}
+            onPress={() => {  
+                props.navigation.navigate('Introduction');
+            }}
+            > 
+            <View style={styles.image}>
+                <Image source={require('../../assets/images/introduction.png')} />
+            </View>
+            <View style={styles.description}>
+                <Text style={styles.lessonTitle}>Basics of candlestick</Text>
+                <Text style={styles.lessonSub}>Introduction</Text>
+            </View>
+        </TouchableOpacity>
+    )
+}
 const HomeScreen = ({navigation}) => {
+
+    useEffect(() => { 
+        AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
+        AdMobInterstitial.requestAd();
+        
+    },[]);
      
     return (
         <SafeAreaView >  
@@ -45,48 +78,51 @@ const HomeScreen = ({navigation}) => {
                         colors={['#8250D5', '#304FFE']} 
                         style={styles.linearGradient}
                     >
-                    <View style={styles.flexContainer}>
-                   
-                        <View style={styles.flexItem}>
-                            <Image source={require('../../assets/images/stockbg.png')} />
+                        <View style={styles.flexContainer}>
+                    
+                            <View style={styles.flexItem1}>
+                                <Image source={require('../../assets/images/stockbg.png')} style={{width:'100%',height:150}} />
+                            </View>
+                            <View style={styles.flexItem2}>
+                                <Text style={styles.hl}>Trade Smarter</Text> 
+                                <Text style={styles.hl}>Trade Better</Text> 
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        navigation.navigate('Lesson', { 
+                                            title: "Bullish Reversal Patterns", 
+                                            module:"bullish",
+                                            modules: modules
+                                        });
+                                    }}
+                                >
+                                    <Text style={styles.btn}>Learn Now</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
-                        <View style={styles.flexItem}>
-                            <Text style={styles.hl}>Trade Smarter</Text> 
-                            <Text style={styles.hl}>Trade Better</Text> 
-                            <TouchableOpacity
-                                onPress={() => {
-                                    navigation.navigate('Lesson', { 
-                                        title: "Bullish Reversal Patterns", 
-                                        module:"bullish",
-                                        modules: modules
-                                    });
-                                }}
-                            >
-                                <Text style={styles.btn}>Learn Now</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
                     </LinearGradient>
                     <Text style={styles.lessonsHeading}>All Lessons</Text>
                     <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
-                    
+                    <IntroductionModule
+                        navigation={navigation}
+                    />
                     <Module 
-                        title="Bullish Reversal Patterns"
+                        title="Bullish reversal patterns"
                         image={1}
                         trend="bullish"
                         navigation={navigation}
                     />
                     <Module 
-                        title="Bearish Reversal Patterns"
+                        title="Bearish reversal patterns"
                         image={0}
                         trend="bearish"
                         navigation={navigation}
+                        showAd={true}
                     />
                     <Module 
-                        title="Continuation Patterns"
+                        title="Continuation patterns"
                         image={2}
                         trend="continuation"
-                        navigation={navigation}
+                        navigation={navigation} 
                     />
                 </View>
                 <AdMobBanner
@@ -112,12 +148,12 @@ const styles = StyleSheet.create({
         backgroundColor:'#FFB800',
         width:116,
         textAlign:'center',
-        paddingTop:5,
-        paddingBottom:5,
+        paddingTop:8,
+        paddingBottom:8,
         borderRadius:25,
         color:'#fff',
         fontFamily:'SourceSansPro-SemiBold',
-        fontSize:15,
+        fontSize:16,
         marginTop:10
     }, 
     hl: {
@@ -130,11 +166,19 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row', 
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        paddingTop:35,
+        paddingBottom:35,
+        paddingLeft:20,
+        paddingRight:20
     },
-    flexItem: {
+    flexItem1: {
         width:'50%',
-        padding:20,
+        paddingRight:5
+    },
+    flexItem2: {
+        width:'50%', 
+        paddingLeft:5
     },
     lessonsHeading: { 
         color:'#394452',
@@ -148,15 +192,13 @@ const styles = StyleSheet.create({
         lineHeight:24,
         marginBottom:30
     },
-    moduleContainer: {
-        // borderWidth:1,
-        // borderColor:'#F4F6F9',
+    moduleContainer: { 
         borderRadius:20,
         padding:20, 
         backgroundColor:'#fff',
         display:'flex',
         flexDirection:'row', 
-        justifyContent:'flex-start',
+        justifyContent:'flex-start', 
         alignItems:'center',
         marginBottom:20, 
         shadowColor:'rgba(90, 108, 234, 0.5)',
@@ -164,19 +206,23 @@ const styles = StyleSheet.create({
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
-        borderColor:'#F4F6F9'
+        borderColor:'#F4F6F9' 
     },
     image: {
         width:60,
         height:60
     },
-    description: {
-        width:'auto',
-        marginLeft:10
+    description: { 
+        marginLeft:10,
+        overflow:'hidden',
+        flexWrap:'wrap'
     },
     lessonTitle: {
         fontSize:22,
-        fontFamily:'SourceSansPro-SemiBold'
+        overflow:'hidden',
+        maxWidth:260,
+        fontFamily:'SourceSansPro-SemiBold',
+    
     },
     lessonSub: {
         fontSize:14,

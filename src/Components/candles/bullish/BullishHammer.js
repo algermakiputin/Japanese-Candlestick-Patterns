@@ -12,7 +12,7 @@ export default function BullishHammer() {
             <Text style={styles.subHeading}>Description</Text>
             <Text style={styles.p}>A bullish hammer is a one-day candlestick pattern that signals a market turning point to bullish trends. A Hammer occurs after a stock price has been declining, suggesting that the market is attempting to reach the bottom. </Text>
             <Text style={styles.p}>A Hammer is formed after the sellers drive the prices down during the trading session, followed by a strong buying pressure and drive prices back up. </Text>
-            <Text style={styles.div} />
+    
             <Text style={styles.subHeading}>How to recognise?</Text>
             
             {styles.bullet('Looks like a letter T')}

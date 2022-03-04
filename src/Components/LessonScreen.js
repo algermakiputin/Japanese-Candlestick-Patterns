@@ -1,26 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, StyleSheet,TouchableOpacity, Image, SafeAreaView, FlatList } from 'react-native';
-import Images from './candles/Images';
-import { AdMobInterstitial } from 'react-native-admob'
-
-const ListHeader = () => {
-
-    return (
-        <SafeAreaView>
-            <TextInput 
-                style={styles.searchBar} 
-                placeholder='Search...'  
-                theme={{colors: {primary: 'red', underlineColor: 'transparent'}}}
-                underlineColor='transparent'
-                onChangeText={(value) => { setSearch(value) }}
-                />
-            <Text style={styles.heading}>{title}</Text>
-            <Text style={styles.p}>{details}</Text>
-
-            <Text style={styles.subHeading}>{ search == '' ? total + ' Patterns' : total + ' results for "'+search+'"'}</Text>
-        </SafeAreaView>
-    )
-}
+import Images from './candles/Images'; 
+ 
 
 const initData = (candles, search) => {
 
@@ -76,16 +57,18 @@ const LessonScreen = ({navigation,route}) => {
     const [total, setTotal] = useState();  
     const [data, setData] = useState(); 
      
-    AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
+    
  
     useEffect(() => {
         const initialData = initData(candles, search);
         setData(initialData)
         setTotal(initialData.length)
+        // AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849');
+        // AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+        // AdMobInterstitial.requestAd();
+        // AdMobInterstitial.showAd();
         // navigation.setOptions({title: title});
-        //AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
-        
-        
+         
     }, [])
     return (
         <SafeAreaView style={styles.container}>  
@@ -97,7 +80,7 @@ const LessonScreen = ({navigation,route}) => {
                     return (
                         <View style={{paddingLeft:20, paddingRight:20}}>
                             <TouchableOpacity  
-                                onPress={() => {
+                                onPress={() => { 
                                     navigation.navigate('Pattern', {
                                         title: item.key, 
                                         module: module,  
@@ -105,6 +88,7 @@ const LessonScreen = ({navigation,route}) => {
                                         page:pattern.page,
                                         modules:modules 
                                     }); 
+                                    
                                 }}
                                 style={styles.lessonWrapper}> 
                                 <View style={styles.imageWrapper}>

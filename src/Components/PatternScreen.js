@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SafeAreaView, View, Text, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 import Candles from './candles/Candles';
 import BottomNavigation from './BottomNavigation'; 
 
