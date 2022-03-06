@@ -56,9 +56,7 @@ const LessonScreen = ({navigation,route}) => {
     const [search, setSearch] = useState(''); 
     const [total, setTotal] = useState();  
     const [data, setData] = useState(); 
-     
-    
- 
+       
     useEffect(() => {
         const initialData = initData(candles, search);
         setData(initialData)
@@ -76,6 +74,9 @@ const LessonScreen = ({navigation,route}) => {
                         <View style={{paddingLeft:20, paddingRight:20}}>
                             <TouchableOpacity  
                                 onPress={() => { 
+
+                                    global.counter++; 
+                                    global.showAd(); 
                                     navigation.navigate('Pattern', {
                                         title: item.key, 
                                         module: module,  

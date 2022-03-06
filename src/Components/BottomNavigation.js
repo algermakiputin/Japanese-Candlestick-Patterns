@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-    AdMobBanner 
-  } from 'react-native-admob'
+import { AdMobBanner } from 'react-native-admob';
+import './Global';
 
 const NextButton = ({nextName,navigation,page, title, modules, module}) => {
     
@@ -11,12 +10,17 @@ const NextButton = ({nextName,navigation,page, title, modules, module}) => {
    
     return (
         <TouchableOpacity
-            onPress={() => {navigation.navigate('Pattern', { 
+            onPress={() => {
+
+                global.counter++;
+                global.showAd(); 
+                navigation.navigate('Pattern', { 
                             page: page,
                             title: nextName,
                             modules:modules,
                             module:module
-                        })}}
+                        })
+            }}
         >
             {nav} 
         </TouchableOpacity>
@@ -28,12 +32,16 @@ const PreviousButton = ({previousName,navigation,page, title, modules, module}) 
     const nav = previousName ? <View style={styles.leftNav}><Text style={styles.text}>&laquo; {previousName}</Text></View> : null;
     return (
         <TouchableOpacity
-            onPress={() => {navigation.navigate('Pattern', {
+            onPress={() => {
+                global.counter++;
+                global.showAd(); 
+                navigation.navigate('Pattern', {
                             title: previousName,
                             page: page, 
                             modules:modules,
                             module:module
-                        })}}
+                        })}
+                }
         >
             {nav}
         </TouchableOpacity>

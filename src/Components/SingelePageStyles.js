@@ -42,13 +42,14 @@ const Styles = StyleSheet.create({
                 alignItems: 'flex-start',
                 flexWrap: 'wrap',
                 flex: 1,
-                marginVertical: 4
+                marginVertical: 4,
+                
             }}>
             <View style={{width: 15}}>
                 <Text>{'\u2022' + " "}</Text>
                 </View>
                 <View style={{flex: 1}}>
-                <Text>{text}</Text>
+                <Text style={{lineHeight:24}}>{text}</Text>
             </View>
         </View>
         );

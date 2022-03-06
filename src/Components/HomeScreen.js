@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
-import AdMobBanner from 'react-native-admob/RNAdMobBanner';
-import { AdMobInterstitial } from 'react-native-admob';   
+import AdMobBanner from 'react-native-admob/RNAdMobBanner';  
 import './Global';
 
 const moduleImages = [
@@ -19,10 +18,8 @@ const Module = (props) => {
             style={styles.moduleContainer}
             onPress={() => {
                 
-                if (props.showAd == true) {
-                    AdMobInterstitial.showAd(); 
-                }
-                    
+                global.counter++;
+                global.showAd();  
                 props.navigation.navigate('Lesson', { 
                     title: props.title, 
                     module:props.trend,
@@ -40,14 +37,17 @@ const Module = (props) => {
         </TouchableOpacity>
     )
 }
-
+ 
 const IntroductionModule = (props) => {
 
     return (
         <TouchableOpacity 
             style={styles.moduleContainer}
             onPress={() => {  
+                global.counter++;
+                global.showAd(); 
                 props.navigation.navigate('Introduction');
+                
             }}
             > 
             <View style={styles.image}>
@@ -61,13 +61,10 @@ const IntroductionModule = (props) => {
     )
 }
 const HomeScreen = ({navigation}) => {
-
-    useEffect(() => { 
-        AdMobInterstitial.setAdUnitID('ca-app-pub-4118987136087583/2259798849'); 
-        AdMobInterstitial.requestAd();
-        
-    },[]);
-     
+    
+    useEffect(() => {
+        global.requestAd();
+    })
     return (
         <SafeAreaView >  
             <ScrollView >
