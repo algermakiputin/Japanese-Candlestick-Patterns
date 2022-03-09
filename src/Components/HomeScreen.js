@@ -2,41 +2,8 @@ import React, { useEffect } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Image, TouchableOpacity, ScrollView} from 'react-native'; 
 import LinearGradient from 'react-native-linear-gradient';
 import AdMobBanner from 'react-native-admob/RNAdMobBanner';  
+import Module from './Module';
 import './Global';
-
-const moduleImages = [
-    require('../../assets/images/bullcandles.png'),
-    require('../../assets/images/bearcandles.png'),
-    require('../../assets/images/continuationcandles.png')
-]
-const modules = require('../modules.json');
-
-const Module = (props) => {
- 
-    return (
-        <TouchableOpacity 
-            style={styles.moduleContainer}
-            onPress={() => {
-                
-                global.counter++;
-                global.showAd();  
-                props.navigation.navigate('Lesson', { 
-                    title: props.title, 
-                    module:props.trend,
-                    modules: modules
-                });
-            }}
-            > 
-            <View style={styles.image}>
-                <Image source={moduleImages[props.image]} />
-            </View>
-            <View style={styles.description}>
-                <Text style={styles.lessonTitle}>{props.title}</Text>
-                <Text style={styles.lessonSub}>{Object.keys(modules[props.trend].candles).length} Lessons</Text>
-            </View>
-        </TouchableOpacity>
-    )
-}
  
 const IntroductionModule = (props) => {
 
@@ -85,11 +52,7 @@ const HomeScreen = ({navigation}) => {
                                 <Text style={styles.hl}>Trade Better</Text> 
                                 <TouchableOpacity
                                     onPress={() => {
-                                        navigation.navigate('Lesson', { 
-                                            title: "Bullish Reversal Patterns", 
-                                            module:"bullish",
-                                            modules: modules
-                                        });
+                                        navigation.navigate('Introduction');
                                     }}
                                 >
                                     <Text style={styles.btn}>Learn Now</Text>
@@ -98,7 +61,7 @@ const HomeScreen = ({navigation}) => {
                         </View>
                     </LinearGradient>
                     <Text style={styles.lessonsHeading}>All Lessons</Text>
-                    <Text style={styles.p}>Candlestick patterns are used by technical traders to predict the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
+                    <Text style={styles.p}>Candlestick patterns are used by technical traders to anticipate the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
                     <IntroductionModule
                         navigation={navigation}
                     />
