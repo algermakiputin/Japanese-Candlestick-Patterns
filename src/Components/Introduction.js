@@ -9,8 +9,8 @@ const styles = Styles;
 const Introduction = ({navigation}) => {
 
     return( 
-        <ScrollView style={styles.container}>
-            <SafeAreaView>
+        <ScrollView>
+            <SafeAreaView style={{padding:20}}>
                 <Image style={{
                     width:'100%',
                     height:180, 
@@ -30,6 +30,7 @@ const Introduction = ({navigation}) => {
                 <Text style={styles.div} />
             
                 <Text style={styles.subHeading}>What's next?</Text>
+                
                 <Module 
                     title="Bullish reversal patterns"
                     image={1}
@@ -43,6 +44,7 @@ const Introduction = ({navigation}) => {
                     navigation={navigation}
                     showAd={true}
                 />
+                
                 <Text style={styles.div} />
                 <Text style={styles.div} />
                 <Text style={styles.div} />

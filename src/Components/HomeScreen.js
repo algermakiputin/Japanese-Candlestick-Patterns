@@ -5,7 +5,10 @@ import AdMobBanner from 'react-native-admob/RNAdMobBanner';
 import Module from './Module';
 import './Global';
  
-const IntroductionModule = (props) => {
+const images = [
+    require('../../assets/images/introduction.png')
+];
+const HomeModule = (props) => {
 
     return (
         <TouchableOpacity 
@@ -13,16 +16,16 @@ const IntroductionModule = (props) => {
             onPress={() => {  
                 global.counter++;
                 global.showAd(); 
-                props.navigation.navigate('Introduction');
+                props.navigation.navigate(props.location);
                 
             }}
             > 
             <View style={styles.image}>
-                <Image source={require('../../assets/images/introduction.png')} />
+                <Image source={images[props.image]} />
             </View>
             <View style={styles.description}>
-                <Text style={styles.lessonTitle}>Basics of candlestick</Text>
-                <Text style={styles.lessonSub}>Introduction</Text>
+                <Text style={styles.lessonTitle}>{props.title}</Text>
+                <Text style={styles.lessonSub}>{props.subTitle}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -62,8 +65,19 @@ const HomeScreen = ({navigation}) => {
                     </LinearGradient>
                     <Text style={styles.lessonsHeading}>All Lessons</Text>
                     <Text style={styles.p}>Candlestick patterns are used by technical traders to anticipate the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
-                    <IntroductionModule
+                    <HomeModule
                         navigation={navigation}
+                        location="Quiz"
+                        image={0}
+                        title="Candlestick Quiz Challenge"
+                        subTitle="Exercise your brain"
+                    />
+                    <HomeModule
+                        navigation={navigation}
+                        location="Introduction"
+                        image={0}
+                        title="Basics of candlestick"
+                        subTitle="Introduction"
                     />
                     <Module 
                         title="Bullish reversal patterns"

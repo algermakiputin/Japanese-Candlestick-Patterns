@@ -23,6 +23,7 @@ import HomeScreen from './src/Components/HomeScreen';
 import LessonScreen from './src/Components/LessonScreen';
 import Introduction from './src/Components/Introduction';
 import PatternScreen from './src/Components/PatternScreen';
+import QuizScreen from './src/Components/QuizScreen';
 import './src/Components/Global';
  
 const Stack = createNativeStackNavigator();
@@ -71,6 +72,50 @@ const shareBtn = () => {
   )
 }
 
+const homeScreenOptions = {
+  headerStyle: {
+    backgroundColor:'#fff',
+    color:"#000"
+  },
+  headerTitleStyle: {
+    color:'#09101D',
+    fontSize:global.scaleFontSize(22)
+  },
+  title:'Candlestick Patterns', 
+  headerRight: shareBtn,
+  headerTitleAlign: 'left',
+  headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
+  headerShadowVisible:false,
+}
+
+const HeaderLeft = (navigation) => {
+  return (
+    <TouchableOpacity
+      onPress={() => {navigation.goBack(null)}}
+    >
+      <View style={styles.imageContainer}>
+        <Image 
+          style={{ 
+            margin:'auto',
+            width:19,
+            height:19, 
+          }}
+          source={require('./assets/images/back.png')} />
+      </View>
+    </TouchableOpacity>
+  )
+}
+
+const headerStyle = {
+  backgroundColor:'#fff',
+  color:"#000"
+}
+
+const headerTitleStyle = {
+  color:'#09101D',
+  fontSize:global.scaleFontSize(22)
+}
+
 const App: () => Node = () => {
   
   return (
@@ -81,52 +126,16 @@ const App: () => Node = () => {
         <Stack.Screen 
           name="Home"
           component={HomeScreen}
-          options={{
-            headerStyle: {
-              backgroundColor:'#fff',
-              color:"#000"
-            },
-            headerTitleStyle: {
-              color:'#09101D',
-              fontSize:global.scaleFontSize(22)
-            },
-            title:'Candlestick Patterns', 
-            headerRight: shareBtn,
-            headerTitleAlign: 'left',
-            headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
-            headerShadowVisible:false,
-          }}
+          options={homeScreenOptions}
         />
         <Stack.Screen 
           name='Lesson'
           component={LessonScreen}
           options={({navigation}) => ({
-            headerStyle: {
-              backgroundColor:'#fff',
-              color:"#000"
-            },
-            headerTitleStyle: {
-              color:'#09101D',
-              fontSize:global.scaleFontSize(22)
-            },
+            headerStyle: headerStyle,
+            headerTitleStyle: headerTitleStyle,
             headerShadowVisible:false,
-            headerLeft:() => {
-              return (
-                <TouchableOpacity
-                  onPress={() => {navigation.goBack(null)}}
-                >
-                  <View style={styles.imageContainer}>
-                    <Image 
-                      style={{ 
-                        margin:'auto',
-                        width:19,
-                        height:19, 
-                      }}
-                      source={require('./assets/images/back.png')} />
-                  </View>
-                </TouchableOpacity>
-              )
-            },
+            headerLeft:() => HeaderLeft(navigation),
             headerRight: shareBtn
           })} 
         />
@@ -134,69 +143,37 @@ const App: () => Node = () => {
           name='Pattern'
           component={PatternScreen}
           options={({navigation}) => ({
-            headerStyle: {
-              backgroundColor:'#fff',
-              color:"#000", 
-            },
-            headerTitleStyle: {
-              color:'#09101D',
-              fontSize:global.scaleFontSize(22)
-            },
+            headerStyle: headerStyle,
+            headerTitleStyle: headerTitleStyle,
             headerShadowVisible:false,
             title:'Pattern Details',
-            headerLeft:() => {
-              return (
-                <TouchableOpacity
-                  onPress={() => {navigation.goBack(null)}}
-                >
-                  <View style={styles.imageContainer}>
-                    <Image 
-                      style={{ 
-                        margin:'auto',
-                        width:19,
-                        height:19
-                      }}
-                      source={require('./assets/images/back.png')} />
-                  </View>
-                </TouchableOpacity>
-                )
-              },
-              headerRight: shareBtn
-            })} 
+            headerLeft:() => HeaderLeft(navigation),
+            headerRight: shareBtn
+          })} 
           />
           <Stack.Screen 
           name='Introduction'
           component={Introduction}
           options={({navigation}) => ({
-            headerStyle: {
-              backgroundColor:'#fff',
-              color:"#000"
-            },
-            headerTitleStyle: {
-              color:'#09101D',
-              fontSize:global.scaleFontSize(22)
-            },
+            headerStyle: headerStyle,
+            headerTitleStyle: headerTitleStyle,
             headerShadowVisible:false,
             title:'Basics of candlestick chart',
-            headerLeft:() => {
-              return (
-                <TouchableOpacity
-                  onPress={() => {navigation.goBack(null)}}
-                >
-                  <View style={styles.imageContainer}>
-                    <Image 
-                      style={{ 
-                        margin:'auto',
-                        width:19,
-                        height:19
-                      }}
-                      source={require('./assets/images/back.png')} />
-                  </View>
-                </TouchableOpacity>
-                )
-              },
-              headerRight: shareBtn
-            })} 
+            headerLeft:() => HeaderLeft(navigation),
+            headerRight: shareBtn
+          })} 
+          />
+          <Stack.Screen 
+          name='Quiz'
+          component={QuizScreen}
+          options={({navigation}) => ({
+            headerStyle: headerStyle,
+            headerTitleStyle: headerTitleStyle,
+            headerShadowVisible:false,
+            title:'Take a Quiz!',
+            headerLeft:() => HeaderLeft(navigation),
+            headerRight: shareBtn
+          })} 
           />
       </Stack.Navigator>
     </NavigationContainer>
