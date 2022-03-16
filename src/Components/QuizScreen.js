@@ -15,7 +15,9 @@ const HomeModule = (props) => {
             onPress={() => {  
                 global.counter++;
                 global.showAd(); 
-                props.navigation.navigate(props.location);
+                props.navigation.navigate(props.location, {
+                    title: props.title
+                });
                 
             }}
             > 
@@ -42,14 +44,14 @@ const QuizScreen = function({navigation}) {
                 <Text style={styles.quizDescription}>Exercise your brain, test your knowledge and conquere the candlestick quiz challenge!</Text>
                 <HomeModule
                     navigation={navigation}
-                    location="Quiz"
+                    location="Challenge"
                     image={0}
                     title="Bullish Patterns Quiz"
                     subTitle="Quiz Challenge #1"
                 />
                 <HomeModule
                     navigation={navigation}
-                    location="Quiz"
+                    location="Challenge"
                     image={1}
                     title="Bearish Patterns Quiz"
                     subTitle="Quiz Challenge #2"
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
-        borderColor:'#F4F6F9' 
+        borderColor:'#F4F6F9'
     },
     quizDescription: {
         marginBottom:20
