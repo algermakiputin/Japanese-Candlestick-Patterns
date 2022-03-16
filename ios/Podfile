@@ -14,6 +14,8 @@ target 'CandlestickPatterns' do
 
   pod 'react-native-admob', :path => '../node_modules/react-native-admob'
 
+  pod 'RNSound', :path => '../node_modules/react-native-sound'
+
   target 'CandlestickPatternsTests' do
     inherit! :complete
     # Pods for testing

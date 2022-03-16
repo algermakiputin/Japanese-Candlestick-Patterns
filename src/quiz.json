@@ -1,0 +1,269 @@
+{
+    "bullish" : {
+        "challenge1": {
+            "answer" : "Three White Soldiers", 
+            "correctOption": "D",
+            "options" : {
+                "A" : "Tri-Star",
+                "B" : "Three Outside Up",
+                "C" : "Three Inside Down",
+                "D" : "Three White Soldiers"
+            },
+            "image": "ThreeWhiteSoldiers"
+        },
+        "challenge2": {
+            "answer" : "Long White Body",
+            "correctOption": "D",
+            "options" : {
+                "A" : "Matching Low",
+                "B" : "Kicking",
+                "C" : "Doji Star",
+                "D" : "Long White Body"
+            },
+            "image": "LongWhiteDay"
+        },
+        "challenge3": {
+            "answer" : "Inverted Hammer",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Stick Sandwich",
+                "B" : "Inverted Hammer",
+                "C" : "Ladder Bottom",
+                "D" : "Unique Three River Bottom"
+            },
+            "image" : "BullishInvertedHammer"
+        },
+        "challenge4": {
+            "answer" : "Bullish Engulfing Pattern",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Bullish Engulfing Pattern",
+                "B" : "Abandoned Baby Star",
+                "C" : "Morning Star",
+                "D" : "Piercing Line"
+            },
+            "image" : "BullishEngulfing"
+        },
+        "challenge6": {
+            "answer" : "Piercing Line",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Piercing Line",
+                "B" : "Concealling Shallow",
+                "C" : "Three Star in the South",
+                "D" : "Three White Soldiers"
+            },
+            "image" : "BullishPiercingLine"
+        },
+        "challenge7": {
+            "answer" : "Doji Star",
+            "correctOption": "C",
+            "options" : {
+                "A" : "Hammer",
+                "B" : "Breakaway",
+                "C" : "Doji Star",
+                "D" : "Tr-Star"
+            },
+            "image" : "BullishDojiStar"
+        },
+        "challenge8": {
+            "answer" : "Meeting Lines",
+            "image" : "BullishMeetingLine",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Meeting Lines",
+                "B" : "Abandoned Baby Star",
+                "C" : "Harami Cross",
+                "D" : "Unique Three River Bottom"
+            }
+        },
+        "challenge9": {
+            "answer" : "Morning Star",
+            "image" : "MorningStar",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Morning Star",
+                "B" : "Morning Doji Star",
+                "C" : "Doji Star",
+                "D" : "Stick Sandwich"
+            }
+        },
+        "challenge10": {
+            "answer" : "Hammer",
+            "image" : "BullishHammer",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Inverted Hammer",
+                "B" : "Hammer",
+                "C" : "Belth Hold",
+                "D" : "Long White Day"
+            }
+        },
+        "challenge11": {
+            "answer" : "Three Inside Up",
+            "image" : "ThreeInsideUp",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Three Outside Up",
+                "B" : "Three Inside Up",
+                "C" : "Ladder Bottom",
+                "D" : "Breakaway"
+            }
+        },
+        "challenge12": {
+            "answer" : "Harami",
+            "image" : "BullishHarami",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Harami Cross",
+                "B" : "Harami",
+                "C" : "Kicking",
+                "D" : "Doji Star"
+            }
+        },
+        "challenge13": {
+            "answer" : "Matching Low",
+            "image" : "MatchingLow",
+            "correctOption": "C",
+            "options" : {
+                "A" : "Stick Sandwich",
+                "B" : "Three Inside Up",
+                "C" : "Matching Low",
+                "D" : "Ladder Bottom"
+            }
+        },
+        "challenge14": {
+            "answer" : "Harami Cross",
+            "correctOption": "C",
+            "image" : "BullishHaramiCross",
+            "options" : {
+                "A" : "Hammer",
+                "B" : "Morning Star",
+                "C" : "Harami Cross",
+                "D" : "Inverted Hammer"
+            }
+        },
+        "challenge15": {
+            "answer" : "Breakaway",
+            "image" : "Breakaway",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Breakaway",
+                "B" : "Harami Cross",
+                "C" : "Tri-Star",
+                "D" : "Concealling Shallow"
+            }
+        },
+        "challenge16": {
+            "answer" : "Stick Sandwich",
+            "image" : "StickSandwich",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Long White Body",
+                "B" : "Stick Sandwich",
+                "C" : "Bullish Engulfing Pattern",
+                "D" : "Three Inside Up"
+            }
+        },
+        "challenge17": {
+            "answer" : "Unique Three River Bottom",
+            "image" : "UniqueThreeRiverBottom",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Unique Three River Bottom",
+                "B" : "Inverted Hammer",
+                "C" : "Three White Soldiers",
+                "D" : "Meeting Lines"
+            }
+        },
+        "challenge18": {
+            "answer" : "Tri-Star",
+            "image" : "TriStar",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Homing Pigeon",
+                "B" : "Tri-Star",
+                "C" : "Belt Hold",
+                "D" : "Doji Star"
+            }
+        },
+        "challenge19": {
+            "answer" : "Abandoned Baby Star",
+            "image" : "AbandonedBaby",
+            "correctOption": "D",
+            "options" : {
+                "A" : "Matching Low",
+                "B" : "Piercing Line",
+                "C" : "Doji Star",
+                "D" : "Abandoned Baby Star"
+            }
+        },
+        "challenge20": {
+            "answer" : "Morning Doji Star",
+            "image" : "MorningStarDoji",
+            "correctOption": "C",
+            "options" : {
+                "A" : "Tri-Star",
+                "B" : "Doji Star",
+                "C" : "Morning Doji Star",
+                "D" : "Harami"
+            }
+        },
+        "challenge21": {
+            "answer" : "Kicking",
+            "image" : "Kicking",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Kicking",
+                "B" : "Abandoned Baby Star",
+                "C" : "Harami Cross",
+                "D" : "Inverted Hammer"
+            }
+        },
+        "challenge22": {
+            "answer" : "Concealing Shallow",
+            "image" : "ConcealingSwallow",
+            "correctOption": "C",
+            "options" : {
+                "A" : "Morning Doji Star",
+                "B" : "Belt Hold",
+                "C" : "Concealing Shallow",
+                "D" : "Homing Pigeon"
+            }
+        },
+        "challenge23": {
+            "answer" : "Three Oustide Up",
+            "image" : "ThreeOutsideUp",
+            "correctOption": "D",
+            "options" : {
+                "A" : "Doji Star",
+                "B" : "Matching Low",
+                "C" : "Meeting Lines",
+                "D" : "Three Outside Up"
+            }
+        },
+        "challenge24": {
+            "answer" : "Three Star in the South",
+            "image" : "ThreeStarsIntheSouth",
+            "correctOption": "A",
+            "options" : {
+                "A" : "Three Star in the South",
+                "B" : "Concealing Shallow",
+                "C" : "Stick Sandwich",
+                "D" : "Piercing Line"
+            }
+        },
+        "challenge25": {
+            "answer" : "Ladder Bottom",
+            "image" : "LadderBottom",
+            "correctOption": "B",
+            "options" : {
+                "A" : "Abandoned Baby Star",
+                "B" : "Ladder Bottom",
+                "C" : "Hammer",
+                "D" : "Unique Three River Bottom"
+            }
+        }
+        
+    }
+}

@@ -25,6 +25,7 @@ import Introduction from './src/Components/Introduction';
 import PatternScreen from './src/Components/PatternScreen';
 import QuizScreen from './src/Components/QuizScreen';
 import ChallengeScreen from './src/Components/ChallengeScreen';
+import CongratulationsScreen from './src/Components/CongratulationsScreen';
 import './src/Components/Global';
  
 const Stack = createNativeStackNavigator();
@@ -184,6 +185,18 @@ const App: () => Node = () => {
             headerTitleStyle: headerTitleStyle,
             headerShadowVisible:false,
             title:'Challenge!',
+            headerLeft:() => HeaderLeft(navigation),
+            headerRight: shareBtn
+          })} 
+          />
+          <Stack.Screen 
+          name='Congratulations'
+          component={CongratulationsScreen}
+          options={({navigation}) => ({
+            headerStyle: headerStyle,
+            headerTitleStyle: headerTitleStyle,
+            headerShadowVisible:false,
+            title:'Congratulations!',
             headerLeft:() => HeaderLeft(navigation),
             headerRight: shareBtn
           })} 
