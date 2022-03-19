@@ -7,7 +7,7 @@ const SoundEffect = {
     
     correct: () => {
 
-        var whoosh = new Sound('correct.mp3', Sound.MAIN_BUNDLE, (error) => {
+        const whoosh = new Sound('correct.mp3', Sound.MAIN_BUNDLE, (error) => {
             if (error) {
               console.log('failed to load the sound', error);
               return;
@@ -26,7 +26,7 @@ const SoundEffect = {
 
     wrong: () => {
 
-        var whoosh = new Sound('wrong.mp3', Sound.MAIN_BUNDLE, (error) => {
+      const whoosh = new Sound('wrong.mp3', Sound.MAIN_BUNDLE, (error) => {
             if (error) {
               console.log('failed to load the sound', error);
               return;

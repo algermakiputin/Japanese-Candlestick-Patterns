@@ -6,7 +6,8 @@ import Module from './Module';
 import './Global';
  
 const images = [
-    require('../../assets/images/introduction.png')
+    require('../../assets/images/introduction.png'),
+    require('../../assets/images/quiz.png')
 ];
 const HomeModule = (props) => {
 
@@ -68,7 +69,7 @@ const HomeScreen = ({navigation}) => {
                     <HomeModule
                         navigation={navigation}
                         location="Quiz"
-                        image={0}
+                        image={1}
                         title="Candlestick Quiz Challenge"
                         subTitle="Exercise your brain"
                     />

@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { SafeAreaView, Image,Text, View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { SafeAreaView, Image,Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import Quiz from '../quiz.json';
 import Images from './candles/Images';
 import SoundEffect from './SoundEffect';
- 
+
+const height = Dimensions.get('window').height;
+
 const Option = (props) => {
    
     return (
@@ -88,7 +90,7 @@ const Correct = () => {
         <Text style={{
             width:'auto', 
             fontFamily:'SouceSansPro-SemiBold',
-            fontSize:16,
+            fontSize:global.scaleFontSize(16),
             color:'#58CC02'
             }}> Good Job!</Text>
     </View>)
@@ -102,7 +104,7 @@ const Wrong = (correctOption) => {
         <Text style={{
             width:'auto', 
             fontFamily:'SouceSansPro-SemiBold',
-            fontSize:16,
+            fontSize:18,
             color:'#FF4B4B'
             } }> Correct answer {correctOption.correctOption}</Text>
     </View>)
@@ -219,7 +221,7 @@ const ChallengeScreen = ({navigation, route}) => {
 const styles = StyleSheet.create({
     guessImage: {
         width:'100%',
-        height:185,
+        height:height / 3.2,
         marginBottom:30
     },
     flexContainer: {
@@ -296,24 +298,23 @@ const styles = StyleSheet.create({
         paddingLeft:15,
         backgroundColor:'rgba(48, 79, 254, 0.1)',
         borderRadius:10,
-        fontSize:18,
+        fontSize:global.scaleFontSize(18),
         fontFamily:'SourceSansPro-SemiBold'
     },
     description: { 
         marginLeft:10,
         overflow:'hidden',
         flexWrap:'wrap',
-
         justifyContent:'center',
     },
     optionTitle: {
-        fontSize:global.scaleFontSize(18),
+        fontSize:global.scaleFontSize(19),
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
     },
     optionTitleSuccess: {
-        fontSize:global.scaleFontSize(18),
+        fontSize:global.scaleFontSize(19),
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
@@ -335,7 +336,8 @@ const styles = StyleSheet.create({
         borderRadius:20,
         backgroundColor:'#F4F4F5',
         borderColor:'#F4F6F9',
-        fontFamily:'SourceSansPro-SemiBold'
+        fontFamily:'SourceSansPro-SemiBold',
+        fontSize:global.scaleFontSize(19)
     },
 
     icon: {
@@ -352,7 +354,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#58CC02',
         borderColor:'#F4F6F9',
         color:"#fff",
-        fontFamily:'SourceSansPro-SemiBold'
+        fontFamily:'SourceSansPro-SemiBold',
+        fontSize:global.scaleFontSize(19)
     },
     errorButton: {
         textAlign:'center',
@@ -364,7 +367,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#FF4B4B',
         borderColor:'#F4F6F9',
         fontFamily:'SourceSansPro-SemiBold',
-        color:'#fff'
+        color:'#fff',
+        fontSize:global.scaleFontSize(19)
     }
 });
 
