@@ -68,8 +68,7 @@ function check(
     
     const nextLevel = parseInt(level) + 1; 
 
-    if (nextLevel == totalItems)    {
-        alert(newScore)
+    if (nextLevel == totalItems) { 
         return navigation.navigate('Congratulations', {'score': newScore});
     } 
         
@@ -110,10 +109,9 @@ const Wrong = (correctOption) => {
 }
 
 const ChallengeScreen = ({navigation, route}) => {
-    const challenges = Object.values(Quiz.bullish);
+    const {title, quizChallenge} = route.params;
+    const challenges = Object.values(Quiz[quizChallenge]);
     const totalItems = challenges.length;
-
-    const {title} = route.params;
     const [option, setOption] = useState(''); 
     const [answer, setAnswer] = useState(''); 
     const [score, setScore] = useState(0);

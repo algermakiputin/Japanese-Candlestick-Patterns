@@ -16,7 +16,8 @@ const HomeModule = (props) => {
                 global.counter++;
                 global.showAd(); 
                 props.navigation.navigate(props.location, {
-                    title: props.title
+                    title: props.title,
+                    quizChallenge: props.quizChallenge
                 });
                 
             }}
@@ -47,12 +48,14 @@ const QuizScreen = function({navigation}) {
                     location="Challenge"
                     image={0}
                     title="Bullish Patterns Quiz"
+                    quizChallenge="bullish"
                     subTitle="Quiz Challenge #1"
                 />
                 <HomeModule
                     navigation={navigation}
                     location="Challenge"
                     image={1}
+                    quizChallenge="bearish"
                     title="Bearish Patterns Quiz"
                     subTitle="Quiz Challenge #2"
                 />

@@ -265,5 +265,293 @@
             }
         }
         
+    },
+    "bearish" : {
+        "challenge1": {
+            "answer" : "Three Inside Down", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Three Inside Down",
+                "B" : "Three Oustide Down",
+                "C" : "Latter Top",
+                "D" : "Matching High"
+            },
+            "image": "Bearish_ThreeInsideDown"
+        },
+        "challenge2": {
+            "answer" : "Bearish Engulfing Pattern", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Harami",
+                "B" : "Bearish Engulfing Pattern",
+                "C" : "Long Black Body",
+                "D" : "Latter Top"
+            },
+            "image": "Bearish_EngulfingPattern"
+        },
+        "challenge3": {
+            "answer" : "Hanging Man", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Shooting Star",
+                "B" : "Two Crows",
+                "C" : "Hanging Man",
+                "D" : "Advance Block"
+            },
+            "image": "Bearish_HangingMan"
+        },
+        "challenge4": {
+            "answer" : "Latter Top", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Latter Top",
+                "B" : "Harami",
+                "C" : "Harami Cross",
+                "D" : "Doji Star"
+            },
+            "image": "Bearish_LatterTop"
+        },
+        "challenge5": {
+            "answer" : "Long Black Body", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Dark Cloud Cover",
+                "B" : "Long Black Body",
+                "C" : "Meeting Lines",
+                "D" : "Two Crows"
+            },
+            "image": "Bearish_LongBlackBody"
+        },
+        "challenge6": {
+            "answer" : "Meeting Lines", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Three Black Crows",
+                "B" : "Evening Star",
+                "C" : "Meeting Lines",
+                "D" : "Deliberation"
+            },
+            "image": "Bearish_MeetingLines"
+        },
+        "challenge7": {
+            "answer" : "Evening Doji Star", 
+            "correctOption": "D",
+            "options" : {
+                "A" : "Harami",
+                "B" : "Breakaway",
+                "C" : "Tri-Star",
+                "D" : "Evening Doji Star"
+            },
+            "image": "Bearish_EveningDojiStar"
+        },
+        "challenge8": {
+            "answer" : "Upside Gap Two Crows", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Abandoned Baby",
+                "B" : "Upside Gap Two Crows",
+                "C" : "Identical Three Crows",
+                "D" : "Dark Cloud Cover"
+            },
+            "image": "Bearish_UpsideGapTwoCrows"
+        },
+        "challenge9": {
+            "answer" : "Advance Block", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Kicking",
+                "B" : "Advance Block",
+                "C" : "Bearish Engulfing Pattern",
+                "D" : "Long Black Body"
+            },
+            "image": "Bearish_AdvanceBlock"
+        },
+        "challenge10": {
+            "answer" : "Belt Hold", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Belt Hold",
+                "B" : "Latter Top",
+                "C" : "Deliberation",
+                "D" : "Two Crows"
+            },
+            "image": "Bearish_BeltHold"
+        },
+        "challenge11": {
+            "answer" : "Doji Star", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Evening Star",
+                "B" : "Hanging Man",
+                "C" : "Doji Star",
+                "D" : "Shooting Star"
+            },
+            "image": "Bearish_DojiStar"
+        },
+        "challenge12": {
+            "answer" : "Harami Cross", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Harami Cross",
+                "B" : "Tri-Star",
+                "C" : "Meeting Lines",
+                "D" : "Belt Hold"
+            },
+            "image": "Bearish_HaramiCross"
+        },
+        "challenge13": {
+            "answer" : "Shooting Star", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Harami Cross",
+                "B" : "Shooting Star",
+                "C" : "Dark Cloud Cover",
+                "D" : "Kicking"
+            },
+            "image": "Bearish_ShootingStar"
+        },
+        "challenge14": {
+            "answer" : "Tri-Star", 
+            "correctOption": "D",
+            "options" : {
+                "A" : "Latter Top",
+                "B" : "Hanging Man",
+                "C" : "Evening Doji Star",
+                "D" : "Tri-Star"
+            },
+            "image": "Bearish_TriStar"
+        },
+        "challenge15": {
+            "answer" : "Harami", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Harami",
+                "B" : "Doji Star",
+                "C" : "Advance Block",
+                "D" : "Three Inside Down"
+            },
+            "image": "Bearish_Harami"
+        },
+        "challenge16": {
+            "answer" : "Matching High", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Evening Doji Star",
+                "B" : "Matching High",
+                "C" : "Upside Gap Two Crows",
+                "D" : "Breakaway"
+            },
+            "image": "Bearish_MatchingHigh"
+        },
+        "challenge17": {
+            "answer" : "Kicking", 
+            "correctOption": "D",
+            "options" : {
+                "A" : "Doji Star",
+                "B" : "Hanging Man",
+                "C" : "Belt Hold",
+                "D" : "Kicking"
+            },
+            "image": "Bearish_Kicking"
+        },
+        "challenge18": {
+            "answer" : "Dark Cloud Cover", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Dark Cloud Cover",
+                "B" : "Evening Doji Star",
+                "C" : "Shooting Star",
+                "D" : "Harami Cross"
+            },
+            "image": "Bearish_DarkCloudCover"
+        },
+        "challenge19": {
+            "answer" : "Three Outside Down", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Three Inside Down",
+                "B" : "Bearish Engulfing Patter",
+                "C" : "Three Outside Down",
+                "D" : "Upside Gap Two Crows"
+            },
+            "image": "Bearish_ThreeOutsideDown"
+        },
+        "challenge20": {
+            "answer" : "Breakaway", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Breakaway",
+                "B" : "Harami",
+                "C" : "Harami Cross",
+                "D" : "Hanging Man"
+            },
+            "image": "Bearish_Breakaway"
+        },
+        "challenge21": {
+            "answer" : "Three Black Crows", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Two Crows",
+                "B" : "Identical Three Crows",
+                "C" : "Three Black Crows",
+                "D" : "Dark Cloud COver"
+            },
+            "image": "Bearish_ThreeBlackCrows"
+        },
+        "challenge22": {
+            "answer" : "Evening Star", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Doji Star",
+                "B" : "Evening Star",
+                "C" : "Latter Top",
+                "D" : "Meeting Lines"
+            },
+            "image": "Bearish_EveningStar"
+        },
+        "challenge23": {
+            "answer" : "Abandoned Baby", 
+            "correctOption": "B",
+            "options" : {
+                "A" : "Kicking",
+                "B" : "Abandoned Baby",
+                "C" : "Evening Star",
+                "D" : "Advance Block"
+            },
+            "image": "Bearish_AbandonedBaby"
+        },
+        "challenge24": {
+            "answer" : "Two Crows", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Two Crows",
+                "B" : "Three Black Crows",
+                "C" : "Breakaway",
+                "D" : "Belt Hold"
+            },
+            "image": "Bearish_TwoCrows"
+        },
+        "challenge25": {
+            "answer" : "Identical Three Crows", 
+            "correctOption": "A",
+            "options" : {
+                "A" : "Identical Three Crows",
+                "B" : "Deliberation",
+                "C" : "Harami Cross",
+                "D" : "Evening Star"
+            },
+            "image": "Bearish_IdenticalThreeCrows"
+        },
+        "challenge26": {
+            "answer" : "Deliberation", 
+            "correctOption": "C",
+            "options" : {
+                "A" : "Abandoned Baby",
+                "B" : "Shooting Star",
+                "C" : "Deliberation",
+                "D" : "Hanging Man"
+            },
+            "image": "Bearish_Deliberation"
+        }
     }
 }
