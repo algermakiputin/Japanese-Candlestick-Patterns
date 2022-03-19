@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { SafeAreaView, Image,Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView, Image,Text, View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import Quiz from '../quiz.json';
 import Images from './candles/Images';
 import SoundEffect from './SoundEffect';
@@ -50,27 +50,29 @@ function check(
     if (option == "")
         return;
 
+    var newScore = score;
     if (!checked) {
 
         if (answer == challenge.answer) {
-            setScore(parseInt(score) + 1);
+            newScore = parseInt(score) + 100;
+            setScore(newScore);
             setCorrect(true);  
             SoundEffect.correct();
         }else {
             setCorrect(false);
             SoundEffect.wrong();
         }
-            
-
+        
         return setChecked(true);
     }
     
     const nextLevel = parseInt(level) + 1; 
-    if (nextLevel == totalItems) {
+
+    if (nextLevel == totalItems)    {
+        alert(newScore)
+        return navigation.navigate('Congratulations', {'score': newScore});
+    } 
         
-        return navigation.navigate('Congratulations');
-    }
-    
     const nextChallenge = challenges[nextLevel]; 
     setChallenge(nextChallenge)
     setLevel(nextLevel);
@@ -128,88 +130,90 @@ const ChallengeScreen = ({navigation, route}) => {
  
     return (
         <SafeAreaView>
-            <Image style={styles.guessImage} source={Images[challenge.image]} />
-            <View style={styles.flexContainer}>
-                <View style={styles.column}>
-                    <Text style={{fontFamily:'SourceSansPro-SemiBold'}}>Guest the pattern #{parseInt(level) + 1}/{totalItems}</Text>
+            <ScrollView>
+                <Image style={styles.guessImage} source={Images[challenge.image]} />
+                <View style={styles.flexContainer}>
+                    <View style={styles.column}>
+                        <Text style={{fontFamily:'SourceSansPro-SemiBold'}}>Pattern #{parseInt(level) + 1}/{totalItems}</Text>
+                    </View>
+                    <View style={styles.column}>
+                        <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold'}}>Score: {score}</Text>
+                    </View>
                 </View>
-                <View style={styles.column}>
-                    <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold'}}>Score: {score}/{totalItems}</Text>
+                <View style={{padding:20}}>
+                    <Option 
+                        answer={challenge.options.A}
+                        option="A"
+                        setOption={setOption}
+                        selectedOption={option}
+                        setAnswer={setAnswer}
+                        checked={checked}
+                        correct={correct}
+                    />
+                    <Option 
+                        answer={challenge.options.B}
+                        option="B"
+                        setOption={setOption}
+                        selectedOption={option}
+                        setAnswer={setAnswer}
+                        checked={checked}
+                        correct={correct} 
+                    />
+                    <Option 
+                        answer={challenge.options.C}
+                        option="C"
+                        setOption={setOption}
+                        selectedOption={option}
+                        setAnswer={setAnswer}
+                        checked={checked}
+                        correct={correct}
+                    />
+                    <Option 
+                        answer={challenge.options.D}
+                        option="D"
+                        setOption={setOption}
+                        selectedOption={option}
+                        setAnswer={setAnswer}
+                        checked={checked}
+                        correct={correct}
+                    />
                 </View>
-            </View>
-            <View style={{padding:20}}>
-                <Option 
-                    answer={challenge.options.A}
-                    option="A"
-                    setOption={setOption}
-                    selectedOption={option}
-                    setAnswer={setAnswer}
-                    checked={checked}
-                    correct={correct}
-                />
-                <Option 
-                    answer={challenge.options.B}
-                    option="B"
-                    setOption={setOption}
-                    selectedOption={option}
-                    setAnswer={setAnswer}
-                    checked={checked}
-                    correct={correct}
-                />
-                <Option 
-                    answer={challenge.options.C}
-                    option="C"
-                    setOption={setOption}
-                    selectedOption={option}
-                    setAnswer={setAnswer}
-                    checked={checked}
-                    correct={correct}
-                />
-                <Option 
-                    answer={challenge.options.D}
-                    option="D"
-                    setOption={setOption}
-                    selectedOption={option}
-                    setAnswer={setAnswer}
-                    checked={checked}
-                    correct={correct}
-                />
-            </View>
-            <View style={styles.flexContainer}>
-                <View style={styles.column}>
-                    <Text>
-                    {
-                        checked ? (correct ? <Correct /> : <Wrong correctOption={challenge.correctOption} />) : ''
-                    }
-                    </Text>
-                </View>
-                <View style={styles.column}>
-                    <TouchableOpacity
-                            onPress={() => check(
-                                answer, 
-                                challenge,
-                                challenges,
-                                setChallenge, 
-                                setSubmitted, 
-                                level, 
-                                setLevel, 
-                                checked,
-                                setChecked,
-                                score,
-                                setScore,
-                                setOption,
-                                setCorrect,
-                                option,
-                                totalItems,
-                                navigation
-                            )}
-                        >
-                        <Text style={option == "" ? styles.defaultButton : (!checked ? styles.successButton : (checked && correct ? styles.successButton : styles.errorButton) )}>
-                            {checked ? "Continue" : "Check"}
+                <View style={styles.flexContainer}>
+                    <View style={styles.column}>
+                        <Text>
+                        {
+                            checked ? (correct ? <Correct /> : <Wrong correctOption={challenge.correctOption} />) : ''
+                        }
                         </Text>
-                    </TouchableOpacity>
+                    </View>
+                    <View style={styles.column}>
+                        <TouchableOpacity
+                                onPress={() => check(
+                                    answer, 
+                                    challenge,
+                                    challenges,
+                                    setChallenge, 
+                                    setSubmitted, 
+                                    level, 
+                                    setLevel, 
+                                    checked,
+                                    setChecked,
+                                    score,
+                                    setScore,
+                                    setOption,
+                                    setCorrect,
+                                    option,
+                                    totalItems,
+                                    navigation
+                                )}
+                            >
+                            <Text style={option == "" ? styles.defaultButton : (!checked ? styles.successButton : (checked && correct ? styles.successButton : styles.errorButton) )}>
+                                {checked ? "Continue" : "Check"}
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-            </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
