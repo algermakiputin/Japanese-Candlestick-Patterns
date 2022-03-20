@@ -18,6 +18,10 @@ export default function BullishPiercingLine() {
             {styles.bullet("The first candle of this pattern is a bearish candlestick signifying the current market trend.")}
             {styles.bullet("The second candle opens below the closing price of the previous candle. The buyers gain momentum and manage to close the price higher within the middle of the previous candle.")}
             
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>This candlestick pattern can be used as a potential buy signal, but it's important to wait for confirmation before entering a trade. One way to confirm the pattern is to look for a move above the high of the second day's candlestick. Another confirmation signal could be a move above the resistance level that was in place before the pattern formed.</Text>
+            <Text style={styles.p}>The Bullish Piercing Line is a bullish reversal pattern, so the trade setup is a buy order placed at the open of the next candlestick. The stop loss should be placed below the low of the Bullish Piercing Line candlestick. The target can be the prior swing high or a 1:1 reward to risk ratio.</Text>
         </View>
         
     )

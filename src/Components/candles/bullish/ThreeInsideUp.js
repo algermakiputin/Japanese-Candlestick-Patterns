@@ -17,7 +17,10 @@ export default function ThreeInsideUp() {
             {styles.bullet("The first candle of this pattern is a red candle indicating the current trend.")}
             {styles.bullet("The second candle is a small bullish candle that opens and closes within the middle of the first candle.")}
             {styles.bullet("The third candle is bullish and closes above the first candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>The Three Inside Up pattern is a good indicator that the market is ready to reverse and move higher. This pattern can be used to trade a variety of markets, including stocks, forex, and commodities. When trading this pattern, it is important to wait for the pattern to complete before entering a trade. This means waiting for the third candlestick in the pattern to close. </Text>
+            <Text style={styles.p}>Once the Three Inside Up pattern has been completed, you can enter a long position at the market price. A stop-loss can be placed below the low of the third candlestick in the pattern. A target can be placed above the high of the first candlestick in the pattern. </Text>
         </View>
        
     )

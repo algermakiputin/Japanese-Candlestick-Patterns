@@ -19,7 +19,9 @@ export default function ThreeStarsIntheSouth() {
             {styles.bullet("The first candlestick is black, with a long real body, long lower shadow, and it lacks an upper shadow.")}
             {styles.bullet("The second candlestick is black with a shorter real body and a low that’s higher than that of the first low candle.")}
             {styles.bullet("The third candlestick is black with a short real body, without shadows, and a close that is within the second candle’s high-low range.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>When trading this pattern, it is important to wait for the confirmation of the fourth candlestick before entering a position. The ideal target is the high of the first candlestick in the pattern. A stop can be placed below the low of the third candlestick.</Text>
         </View>
         
     )

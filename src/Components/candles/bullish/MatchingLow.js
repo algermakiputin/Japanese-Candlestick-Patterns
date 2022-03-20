@@ -18,7 +18,9 @@ export default function MatchingLow() {
             {styles.bullet("This pattern is consist of two candlestick.")}
             {styles.bullet("As its name suggest both candle closing price is equal.")}
             {styles.bullet("The body size of both candles does not matter as long as both candle closing price is equal.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>The best way to trade this pattern is to look for a breakout above the high of the second candle. This will signal that the buyers are in control and that the downtrend is starting to reverse. Once the breakout occurs, you can then enter a long position and target the previous highs.</Text>
         </View>
          
     )

@@ -17,7 +17,9 @@ export default function Kicking() {
             {styles.bullet("The current trend must be a downtrend.")}
             {styles.bullet("Consist of two long opposite candlesticks separated by price gap.")}
             {styles.bullet("The first candlestick is a long bullish candlestick followed by a bullish candlestick that gaps up and closes above the first candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>To trade the Bullish Kicking candlestick pattern, you would look to enter a long position on the third candle, with a stop loss placed below the low of the second candle.</Text>
         </View>
          
     )

@@ -16,7 +16,9 @@ export default function BullishHarami() {
             {styles.bullet("The first candle of this pattern is a bearish candle showing bearish implications.")}
             {styles.bullet("The second candle of this pattern the price jump up from the low of the previous candle for the price to open slightly higher.")}
             {styles.bullet("The second candle is not more than 25% the size of the first day bearish candle.")}
-            
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>To trade the Bullish Harami pattern, you would wait for the second candlestick to form and then enter a long position at the open of the third candlestick. Your stop loss would be placed below the low of the second candlestick and your target would be the previous high.</Text>
         </View>
         
     )

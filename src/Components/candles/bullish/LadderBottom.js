@@ -18,7 +18,9 @@ export default function LadderBottom() {
             {styles.bullet("The first three candles are bearish candles with successive lower open and closing price.")}
             {styles.bullet("The fourth candle resembles an inverted hammer that has a small body and long upper shadow.")}
             {styles.bullet("The fifth candle is a long bullish candle that gaps up and open the price above the body of the fourth candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>To trade this pattern, you would want to buy when the second candlestick closes above the midpoint of the first candlestick. Your stop loss would be placed below the low of the second candlestick, and your target would be the same as your stop loss.</Text>
         </View>
         
     )

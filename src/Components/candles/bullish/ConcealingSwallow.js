@@ -19,7 +19,9 @@ export default function ConcealingSwallow() {
             {styles.bullet("The first two candles are without any upper or lower shadow.")}
             {styles.bullet("The third candle must be a High Wave without a lower shadow. It opens below the previous closing price while its upper shadow enters the body of the previous candle.")}
             {styles.bullet("The fourth candle must have a black body engulfing the body and upper shadow of the previous candle.")} 
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>If you see a bullish concealing swallow pattern forming, you should consider buying the security. The best way to trade this pattern is to wait for the second candlestick to close and then enter a long position. You can place a stop loss just below the low of the second candlestick.</Text>
         </View>
         
     )

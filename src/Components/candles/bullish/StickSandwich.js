@@ -17,7 +17,9 @@ export default function StickSandwhich() {
             {styles.bullet("It consists of 3 candlestick.")}
             {styles.bullet("Appears at a down-trending market.")}
             {styles.bullet("The color of the second candlestick of this pattern is opposite to the first and third candle.")}
-            
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>If you see a Bullish Stick Sandwich pattern forming, it is a good idea to enter a long position. Place a stop loss just below the lows of the pattern. If the pattern is valid, the market should reverse and head higher. Target the previous swing high for your profit target.</Text>
         </View>
         
     )

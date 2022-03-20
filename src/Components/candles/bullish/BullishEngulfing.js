@@ -16,6 +16,13 @@ export default function BullishEngulfing() {
             {styles.bullet("The first candle  of this pattern has a smaller body.")}
             {styles.bullet("The second candlestick completely engulf the first candlestick.")}
             {styles.bullet("The second candlestick price opens lower than the first day and closes above the first day.")} 
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text>The bullish engulfing pattern is one of the most reliable candlestick patterns out there. It's a strong signal that the bears are losing control and the bulls are taking over. Here's how you can trade it:</Text>
+            {styles.bullet("Look for the pattern to form after a period of bearishness. The engulfing candle should be a big, bold candle that completely engulfs the previous candle.")}
+            {styles.bullet("Enter a long position when the pattern is confirmed. The pattern is confirmed when the next candle closes above the engulfing candle's high.")}
+            {styles.bullet("Place a stop loss just below the low of the engulfing candle.")}
+            {styles.bullet("Profit targets can be set at previous resistance levels or Fibonacci levels.")}
         </View>
      
     )

@@ -18,6 +18,14 @@ export default function AbandonedBaby() {
             {styles.bullet("Three bar reversal pattern, the first candle is a long bearish candlestick")}
             {styles.bullet("The second candle gaps down in the direction of the primary trend, the first bar and the third bar body and shadow cannot overlap with the second candle.")}
             {styles.bullet("Third candle gaps up, forming a large bullish candlestick.")}
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>Here’s how you can trade the Bullish Abandoned Baby candlestick pattern:</Text>
+            <Text style={styles.p}>1. Look for the pattern to form after a downtrend.</Text>
+            <Text style={styles.p}>2. Enter a long position when the third candlestick closes above the midpoint of the first candlestick.</Text>
+            <Text style={styles.p}>3. Place a stop loss below the low of the second candlestick.</Text>
+            <Text style={styles.p}>4. Exit the trade when the price hits your profit target or the pattern fails.</Text>
+          
         </View>
       
     )

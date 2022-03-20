@@ -17,7 +17,10 @@ export default function MorningStar() {
             {styles.bullet("Day 1 is a long bearish candlestick.")}
             {styles.bullet("The second day can be a red or green candlestick with a small body.")}
             {styles.bullet("The third day is a large bullish candlestick.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>The key to trading the Morning Star pattern is to wait for the third candlestick to confirm the reversal. The third candlestick should close above the midpoint of the first candlestick. This confirms that the buyers are in control and that the downtrend has reversed.</Text>
+            <Text style={styles.p}>Once the third candlestick closes, you can enter a long position. Place a stop loss just below the low of the third candlestick. The target for this trade can be the previous highs or a 1:1 risk to reward ratio.</Text>
         </View>
        
     )

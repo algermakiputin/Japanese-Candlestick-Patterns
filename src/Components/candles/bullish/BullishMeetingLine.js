@@ -17,7 +17,15 @@ export default function BullishMeetingLine() {
             {styles.bullet("The trend must be downtrend.")}
             {styles.bullet("The first day candlestick is a bearish candle.")}
             {styles.bullet("The second day candlestick price gaps down at the open and closes equal to the previous candlestick closing price.")}
-    
+
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>This pattern can be used as a trade entry signal when the following conditions are met: </Text>
+            <Text style={styles.p}>1. The market is in a downtrend</Text>
+            <Text style={styles.p}>2. The first candlestick is a bearish candlestick</Text>
+            <Text style={styles.p}>3. The second candlestick is a bullish candlestick</Text>
+            <Text style={styles.p}>4. The second candlestick closes above the midpoint of the first candlestick</Text>
+            <Text style={styles.p}>When these conditions are met, you can enter a long trade at the open of the third candlestick. Your stop loss should be placed below the low of the second candlestick. Your target profit can be placed at a previous support level.</Text>
         </View>
        
     )

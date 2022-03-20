@@ -17,7 +17,9 @@ export default function UniqueThreeRiverBottom() {
             {styles.bullet("The First is a long red candle that shows the current trend.")}
             {styles.bullet("The second candle is a hammer candle with a long shadow that sets a new low price.")}
             {styles.bullet("The third candle is a short green candle that does not exceed the high or low of the second candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>To trade this pattern, you would buy when the white candlestick closes above the midpoint of the first black candlestick. Your stop loss would go below the low of the white candlestick, and your target would be the high of the first black candlestick.</Text>
         </View>
          
     )

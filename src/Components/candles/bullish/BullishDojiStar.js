@@ -16,6 +16,10 @@ export default function BullishDojiStar() {
             {styles.bullet("Two day candlestick pattern")}
             {styles.bullet("The first candle is a normal bearish candle")}
             {styles.bullet("Second day price gaps down and close near its opening price forming a doji candlestick.")} 
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>The key to trading this pattern is to wait for the Doji to form before entering a long position. The Doji signals that the bears are losing control and that the bulls are starting to take control of the market. The long upper shadow of the Doji indicates that the bears are still trying to push the prices lower, but they are losing strength.</Text>
+            <Text style={styles.p}>Once the Doji forms, you can enter a long position with a stop loss below the low of the Doji. If the market reverses and starts to move higher, you can trail your stop loss to lock in profits.</Text>
         </View>
         
     )

@@ -17,7 +17,9 @@ export default function MorningStarDoji() {
             {styles.bullet("The first day of this pattern is a long bearish candlestick.")}
             {styles.bullet("The second day is a doji candlestick signifying market indecision.")}
             {styles.bullet("The third day is a large bullish candle, above the second day candle and closes at the midpoint of the first candlestick.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>When it comes to trading the Bullish Morning Star Doji, there are a few things you need to keep in mind. First, you want to wait for the pattern to complete itself. Once it does, you can enter a long position at the opening of the fourth day. Your stop loss should be placed below the low of the third day, and your target profit should be based on your own personal risk/reward ratio.</Text>
         </View>
         
     )

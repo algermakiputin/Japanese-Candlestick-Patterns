@@ -18,6 +18,14 @@ export default function BullishHammer() {
             {styles.bullet('Looks like a letter T')}
             {styles.bullet("The opening price and closing price are very close to each other forming a very small candlestick body")}
             {styles.bullet("The lower shadow is at least twice of its body size")}
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text>The Bullish Hammer candlestick pattern is a powerful signal that can be used to trade a variety of markets. Here are a few ideas on how to trade this pattern:</Text>
+            {styles.bullet('Look for the Bullish Hammer pattern after a period of bearish price action. This suggests that the market is ready to reverse and head higher.')}
+            {styles.bullet('Enter a long position when the candlestick closes above the high of the Bullish Hammer.')}
+            {styles.bullet('Place a stop loss just below the low of the Bullish Hammer.')}
+            {styles.bullet('Target the previous high for your take profit level.')}
+            {styles.bullet('You can also look to trade the Bullish Hammer pattern on higher timeframes such as the daily or weekly chart. This can give you a longer-term view of the market and help you stay in winning trades for longer.')}
         </View>
       
     )

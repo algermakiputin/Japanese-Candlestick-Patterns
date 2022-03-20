@@ -17,7 +17,12 @@ export default function HomingPigeon() {
             {styles.bullet("The current trend must be a downtrend, consisting of two candle.")}
             {styles.bullet("The first candle is a long bearish candlestick.")}
             {styles.bullet("The second candle gaps up and the closing and opening price is within the middle range of the first candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>When it comes to trading the Bullish Homing Pigeon candlestick pattern, there are a few things you need to keep in mind. First and foremost, this pattern indicates that the market is about to make a major move to the upside. So, if you see this pattern forming on your charts, be prepared to enter a long position.</Text>
+            <Text style={styles.p}>Another thing to keep in mind is that the Bullish Homing Pigeon is a fairly rare pattern. So, if you do see it forming, make sure to pay close attention to the market conditions to make sure that a major move is indeed about to take place.</Text>
+            <Text style={styles.p}>Finally, when trading the Bullish Homing Pigeon, it's important to use a tight stop loss. This is because the pattern is relatively short-lived and you don't want to get caught in a false move.</Text>
+            <Text style={styles.p}>If you keep these things in mind, trading the Bullish Homing Pigeon can be a highly profitable endeavor. So, keep your eyes peeled for this pattern and be ready to take advantage when it forms.</Text>
         </View>
         
     )

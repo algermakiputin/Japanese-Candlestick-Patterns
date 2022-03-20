@@ -16,6 +16,9 @@ export default function longWhiteDay() {
             {styles.bullet('This candle is easy to recognize because it is only composed of 1 candle')}
             {styles.bullet('Made up of long body, longer than previous candles on the chart')}
             {styles.bullet('The length of this candle should completely contain previous candles on the chart')}
+            <Text style={styles.div} />
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The long white candlestick is a bullish reversal pattern that can be used to trade the markets. There are a few ways to trade this pattern, but one way is to look for a long white candlestick to form after a period of consolidation or a downtrend. This signals that the market is ready to move higher and that the buyers are in control. Another way to trade this pattern is to look for a long white candlestick to form after an upthrust. This signals that the market is ready to move higher and that the buyers are in control.</Text>
         </View>
         
     )

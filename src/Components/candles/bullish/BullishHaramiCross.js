@@ -18,7 +18,10 @@ export default function BullishHaramiCross() {
             {styles.bullet("The first candlestick of this pattern completely engulf the next day candle.")}
             {styles.bullet("The second candle is a Doji candle with lower and upper shadows, about the same size on both shadows.")}
             {styles.bullet("The current trend must be a downtrend.")}
-            
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The key to trading this pattern is to wait for confirmation before entering a trade. The confirmation comes when the black candlestick is followed by a white candlestick that closes above the midpoint of the black candlestick.</Text>
+            <Text style={styles.p}>Once confirmation is given, you can enter a long position at the opening of the next candlestick. Your stop loss should be placed below the low of the white candlestick.</Text>
         </View>
         
     )

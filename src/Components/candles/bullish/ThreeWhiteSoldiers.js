@@ -17,7 +17,15 @@ export default function ThreeWhiteSoldiers() {
             {styles.bullet("Appears at a downtrend.")}
             {styles.bullet("Three consecutive normal bullish candles like a staircase.")}
             {styles.bullet("Each candle price must close higher to the previous candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text> 
+            <Text style={styles.p}>If you're looking to trade the Bullish Three White Soldiers candlestick pattern, here are a few things you should keep in mind:</Text>
+            <Text style={styles.p}>1. This pattern is typically seen as a reversal of a downtrend, so you'll want to look for it after a period of negative price action.</Text>
+            <Text style={styles.p}>2. The three white candlesticks should have consecutively higher closes, and each should open within the body of the previous candle.</Text>
+            <Text style={styles.p}>3. The pattern is completed when the third white candle closes above the midpoint of the first candle's body.</Text>
+            <Text style={styles.p}>4. Once the pattern is formed, you can enter a long position at the opening of the fourth candlestick.</Text>
+            <Text style={styles.p}>5. Your stop loss should be placed below the low of the third candle.</Text>
+            <Text style={styles.p}>6. Your target profit can be taken at the next major resistance level.</Text>
         </View>
          
     )
