@@ -17,7 +17,10 @@ export default function UpsideGapTwoCrows() {
             {styles.bullet("The first candle is a bearish candle.")}
             {styles.bullet("The second candle is a bearish candle that opens and closes above the previous candle.")}
             {styles.bullet("The third candle is a bearish candle that completely engulf the previous candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>This pattern is a bearish reversal pattern and can be a good indication that the uptrend is coming to an end. If you see this pattern forming, it's important to wait for the third candle to close before entering a short position.</Text>
+            <Text style={styles.p}>Remember, trading is all about probabilities. This pattern may not always be accurate, but it's a good indication that the market is starting to turn. As with any pattern or technical indicator, it's important to use it in conjunction with other forms of analysis before making any trading decisions.</Text>
         </View>
      
     )

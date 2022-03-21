@@ -18,7 +18,11 @@ export default function AbandonedBaby() {
             {styles.bullet("The first candle is a large bullish candle.")}
             {styles.bullet("The second candle is a small candle above the first candlestick.")}
             {styles.bullet("The third candle opening price gaps down and continue to drop and closes within the middle of the first candlestick’s body.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The pattern is very easy to spot and can be used in any time frame, although it is most commonly seen on daily charts. </Text>
+            <Text style={styles.p}>The Bearish Evening Star pattern can be a very profitable pattern to trade, but it is important to remember that it is a relatively rare pattern. If you see this pattern forming, make sure to wait for confirmation before taking any action.</Text>
+            <Text style={styles.p}>The key to trading this pattern is to wait for the third candle to close below the midpoint of the first candle. This is your signal to enter a short position. Your stop loss should be placed just above the high of the father candle.</Text>
         </View>
          
     )

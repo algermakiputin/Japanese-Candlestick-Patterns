@@ -17,7 +17,10 @@ export default function MatchingHigh() {
             {styles.bullet("The market is characterized by a prevailing uptrend.")}
             {styles.bullet("A white body is observed on the first day.")}
             {styles.bullet("The second day follows with another white candlestick whose closing price is exactly equal to the closing price of the first day.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}> When you see this pattern form, you want to enter a short position. Your stop loss should be placed above the highs of the candlesticks, and your target should be the previous low.</Text>
+            <Text style={styles.p}>This pattern can be a great way to profit from a bearish trend. However, you need to make sure you identify it correctly. If you don't, you could end up losing money. So, keep an eye out for the Bearish Matching High Candlestick Pattern and start making some profits!</Text>
         </View>
         
     )

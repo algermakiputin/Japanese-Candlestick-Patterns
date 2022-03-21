@@ -17,7 +17,9 @@ export default function ThreeBlackCrows() {
             {styles.bullet("The current market trend is uptrend.")}
             {styles.bullet("Three consecutive bearish candle with lower close.")}
             {styles.bullet("Little to no lower wicks.")}
-    
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The Three Black Crows pattern is a very bearish reversal pattern that should be treated with caution. However, if you enter a short position after the pattern completes, you can ride the downtrend for some nice profits. Just be sure to place a stop loss just above the high of the last candlestick in the pattern.</Text>
         </View>
         
     )

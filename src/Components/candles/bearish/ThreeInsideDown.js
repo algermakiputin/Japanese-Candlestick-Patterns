@@ -17,7 +17,10 @@ export default function ThreeInsideDown() {
             {styles.bullet("The first candle is a long bullish candlestick, which is another candle in continuation of an uptrend. It has little significance by its own.")}
             {styles.bullet("The second candle is a small bearish candlestick, which lies within the body of the candlestick body formed on day 1. This first two day candle forms bearish harami candlestick pattern.")}
             {styles.bullet("The third candle is a bearish candlestick, which closes below the close price of the candlestick formed on day 2.This further confirmed the bearish harami pattern formed on Day 2 and, all the three candle together forms a Three Inside Down Pattern.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>When trading this pattern, you should look for bearish reversal signals such as a bearish engulfing pattern or a bearish reversal candlestick pattern.</Text>
+            <Text style={styles.p}>If you see this pattern forming, it's a good idea to get out of any long positions you may have and look to short the market.</Text>
         </View>
          
     )

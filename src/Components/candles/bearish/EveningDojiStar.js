@@ -17,7 +17,9 @@ export default function AbandonedBaby() {
             {styles.bullet("The first candle is a long bullish candle.")}
             {styles.bullet("The second candle is a Doji candle.")}
             {styles.bullet("The third candle opens below the second candle’s body and then close below the midpoint of the first candlestick body.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>When trading this pattern, you will want to look for a bearish candlestick to form on the third day. This will confirm the pattern and give you a signal to enter a short position. You can place a stop loss just above the high of the second candle, and target the low of the first candle.</Text>
         </View>
         
     )

@@ -18,7 +18,12 @@ export default function BeltHold() {
             {styles.bullet("This is a two candle pattern that appears in an uptrend.")}
             {styles.bullet("The first candle is a normal bullish candle indicating the current market sentiment.")}
             {styles.bullet("The second candle opening price gaps up with no upper shadow and then closes near at the first candle's body.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The pattern is considered bearish because it shows that the bears are in control. This is a good time to short the market or sell your long positions.</Text>
+            <Text style={styles.p}>The key to trading this pattern is to wait for the second candlestick to form and then enter a short position at the opening of the third candlestick.</Text>
+            <Text style={styles.p}>The stop loss can be placed above the high of the second candlestick.</Text>
+            <Text style={styles.p}>The target for the trade can be placed at the previous low.</Text>
         </View>
          
     )

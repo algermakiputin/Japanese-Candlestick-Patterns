@@ -18,7 +18,11 @@ export default function AbandonedBaby() {
             {styles.bullet("The first candle is a bullish candle.")}
             {styles.bullet("The second candle is a doji candle.")}
             {styles.bullet("The third candle gaps down below the second candle shadow, and closes within the midpoint of the first candlestick.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>Once you've identified the pattern, you can enter a short position at the open of the third candle. Your stop loss should be placed just above the high of the third candle.</Text>
+            <Text style={styles.p}>The potential profit target for this trade is the low of the first candle. However, you can also take partial profits at the support level created by the Doji.</Text>
+            <Text style={styles.p}>This is a high-probability trade setup, so make sure you don't miss it!</Text>
         </View> 
     )
 }

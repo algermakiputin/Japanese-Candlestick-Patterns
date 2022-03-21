@@ -17,7 +17,9 @@ export default function ThreeOutsideDown() {
             {styles.bullet("The first candle is a small bullish candlestick, which is mere a n the continuation of the uptrend, as shown in the Figure.")}
             {styles.bullet("The second candlestick a larger bearish candlestick that completely engulf the first candle.")}
             {styles.bullet("The third candle is also a bearish candlestick that closes below the second candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The Bearish Three Outside Down Candlestick Pattern is a reliable way to trade the markets. This pattern occurs when the market is in a downtrend and the candlesticks form a bearish three outside down pattern. This pattern is a great way to trade the markets because it is a reliable way to pick market reversals. The key to trading this pattern is to enter the market when the candlestick closes below the support line. The stop loss should be placed above the resistance line.</Text>
         </View>
         
     )

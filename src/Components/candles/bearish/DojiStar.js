@@ -17,7 +17,10 @@ export default function DojiStar() {
             { styles.bullet("Current trend must be uptrend.") }
             { styles.bullet("The first candle is a long white candle.") }
             { styles.bullet("The second candle is a Doji candle above the first candlestick body.") } 
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The key to trading this pattern is to wait for the confirmation of the bearish reversal on the following candlestick. This candlestick should ideally be a black candlestick that closes below the lows of the doji candlestick.</Text>
+            <Text style={styles.p}>Once you have confirmation of the bearish reversal, you can enter a short position with a stop-loss just above the highs of the Doji candlestick.</Text>
         </View>
        
     )

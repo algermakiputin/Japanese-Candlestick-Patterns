@@ -18,7 +18,10 @@ export default function TwoCrows() {
             {styles.bullet("Candle 1: A bullish candle that continues the uptrend, represented by a long white (or green) candlestick that indicates a closing price well above the open price.")}
             {styles.bullet("Candle 2: A bearish candle despite the security gapping higher at the open. Therefore, this candle gaps up from the prior candle, and is black with a close below the open.")}
             {styles.bullet("Candle 3: A second bearish candle. The candle opens higher than the Candle 2 open, and closes below the Candle 2 close but above the Candle 1 close. This is visually represented by a bigger down candle that 'engulfs' Candle 2.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The Bearish Two Crows Candlestick Pattern can be used to enter a short position at the close of the second candlestick.</Text>
+            <Text style={styles.p}>The stop loss can be placed above the highs of the candlesticks. The target for the trade can be the support level.</Text>
         </View>
        
     )

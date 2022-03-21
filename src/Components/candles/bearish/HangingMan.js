@@ -17,7 +17,10 @@ export default function HangingMan() {
             {styles.bullet("Occurs at an uptrend.")}
             {styles.bullet("A Hanging Man pattern can either be a green or red candle, although a red candle provides a better indication that the bullish trend is weakening.")}
             {styles.bullet("Can have a small upper shadow and a long lower shadow.")}
-
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The key to trading the Bearish Hanging Man Candlestick pattern is to wait for confirmation. The confirmation comes in the form of a bearish candlestick that closes below the real body of the Bearish Hanging Man. This signals that the bears have taken control of price and that the uptrend is over.</Text>
+            <Text style={styles.p}>Once you have confirmation, you can enter a short position with a stoploss just above the high of the Bearish Hanging Man Candlestick. The target for the trade is typically the same as the height of the Bearish Hanging Man Candlestick.</Text>
         </View>
        
     )

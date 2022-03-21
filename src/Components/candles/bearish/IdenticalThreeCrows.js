@@ -17,7 +17,10 @@ export default function IdenticalThreeCrows() {
             {styles.bullet("The identical three crows candlestick pattern is a 3-bar bearish reversal pattern.")}
             {styles.bullet("It occurs during an uptrend.")}
             {styles.bullet("It is made of three consecutive bearish candlesticks.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>If you see this pattern forming, it's time to start thinking about selling your position. This is because the Three Crows pattern is a strong indication that the current trend is about to reverse and the price is going to start falling.</Text>
+            <Text style={styles.p}>To trade the Three Crows pattern, you can sell short when the third black candle closes. Place a stop loss above the high of the third candle. Take profit when prices fall to the support level.</Text>
         </View>
         
     )

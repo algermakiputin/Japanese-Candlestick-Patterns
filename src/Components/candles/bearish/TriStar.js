@@ -18,7 +18,10 @@ export default function TriStar() {
             {styles.bullet("There must be a clear and defined trend in the market.")}
             {styles.bullet("Three consecutive Doji candles must appear.")}
             {styles.bullet("The second Doji candle must create a gap below the first and third Doji candles creating a shape that resembles the letter “V” (or the opposite for the bearish variation).")} 
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The bearish tri-star pattern is a powerful signal, but it is important to remember that it is not a guarantee that a reversal will occur. This pattern should be used as a way to signal a potential reversal, but it should not be used as the sole reason to enter a trade.</Text>
+            <Text style={styles.p}>If you see this pattern forming on a chart, you can enter a short position when the third candlestick closes. Your stop loss should be placed just above the high of the third candlestick.</Text>
         </View>
         
     )

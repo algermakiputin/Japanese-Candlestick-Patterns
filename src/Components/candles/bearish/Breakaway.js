@@ -19,7 +19,10 @@ export default function Breakaway() {
             {styles.bullet("The next three candles must be spinning tops. ")}
             {styles.bullet("The second candle must also create a gap between the first and itself.")}
             {styles.bullet("The fifth candle must be a long candle closing within the body gap of the first two candles.")} 
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The key to trading this pattern is to look for a break of the low of the candle. This signals that the market is ready to move lower. The next step is to enter a short position at the opening of the next candle. The stop loss can be placed just above the high of the candle.</Text>
+            <Text style={styles.p}>This is a great pattern for traders who are looking for a quick and easy way to trade the markets. This pattern can be used in any time frame and can provide some great profits.</Text>
         </View>
         
     )

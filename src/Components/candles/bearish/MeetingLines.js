@@ -17,7 +17,10 @@ export default function MeetingLines() {
             {styles.bullet("The market is in an upward trend.")}
             {styles.bullet("The first candle is a long white candle.")}
             {styles.bullet("The third candle is a bearish candle that opens above the previous candle and closes equal to the price of the second candle.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>The bearishness of the pattern is confirmed when the second candlestick closes below the midpoint of the first candlestick. The pattern can be found on any time frame but is most commonly found on daily charts.</Text>
+            <Text style={styles.p}>To trade the Bearish Meeting Line Candlestick pattern, you would look to enter a short position after the pattern has been confirmed. Your stop loss would be placed just above the high of the second candlestick. Your target would be the same as if you were trading a bearish engulfing pattern, which would be the low of the previous candlestick.</Text>
         </View>
          
     )

@@ -18,7 +18,9 @@ export default function AdvanceBlock() {
             {styles.bullet("The advance block candlestick pattern is a 3-bar bearish reversal pattern. ")}
             {styles.bullet("It has three long green candles with consecutively higher closes than the previous candles.")}
             {styles.bullet("Each candle has a shorter body than the previous one.")}
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>When you see this pattern form, it is a good idea to start looking for potential short-selling opportunities. This pattern can be found in any time frame but is most useful on daily and weekly charts.</Text>
         </View>
         
     )

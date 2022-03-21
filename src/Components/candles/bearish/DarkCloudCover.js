@@ -17,7 +17,9 @@ export default function DarkCloudCover() {
             {styles.bullet("Current trend must be uptrend.")}
             {styles.bullet("The first candlestick is a white/green candle with a long real body.")}
             {styles.bullet("The next candle gaps higher, but then turns black/red and closes in the lower half of the body of the preceding candle.")} 
-        
+            <Text style={styles.div}></Text>
+            <Text style={styles.subHeading}>How to trade?</Text>
+            <Text style={styles.p}>When you see this pattern form, you should enter a short position at the opening of the next candlestick. Your stop loss should be placed just above the high of the white candlestick. If the market rallies and the candlesticks close above this level, then you know that the reversal was false and you can exit your position. Otherwise, you can hold your position until the market reverses and the black candlesticks start to form again.</Text>
         </View>
        
     )
