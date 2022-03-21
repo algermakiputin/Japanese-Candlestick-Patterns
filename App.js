@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useRef} from 'react';
 import type {Node} from 'react';
 import { setCustomText } from 'react-native-global-props';
 import { 
@@ -14,7 +14,9 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Share
+  Share,
+  DrawerLayoutAndroid,
+  Text
 } from 'react-native';
  
 import { NavigationContainer } from '@react-navigation/native';
@@ -25,7 +27,7 @@ import Introduction from './src/Components/Introduction';
 import PatternScreen from './src/Components/PatternScreen';
 import QuizScreen from './src/Components/QuizScreen';
 import ChallengeScreen from './src/Components/ChallengeScreen';
-import CongratulationsScreen from './src/Components/CongratulationsScreen';
+import CongratulationsScreen from './src/Components/CongratulationsScreen'; 
 import './src/Components/Global';
  
 const Stack = createNativeStackNavigator();
@@ -43,7 +45,7 @@ const theme = {
   }
 }
 
-const shareBtn = () => {
+const shareBtn = (drawer) => {
 
   const onShare = async () => {
     try {
@@ -65,7 +67,7 @@ const shareBtn = () => {
 
   return (
     <View style={styles.shareContainer}>
-      <TouchableOpacity onPress={onShare}>
+      <TouchableOpacity onPress={() => drawer.current.openDrawer()}>
         <Image 
           style={{width:17,opacity:0.7, height:17}} 
           source={require('./assets/images/share.png')} />
@@ -74,20 +76,22 @@ const shareBtn = () => {
   )
 }
 
-const homeScreenOptions = {
-  headerStyle: {
-    backgroundColor:'#fff',
-    color:"#000"
-  },
-  headerTitleStyle: {
-    color:'#09101D',
-    fontSize:global.scaleFontSize(22)
-  },
-  title:'Candlestick Patterns', 
-  headerRight: shareBtn,
-  headerTitleAlign: 'left',
-  headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
-  headerShadowVisible:false,
+const homeScreenOptions = (drawer) => {
+  return {
+    headerStyle: {
+      backgroundColor:'#fff',
+      color:"#000"
+    },
+    headerTitleStyle: {
+      color:'#09101D',
+      fontSize:global.scaleFontSize(22)
+    },
+    title:'Candlestick Patterns', 
+    headerRight: () => shareBtn(drawer),
+    headerTitleAlign: 'left',
+    headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
+    headerShadowVisible:false,
+  }
 }
 
 const HeaderLeft = (navigation) => {
@@ -118,17 +122,31 @@ const headerTitleStyle = {
   fontSize:global.scaleFontSize(22)
 }
 
+const navigationView = () => (
+  <View>
+    <Text>Im on the drawer</Text>
+  </View>
+);
+
 const App: () => Node = () => {
-  
+
+  const drawer = useRef(null);
+
   return (
     <NavigationContainer theme={theme}> 
-      <Stack.Navigator 
+      <DrawerLayoutAndroid
+        ref={drawer}
+        drawerWidth={300}
+        drawerPosition='left'
+        renderNavigationView={navigationView}
+      >
+        <Stack.Navigator 
         initialRouteName='Home' 
       >
         <Stack.Screen 
           name="Home"
           component={HomeScreen}
-          options={homeScreenOptions}
+          options={homeScreenOptions(drawer)}
         />
         <Stack.Screen 
           name='Lesson'
@@ -138,7 +156,7 @@ const App: () => Node = () => {
             headerTitleStyle: headerTitleStyle,
             headerShadowVisible:false,
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
         />
         <Stack.Screen 
@@ -150,7 +168,7 @@ const App: () => Node = () => {
             headerShadowVisible:false,
             title:'Pattern Details',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
           />
           <Stack.Screen 
@@ -162,7 +180,7 @@ const App: () => Node = () => {
             headerShadowVisible:false,
             title:'Basics of candlestick chart',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
           />
           <Stack.Screen 
@@ -174,7 +192,7 @@ const App: () => Node = () => {
             headerShadowVisible:false,
             title:'Take a Quiz #Challenge!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
           />
           <Stack.Screen 
@@ -186,7 +204,7 @@ const App: () => Node = () => {
             headerShadowVisible:false,
             title:'Challenge!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
           />
           <Stack.Screen 
@@ -198,10 +216,12 @@ const App: () => Node = () => {
             headerShadowVisible:false,
             title:'Congratulations!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: shareBtn
+            headerRight: () => shareBtn(drawer)
           })} 
           />
       </Stack.Navigator>
+      </DrawerLayoutAndroid>
+      
     </NavigationContainer>
   );
 };
