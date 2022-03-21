@@ -28,7 +28,8 @@ import PatternScreen from './src/Components/PatternScreen';
 import QuizScreen from './src/Components/QuizScreen';
 import ChallengeScreen from './src/Components/ChallengeScreen';
 import CongratulationsScreen from './src/Components/CongratulationsScreen'; 
-import './src/Components/Global';
+import './src/Components/Global'; 
+import Rate, { AndroidMarket } from 'react-native-rate'
  
 const Stack = createNativeStackNavigator();
 const customTextProps = { 
@@ -47,32 +48,14 @@ const theme = {
 
 const shareBtn = (drawer) => {
 
-  const onShare = async () => {
-    try {
-      const result = await Share.share({
-        message:
-          'The most complete candlestick pattern learning mobile app | Become a stronger trader download now! https://play.google.com/store/apps/details?id=com.candlestickpatterns',
-        title: 
-          'Candlestick Patterns Mobile App'
-      }).then(({action, activityType}) => {
-        if(action === Share.sharedAction)
-          console.log('Share was successful');
-        else
-          console.log('Share was dismissed');
-        }); 
-    } catch (error) {
-      alert(error.message);
-    }
-  };
-
   return (
-    <View style={styles.shareContainer}>
-      <TouchableOpacity onPress={() => drawer.current.openDrawer()}>
-        <Image 
-          style={{width:17,opacity:0.7, height:17}} 
-          source={require('./assets/images/share.png')} />
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity onPress={() => drawer.current.openDrawer()}>
+      <View style={styles.shareContainer}>
+          <Image 
+            style={{width:17,opacity:0.7, height:17}} 
+            source={require('./assets/images/menu.png')} />
+      </View>
+    </TouchableOpacity>
   )
 }
 
@@ -122,24 +105,73 @@ const headerTitleStyle = {
   fontSize:global.scaleFontSize(22)
 }
 
+const onShare = async () => {
+  try {
+    const result = await Share.share({
+      message:
+        'The most complete candlestick pattern learning mobile app | Become a stronger trader download now! https://play.google.com/store/apps/details?id=com.candlestickpatterns',
+      title: 
+        'Candlestick Patterns Mobile App'
+    }).then(({action, activityType}) => {
+      if(action === Share.sharedAction)
+        console.log('Share was successful');
+      else
+        console.log('Share was dismissed');
+      }); 
+  } catch (error) {
+    alert(error.message);
+  }
+};
+ 
+
 const navigationView = () => (
-  <View>
-    <Text>Im on the drawer</Text>
+  
+  <View style={{marginTop:10}}>
+    <View style={styles.menuHeader}>
+      <Image source={require('./assets/images/logo.png')} />
+      <Text style={{fontFamily:'SourceSansPro-SemiBold'}}> Candlestick Patterns - Stocks</Text>
+    </View> 
+    <TouchableOpacity
+        onPress={() => { 
+          const options = { 
+            GooglePackageName:"com.candlestickpatterns",  
+            preferredAndroidMarket: AndroidMarket.Google,
+            preferInApp:false,
+            openAppStoreIfInAppFails:true,
+            fallbackPlatformURL:"https://play.google.com/store/apps/details?id=com.candlestickpatterns",
+          }
+
+          Rate.rate(options, (success, errorMessage)=>{
+            if (success) {
+              // this technically only tells us if the user successfully went to the Review Page. Whether they actually did anything, we do not know.
+             
+            }
+            if (errorMessage) {
+              // errorMessage comes from the native code. Useful for debugging, but probably not for users to view
+              console.error(`Example page Rate.rate() error: ${errorMessage}`)
+            }
+          })
+        }}
+      >
+      <Text style={styles.menu}><Image style={styles.icon} source={require('./assets/images/star.png')} /> Rate Us</Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => onShare()}>
+      <Text style={styles.menu}><Image style={styles.icon} source={require('./assets/images/share.png')} />  Share</Text>
+    </TouchableOpacity>
   </View>
 );
 
-const App: () => Node = () => {
+const App: () => Node = ({navigation}) => {
 
   const drawer = useRef(null);
-
   return (
     <NavigationContainer theme={theme}> 
       <DrawerLayoutAndroid
         ref={drawer}
         drawerWidth={300}
         drawerPosition='left'
-        renderNavigationView={navigationView}
-      >
+        renderNavigationView={() => navigationView()}
+      >   
         <Stack.Navigator 
         initialRouteName='Home' 
       >
@@ -148,6 +180,7 @@ const App: () => Node = () => {
           component={HomeScreen}
           options={homeScreenOptions(drawer)}
         />
+      
         <Stack.Screen 
           name='Lesson'
           component={LessonScreen}
@@ -231,6 +264,30 @@ const styles = StyleSheet.create({
     marginTop: 32,
     paddingHorizontal: 24,
   },
+  menu: {  
+    paddingTop:10,
+    paddingBottom:10,
+    paddingLeft:15,
+    display:'flex',
+    alignContent:'center',
+    justifyContent:'center',
+    fontSize:global.scaleFontSize(18),
+   // fontFamily:'SourceSansPro-SemiBold'
+  },
+  menuHeader: {
+    borderBottomWidth:1,
+    borderBottomColor:'#F4F6F9',
+    paddingBottom:20,
+    paddingTop:20,
+    paddingLeft:15, 
+    display:'flex', 
+    flexDirection:'row',
+    alignItems:'center'
+  },
+  icon: {
+    height:global.scaleFontSize(13),
+    width:global.scaleFontSize(13)
+  },  
   sectionTitle: {
     fontSize: global.scaleFontSize(24),
     fontWeight: '600',
@@ -254,7 +311,6 @@ const styles = StyleSheet.create({
     marginRight: 15
   },
   shareContainer: {
-   
     backgroundColor:'rgba(48, 79, 254, 0.1)',
     height:36,
     width:36,

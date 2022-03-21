@@ -59,10 +59,10 @@ function check(
             newScore = parseInt(score) + 100;
             setScore(newScore);
             setCorrect(true);  
-            SoundEffect.correct();
+            SoundEffect.correct(true);
         }else {
             setCorrect(false);
-            SoundEffect.wrong();
+            SoundEffect.wrong(true);
         }
         
         return setChecked(true);
@@ -124,8 +124,9 @@ const ChallengeScreen = ({navigation, route}) => {
     const [correct, setCorrect] = useState('');
      
     useEffect(() => {
-        navigation.setOptions({title: title });
-        
+        navigation.setOptions({title: title }); 
+        SoundEffect.correct();
+        SoundEffect.wrong();
     });
  
     return (
