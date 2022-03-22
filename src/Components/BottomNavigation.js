@@ -89,11 +89,10 @@ export default BottomNavigation;
 
 const styles = StyleSheet.create({
     container: {
-        display:'flex',
+        display:'flex', 
         padding:20,
         flexDirection:'row', 
-        justifyContent:'space-between',
-        marginTop:40,
+        justifyContent:'space-between', 
         marginBottom:10
     }, 
     leftNav: {

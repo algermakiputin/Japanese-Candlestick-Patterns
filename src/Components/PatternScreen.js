@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView, View } from 'react-native';
 import Candles from './candles/Candles';
 import BottomNavigation from './BottomNavigation'; 
 
@@ -29,19 +29,20 @@ const PatternScreen = ({navigation, route}) => {
     return (
         <SafeAreaView>
             <ScrollView ref={ref} >
-                <DescriptionToRender />
-                <BottomNavigation
-                    nextPage={nextPage}
-                    previousPage={previousPage}
-                    navigation={navigation}
-                    title={title}
-                    page={page}
-                    title={title}
-                    modules={modules}
-                    module={module}
-                    nextName={nextPatternIndex}
-                    previousName={prevPatternIndex}
-                />
+                <View>
+                    <DescriptionToRender />
+                    <BottomNavigation
+                        nextPage={nextPage}
+                        previousPage={previousPage}
+                        navigation={navigation}
+                        title={title}
+                        page={page} 
+                        modules={modules}
+                        module={module}
+                        nextName={nextPatternIndex}
+                        previousName={prevPatternIndex}
+                    />
+                </View>
             </ScrollView>
         </SafeAreaView>
     )

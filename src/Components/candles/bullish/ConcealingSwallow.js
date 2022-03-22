@@ -21,7 +21,9 @@ export default function ConcealingSwallow() {
             {styles.bullet("The fourth candle must have a black body engulfing the body and upper shadow of the previous candle.")} 
             <Text style={styles.div}></Text>
             <Text style={styles.subHeading}>How to trade?</Text> 
-            <Text style={styles.p}>If you see a bullish concealing swallow pattern forming, you should consider buying the security. The best way to trade this pattern is to wait for the second candlestick to close and then enter a long position. You can place a stop loss just below the low of the second candlestick.</Text>
+            <Text style={styles.p}>To trade this pattern, you would want to look for a stock that is starting to form the pattern and then wait for the breakout. Once the stock breaks out above the high of the fourth candlestick body, you would enter a long position.</Text>
+            <Text style={styles.p}>Your stop loss would be placed just below the low of the fourth candlestick body, and your target would be the most recent swing high.</Text>
+            <Text style={styles.p}>Keep in mind that this pattern is not foolproof, and there is always the potential for a false breakout. So, make sure you use proper risk management techniques when trading it.</Text>
         </View>
         
     )

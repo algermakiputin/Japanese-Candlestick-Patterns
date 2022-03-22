@@ -10,7 +10,7 @@ export default function LongBlackBody() {
         <View style={styles.container}>
             <Image style={styles.image} source={require('../../../../assets/images/candles/bearish/long_black_body.png')} />
             <Text style={styles.subHeading}>Description</Text>
-            <Text style={styles.p}>A long black body is usually seen as a continuation pattern of a downtrend. However, it’s also important to gain the broader sentiment of the market before taking action on this pattern. This candlestick pattern shows strong selling pressure that indicates the current trend and the price drops significantly showing that the sellers are taking control.</Text>
+            <Text style={styles.p}>A long black body is usually seen as a continuation pattern of a downtrend. However, it’s also important to gain the broader sentiment of the market before taking action on this pattern. This candlestick pattern shows strong selling pressure that indicates the current trend is weakening and the price drops significantly showing that the sellers are taking control.</Text>
             <Text style={styles.div} />
             <Text style={styles.subHeading}>How to recognise?</Text>
 

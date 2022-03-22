@@ -70,7 +70,7 @@ const HomeScreen = ({navigation}) => {
                         navigation={navigation}
                         location="Quiz"
                         image={1}
-                        title="Candlestick Quiz Challenge"
+                        title="Guess the pattern"
                         subTitle="Exercise your brain"
                     />
                     <HomeModule
@@ -82,23 +82,23 @@ const HomeScreen = ({navigation}) => {
                     />
                     <Module 
                         title="Bullish reversal patterns"
-                        image={1}
+                        image={0}
                         trend="bullish"
                         navigation={navigation}
                     />
                     <Module 
                         title="Bearish reversal patterns"
-                        image={0}
+                        image={1}
                         trend="bearish"
                         navigation={navigation}
                         showAd={true}
                     />
-                    <Module 
+                    {/* <Module 
                         title="Continuation patterns"
                         image={2}
                         trend="continuation"
                         navigation={navigation} 
-                    />
+                    /> */}
                 </View>
                 <AdMobBanner
                     adSize="smartBannerLandscape"
