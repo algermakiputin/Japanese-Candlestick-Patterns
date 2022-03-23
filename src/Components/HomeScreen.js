@@ -38,7 +38,7 @@ const HomeScreen = ({navigation}) => {
     })
     return (
         <SafeAreaView >  
-            <ScrollView >
+            <ScrollView style={{backgroundColor:"#fff"}}>
                 <View style={styles.container}>
                     <LinearGradient 
                         start={{x:0.1,y:1}} 

@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React, {useRef} from 'react';
 import type {Node} from 'react';
 import { setCustomText } from 'react-native-global-props';
@@ -19,8 +19,8 @@ import {
   Text
 } from 'react-native';
  
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native'; 
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from './src/Components/HomeScreen';
 import LessonScreen from './src/Components/LessonScreen';
 import Introduction from './src/Components/Introduction';
@@ -29,9 +29,12 @@ import QuizScreen from './src/Components/QuizScreen';
 import ChallengeScreen from './src/Components/ChallengeScreen';
 import CongratulationsScreen from './src/Components/CongratulationsScreen'; 
 import './src/Components/Global'; 
-import Rate, { AndroidMarket } from 'react-native-rate'
- 
+import Rate, { AndroidMarket } from 'react-native-rate';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
+  
 const customTextProps = { 
   style: { 
     fontFamily: 'SourceSansPro-Regular',
@@ -46,10 +49,10 @@ const theme = {
   }
 }
 
-const shareBtn = (drawer) => {
+const shareBtn = () => {
 
   return (
-    <TouchableOpacity onPress={() => drawer.current.openDrawer()}>
+    <TouchableOpacity onPress={() => null}>
       <View style={styles.shareContainer}>
           <Image 
             style={{width:17,opacity:0.7, height:17}} 
@@ -72,8 +75,9 @@ const homeScreenOptions = (drawer) => {
     title:'Candlestick Patterns', 
     headerRight: () => shareBtn(drawer),
     headerTitleAlign: 'left',
-    headerLeft: () => { return <Image style={{marginRight:20}} source={require('./assets/images/logo.png')} /> },
+    headerLeft: () => { return <Image style={{marginRight:0,marginLeft:20}} source={require('./assets/images/logo.png')} /> },
     headerShadowVisible:false,
+    drawerStyle: {backgroundColor:"#fff"}
   }
 }
 
@@ -81,6 +85,7 @@ const HeaderLeft = (navigation) => {
   return (
     <TouchableOpacity
       onPress={() => {navigation.goBack(null)}}
+      style={{marginLeft:20}}
     >
       <View style={styles.imageContainer}>
         <Image 
@@ -104,119 +109,63 @@ const headerTitleStyle = {
   color:'#09101D',
   fontSize:global.scaleFontSize(22)
 }
-
-const onShare = async () => {
-  try {
-    const result = await Share.share({
-      message:
-        'The most complete candlestick pattern learning mobile app | Become a stronger trader download now! https://play.google.com/store/apps/details?id=com.candlestickpatterns',
-      title: 
-        'Candlestick Patterns Mobile App'
-    }).then(({action, activityType}) => {
-      if(action === Share.sharedAction)
-        console.log('Share was successful');
-      else
-        console.log('Share was dismissed');
-      }); 
-  } catch (error) {
-    alert(error.message);
-  }
-};
  
-
-const navigationView = () => (
-  
-  <View style={{marginTop:10}}>
-    <View style={styles.menuHeader}>
-      <Image source={require('./assets/images/logo.png')} />
-      <Text style={{fontFamily:'SourceSansPro-SemiBold'}}> Candlestick Patterns - Stocks</Text>
-    </View> 
-    <TouchableOpacity
-        onPress={() => { 
-          const options = { 
-            GooglePackageName:"com.candlestickpatterns",  
-            preferredAndroidMarket: AndroidMarket.Google,
-            preferInApp:false,
-            openAppStoreIfInAppFails:true,
-            fallbackPlatformURL:"https://play.google.com/store/apps/details?id=com.candlestickpatterns",
-          }
-
-          Rate.rate(options, (success, errorMessage)=>{
-            if (success) {
-              // this technically only tells us if the user successfully went to the Review Page. Whether they actually did anything, we do not know.
-             
-            }
-            if (errorMessage) {
-              // errorMessage comes from the native code. Useful for debugging, but probably not for users to view
-              console.error(`Example page Rate.rate() error: ${errorMessage}`)
-            }
-          })
-        }}
-      >
-      <Text style={styles.menu}><Image style={styles.icon} source={require('./assets/images/star.png')} /> Rate Us</Text>
-    </TouchableOpacity>
-    <TouchableOpacity onPress={() => onShare()}>
-      <Text style={styles.menu}><Image style={styles.icon} source={require('./assets/images/share.png')} />  Share</Text>
-    </TouchableOpacity>
-  </View>
-);
-
 const App: () => Node = ({navigation}) => {
-
-  const drawer = useRef(null);
+ 
   return (
-    <NavigationContainer theme={theme}> 
-      <DrawerLayoutAndroid
-        ref={drawer}
-        drawerWidth={300}
-        drawerPosition='left'
-        renderNavigationView={() => navigationView()}
-      >   
-        <Stack.Navigator 
-        initialRouteName='Home' 
-      >
+    <NavigationContainer>  
+      <Drawer.Navigator initialRouteName='Home'>
         <Stack.Screen 
           name="Home"
           component={HomeScreen}
-          options={homeScreenOptions(drawer)}
-        />
-      
-        <Stack.Screen 
-          name='Lesson'
-          component={LessonScreen}
-          options={({navigation}) => ({
-            headerStyle: headerStyle,
-            headerTitleStyle: headerTitleStyle,
-            headerShadowVisible:false,
-            headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
-          })} 
+          options={homeScreenOptions('')}
+
         />
         <Stack.Screen 
-          name='Pattern'
-          component={PatternScreen}
-          options={({navigation}) => ({
-            headerStyle: headerStyle,
-            headerTitleStyle: headerTitleStyle,
-            headerShadowVisible:false,
-            title:'Pattern Details',
-            headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
-          })} 
+          animationEnabled={true}
+           name='Lesson'
+           component={LessonScreen}
+           options={({navigation}) => ({
+             headerStyle: headerStyle,
+             headerTitleStyle: headerTitleStyle,
+             headerShadowVisible:false,
+             headerLeft:() => HeaderLeft(navigation),
+             headerRight: () => shareBtn() 
+           })} 
+         />
+         <Stack.Screen 
+           name='Pattern'
+           component={PatternScreen}
+           options={({navigation}) => ({
+             headerStyle: headerStyle,
+             headerTitleStyle: headerTitleStyle,
+             headerShadowVisible:false,
+             title:'Pattern Details',
+             headerLeft:() => HeaderLeft(navigation),
+             headerRight: () => shareBtn(),
+              drawerStyle:{
+                backgroundColor:'#fff'
+              },
+              animationEnabled:true
+           })} 
+           />
+           <Stack.Screen 
+           name='Introduction'
+           component={Introduction}
+           options={({navigation}) => ({
+             headerStyle: headerStyle,
+             headerTitleStyle: headerTitleStyle,
+             headerShadowVisible:false,
+             title:'Basics of candlestick chart',
+             headerLeft:() => HeaderLeft(navigation),
+             headerRight: () => shareBtn(),
+             drawerStyle:{
+              backgroundColor:'#fff'
+            },
+            animationEnabled:true
+           })} 
           />
-          <Stack.Screen 
-          name='Introduction'
-          component={Introduction}
-          options={({navigation}) => ({
-            headerStyle: headerStyle,
-            headerTitleStyle: headerTitleStyle,
-            headerShadowVisible:false,
-            title:'Basics of candlestick chart',
-            headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
-          })} 
-          />
-          <Stack.Screen 
+          <Drawer.Screen 
           name='Quiz'
           component={QuizScreen}
           options={({navigation}) => ({
@@ -225,10 +174,14 @@ const App: () => Node = ({navigation}) => {
             headerShadowVisible:false,
             title:'Take a Quiz #Challenge!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
+            headerRight: () => shareBtn(),
+            drawerStyle:{
+              backgroundColor:'#fff'
+            },
+            animationEnabled:true
           })} 
           />
-          <Stack.Screen 
+          <Drawer.Screen 
           name='Challenge'
           component={ChallengeScreen}
           options={({navigation}) => ({
@@ -237,10 +190,14 @@ const App: () => Node = ({navigation}) => {
             headerShadowVisible:false,
             title:'Challenge!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
+            headerRight: () => shareBtn(),
+            drawerStyle:{
+              backgroundColor:'#fff'
+            },
+            animationEnabled:true
           })} 
           />
-          <Stack.Screen 
+          <Drawer.Screen 
           name='Congratulations'
           component={CongratulationsScreen}
           options={({navigation}) => ({
@@ -249,12 +206,14 @@ const App: () => Node = ({navigation}) => {
             headerShadowVisible:false,
             title:'Congratulations!',
             headerLeft:() => HeaderLeft(navigation),
-            headerRight: () => shareBtn(drawer)
+            headerRight: () => shareBtn(),
+            drawerStyle:{
+              backgroundColor:'#fff'
+            },
+            animationEnabled:true
           })} 
           />
-      </Stack.Navigator>
-      </DrawerLayoutAndroid>
-      
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };
@@ -317,7 +276,8 @@ const styles = StyleSheet.create({
     display:'flex', 
     justifyContent:'center',
     alignItems:'center',
-    borderRadius:9 
+    borderRadius:9,
+    marginRight:20
      
   }
 });
