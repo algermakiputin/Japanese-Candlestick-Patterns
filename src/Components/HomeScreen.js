@@ -9,6 +9,10 @@ const images = [
     require('../../assets/images/introduction.png'),
     require('../../assets/images/quiz.png')
 ];
+
+const Bearish = Module;
+const Bullish = Module;
+
 const HomeModule = (props) => {
 
     return (
@@ -80,18 +84,17 @@ const HomeScreen = ({navigation}) => {
                         title="Basics of candlestick"
                         subTitle="Introduction"
                     />
-                    <Module 
+                    <Bullish 
                         title="Bullish reversal patterns"
                         image={0}
                         trend="bullish"
                         navigation={navigation}
                     />
-                    <Module 
+                    <Bearish 
                         title="Bearish reversal patterns"
                         image={1}
                         trend="bearish"
-                        navigation={navigation}
-                        showAd={true}
+                        navigation={navigation} 
                     />
                     {/* <Module 
                         title="Continuation patterns"

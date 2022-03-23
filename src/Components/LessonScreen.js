@@ -67,9 +67,14 @@ const LessonScreen = ({navigation,route}) => {
         <SafeAreaView style={styles.container}>  
             <FlatList
                 data={data}
-                renderItem={({item}) => {
-                    const pattern = modules[module]['candles'][item.key];
+                renderItem={({item}) => { 
+
+                    const pattern = modules[module]['candles'][item.key];  
+                    if (!pattern)
+                        return;
+                    
                     const image = Images[pattern.page]
+
                     return (
                         <View style={{paddingLeft:20, paddingRight:20}}>
                             <TouchableOpacity  

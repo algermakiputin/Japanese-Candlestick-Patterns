@@ -10,7 +10,7 @@ const moduleImages = [
 const modules = require('../modules.json');
 
 const Module = (props) => {
-
+    
     return(
         <TouchableOpacity 
             style={styles.moduleContainer}
