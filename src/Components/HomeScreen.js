@@ -92,13 +92,7 @@ const HomeScreen = ({navigation}) => {
                         trend="bearish"
                         navigation={navigation}
                         showAd={true}
-                    />
-                    {/* <Module 
-                        title="Continuation patterns"
-                        image={2}
-                        trend="continuation"
-                        navigation={navigation} 
-                    /> */}
+                    /> 
                 </View>
                 <AdMobBanner
                     adSize="smartBannerLandscape"
@@ -145,7 +139,7 @@ const styles = StyleSheet.create({
         paddingTop:35,
         paddingBottom:35,
         paddingLeft:20,
-        paddingRight:20
+        paddingRight:20,
     },
     flexItem1: {
         width:'50%',
@@ -160,26 +154,25 @@ const styles = StyleSheet.create({
         fontSize:global.scaleFontSize(26),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36,
-        marginBottom:22
+        marginBottom:22,
+        color:"#fff"
     },
     p: { 
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
-        marginBottom:30
+        marginBottom:30,
+        color:"#fff"
     },
     moduleContainer: { 
         borderRadius:20,
         padding:20, 
-        backgroundColor:'#fff',
+        backgroundColor:'#2e2d2e',
         display:'flex',
         flexDirection:'row', 
         justifyContent:'flex-start', 
         alignItems:'center',
-        marginBottom:20, 
-        shadowColor:'rgba(90, 108, 234, 0.5)',
-        shadowOffset:{width:0,height:1},
-        elevation:24, 
-        borderWidth:1,
+        marginBottom:20,  
+        elevation:24,  
         shadowRadius:16,
         borderColor:'#F4F6F9' 
     },
@@ -197,10 +190,11 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-    
+        color:"#fff"
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
+        color:"#fff"
     }
     
 });

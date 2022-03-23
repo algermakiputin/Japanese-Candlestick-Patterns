@@ -45,9 +45,7 @@ const Introduction = ({navigation}) => {
                     showAd={true}
                 />
                 
-                <Text style={styles.div} />
-                <Text style={styles.div} />
-                <Text style={styles.div} />
+                <Text style={styles.div} /> 
             </SafeAreaView>
         
         </ScrollView>

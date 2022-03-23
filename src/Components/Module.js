@@ -40,18 +40,12 @@ const styles = StyleSheet.create({
     moduleContainer: { 
         borderRadius:20,
         padding:20, 
-        backgroundColor:'#fff',
+        backgroundColor:'#2e2d2e',
         display:'flex',
         flexDirection:'row', 
         justifyContent:'flex-start', 
         alignItems:'center',
-        marginBottom:20, 
-        shadowColor:'rgba(90, 108, 234, 0.5)',
-        shadowOffset:{width:0,height:1},
-        elevation:24, 
-        borderWidth:1,
-        shadowRadius:16,
-        borderColor:'#F4F6F9' 
+        marginBottom:20,  
     },
     image: {
         width:60,
@@ -67,10 +61,11 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-    
+        color:"#fff"
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
+        color:"#fff"
     }
 });
 

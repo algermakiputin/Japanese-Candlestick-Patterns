@@ -85,6 +85,18 @@ function check(
 
 const Correct = () => {
 
+    const words = [
+        'Good Job!',
+        'Exactly Right!',
+        'Excellent!',
+        'Fabulous!',
+        'Fantastic!',
+        'Sensational!',
+        'Outstanding!',
+        'Wonderful!',
+        'Outstanding!'
+    ];
+    const index = Math.floor(Math.random() * 9); 
     return (<View style={styles.flexContainer}>
         <Image style={styles.icon} source={require('../../assets/images/check.png')} /> 
         <Text style={{
@@ -92,7 +104,7 @@ const Correct = () => {
             fontFamily:'SouceSansPro-SemiBold',
             fontSize:global.scaleFontSize(16),
             color:'#58CC02'
-            }}> Good Job!</Text>
+            }}> {words[index]}</Text>
     </View>)
 }
 
@@ -135,10 +147,10 @@ const ChallengeScreen = ({navigation, route}) => {
                 <Image style={styles.guessImage} source={Images[challenge.image]} />
                 <View style={styles.flexContainer}>
                     <View style={styles.column}>
-                        <Text style={{fontFamily:'SourceSansPro-SemiBold'}}>Pattern #{parseInt(level) + 1}/{totalItems}</Text>
+                        <Text style={{fontFamily:'SourceSansPro-SemiBold', color:"#fff"}}>Pattern #{parseInt(level) + 1}/{totalItems}</Text>
                     </View>
                     <View style={styles.column}>
-                        <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold'}}>Score: {score}</Text>
+                        <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold',color:"#fff"}}>Score: {score}</Text>
                     </View>
                 </View>
                 <View style={{padding:20}}>
@@ -231,7 +243,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         paddingLeft:20,
-        paddingRight:20,
+        paddingRight:20
        
     },
     column: {
@@ -271,25 +283,21 @@ const styles = StyleSheet.create({
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
-        borderColor:'#F4F6F9' 
+        borderColor:'#2e2d2e' 
     },
     moduleContainer: { 
         borderRadius:20,
         paddingTop:10,
         paddingBottom:10,
         paddingLeft:20, 
-        backgroundColor:'#fff',
+        backgroundColor:'#2e2d2e',
         display:'flex',
         flexDirection:'row', 
         justifyContent:'flex-start', 
         alignItems:'center',
-        marginBottom:10, 
-        shadowColor:'rgba(90, 108, 234, 0.5)',
-        shadowOffset:{width:0,height:1},
-        elevation:24, 
-        borderWidth:1,
-        shadowRadius:16,
-        borderColor:'#F4F6F9' 
+        marginBottom:10,  
+        borderWidth:1, 
+        borderColor:'#2e2d2e' 
     },
     image: { 
         justifyContent:'center',
@@ -313,6 +321,7 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
+        color:"#fff"
     },
     optionTitleSuccess: {
         fontSize:global.scaleFontSize(19),
@@ -322,7 +331,8 @@ const styles = StyleSheet.create({
         color:"#fff"
     },
     order: {
-        fontFamily:'SourceSansPro-SemiBold'
+        fontFamily:'SourceSansPro-SemiBold',
+        color:"#304FFE"
     },
     orderSuccess: {
         fontFamily:'SourceSansPro-SemiBold',
@@ -335,8 +345,9 @@ const styles = StyleSheet.create({
         marginLeft:'auto',
         padding:10,
         borderRadius:20,
-        backgroundColor:'#F4F4F5',
-        borderColor:'#F4F6F9',
+        color:"#fff",
+        backgroundColor:'#2e2d2e',
+        borderColor:'#2e2d2e',
         fontFamily:'SourceSansPro-SemiBold',
         fontSize:global.scaleFontSize(19)
     },
@@ -353,7 +364,7 @@ const styles = StyleSheet.create({
         padding:10,
         borderRadius:20,
         backgroundColor:'#58CC02',
-        borderColor:'#F4F6F9',
+        borderColor:'#2e2d2e',
         color:"#fff",
         fontFamily:'SourceSansPro-SemiBold',
         fontSize:global.scaleFontSize(19)
@@ -366,7 +377,7 @@ const styles = StyleSheet.create({
         padding:10,
         borderRadius:20,
         backgroundColor:'#FF4B4B',
-        borderColor:'#F4F6F9',
+        borderColor:'#2e2d2e',
         fontFamily:'SourceSansPro-SemiBold',
         color:'#fff',
         fontSize:global.scaleFontSize(19)

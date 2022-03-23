@@ -42,7 +42,7 @@ const customTextProps = {
 setCustomText(customTextProps);
 const theme = {
   colors: {
-    background:'#fff'
+    background:'#292929'
   }
 }
 
@@ -62,11 +62,11 @@ const shareBtn = (drawer) => {
 const homeScreenOptions = (drawer) => {
   return {
     headerStyle: {
-      backgroundColor:'#fff',
-      color:"#000"
+      backgroundColor:'#292829',
+      color:"#fff"
     },
     headerTitleStyle: {
-      color:'#09101D',
+      color:'#ffffff',
       fontSize:global.scaleFontSize(22)
     },
     title:'Candlestick Patterns', 
@@ -96,12 +96,12 @@ const HeaderLeft = (navigation) => {
 }
 
 const headerStyle = {
-  backgroundColor:'#fff',
-  color:"#000"
+  backgroundColor:'#292829',
+  color:"#fff"
 }
 
 const headerTitleStyle = {
-  color:'#09101D',
+  color:'#fff',
   fontSize:global.scaleFontSize(22)
 }
 

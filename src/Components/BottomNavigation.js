@@ -102,9 +102,10 @@ const styles = StyleSheet.create({
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
-        borderColor:'#F4F6F9',
+        backgroundColor:'#2e2d2e',
         padding:10,
         borderWidth:1,
+        borderColor:"#2e2d2e",
         paddingRight:15,
         paddingLeft:15,
         maxWidth:200
@@ -116,15 +117,17 @@ const styles = StyleSheet.create({
         elevation:24, 
         borderWidth:1,
         shadowRadius:16,
-        borderColor:'#F4F6F9',
-        padding:10,
+        backgroundColor:"#2e2d2e",
+        borderColor:'#2e2d2e',
         borderWidth:1,
+        padding:10, 
         paddingLeft:15,
         paddingRight:15,
         maxWidth:200
     },
     text: {
         fontFamily:'SourceSansPro-SemiBold',
-        fontSize:16
+        fontSize:16,
+        color:"#fff"
     }
 });

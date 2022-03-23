@@ -119,60 +119,60 @@ const styles = StyleSheet.create({
     container: { 
     },
     searchBar: {
-        backgroundColor: '#F5F7F9',
+        backgroundColor: '#2e2d2e',
         borderRadius:8,
         marginBottom:20,
         height:50,
         paddingLeft:15,
-        color:"#09101D"
+        color:"#09101D",
+        marginTop:15
     },
     heading: {
-        fontSize:global.scaleFontSize(22),
+        fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-SemiBold',
-        marginBottom:10
+        marginBottom:10,
+        color:"#fff"
     },
     subHeading: {
-        fontSize:global.scaleFontSize(22),
+        fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:30,
-        marginTop:15
+        marginTop:15,
+        color:"#fff"
     },  
     lessonWrapper: { 
         borderRadius:20,
         padding:20, 
-        backgroundColor:'#fff',
+        backgroundColor:'#2e2d2e',
         display:'flex',
         flexDirection:'row', 
         justifyContent:'flex-start',
         alignItems:'center',
         marginBottom:20, 
-        width:'100%',
-        shadowColor:'rgba(90, 108, 234, 0.5)',
-        shadowOffset:{width:0,height:1},
-        elevation:22, 
-        borderWidth:1,
-        shadowRadius:16,
-        borderColor:'#F4F6F9'
+        width:'100%'
     },
     lessonHeader: {
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36,
-        fontSize: global.scaleFontSize(18)
+        fontSize: global.scaleFontSize(22),
+        color:"#fff"
     },
     lessonSub: {
         fontSize:global.scaleFontSize(16),
-        fontFamily:'SourceSansPro-Regular'
+        fontFamily:'SourceSansPro-Regular',
+        color:"#fff"
     },  
     p: {
-        marginBottom:25
+        marginBottom:25,
+        color:"#fff"
     },  
     imageWrapper: {  
-        width:65,
+        width:70,
         marginRight:10
     },
     image: {
-        width:60,
-        height:60
+        width:70,
+        height:70
     },
     descriptionWrapper: {
         width:'auto',

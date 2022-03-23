@@ -9,13 +9,13 @@ const Styles = StyleSheet.create({
     p: {
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
-        color:'#000',
+        color:'#fff',
         marginBottom:15 
     },
     list: {
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
-        color:'#000',
+        color:'#fff',
         marginBottom:10
     },
     div: {
@@ -25,7 +25,8 @@ const Styles = StyleSheet.create({
         fontSize:global.scaleFontSize(22),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:24,
-        marginBottom:20 
+        marginBottom:20,
+        color:"#fff"
     },
     image: {
         width:'100%',
@@ -43,13 +44,14 @@ const Styles = StyleSheet.create({
                 flexWrap: 'wrap',
                 flex: 1,
                 marginVertical: 4,
+                color:"#fff"
                 
             }}>
             <View style={{width: 15}}>
                 <Text>{'\u2022' + " "}</Text>
                 </View>
                 <View style={{flex: 1}}>
-                <Text style={{lineHeight:24}}>{text}</Text>
+                <Text style={{lineHeight:24,color:"#fff"}}>{text}</Text>
             </View>
         </View>
         );
