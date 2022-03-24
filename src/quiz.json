@@ -49,7 +49,7 @@
             "correctOption": "A",
             "options" : {
                 "A" : "Piercing Line",
-                "B" : "Concealling Shallow",
+                "B" : "Concealing Baby Swallow",
                 "C" : "Three Star in the South",
                 "D" : "Three White Soldiers"
             },
@@ -151,7 +151,7 @@
                 "A" : "Breakaway",
                 "B" : "Harami Cross",
                 "C" : "Tri-Star",
-                "D" : "Concealling Shallow"
+                "D" : "Concealing Baby Swallow"
             }
         },
         "challenge16": {
@@ -221,13 +221,13 @@
             }
         },
         "challenge22": {
-            "answer" : "Concealing Shallow",
+            "answer" : "Concealing Baby Swallow",
             "image" : "ConcealingSwallow",
             "correctOption": "C",
             "options" : {
                 "A" : "Morning Doji Star",
                 "B" : "Belt Hold",
-                "C" : "Concealing Shallow",
+                "C" : "Concealing Baby Swallow",
                 "D" : "Homing Pigeon"
             }
         },
@@ -248,7 +248,7 @@
             "correctOption": "A",
             "options" : {
                 "A" : "Three Star in the South",
-                "B" : "Concealing Shallow",
+                "B" : "Concealing Baby Swallow",
                 "C" : "Stick Sandwich",
                 "D" : "Piercing Line"
             }
