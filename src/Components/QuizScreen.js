@@ -40,7 +40,7 @@ const QuizScreen = function({navigation}) {
             <SafeAreaView style={{padding:20}}>
                 <Image 
                     style={styles.banner}
-                    source={require('./../../assets/images/quizbg.jpg')} />
+                    source={require('./../../assets/images/quizbanner.png')} />
                 <Text style={styles.heading}>Candlestick Quiz Challenege</Text>
                 <Text style={styles.quizDescription}>Exercise your brain, test your knowledge and conquere the candlestick quiz challenge!</Text>
                 <HomeModule
