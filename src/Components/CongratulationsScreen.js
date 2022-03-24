@@ -17,8 +17,8 @@ const CongratulationsScreen = ({navigation, route}) => {
             <View style={styles.container}>
                 <Image style={styles.image} source={require('./../../assets/images/award.png')} />
                 <Text style={styles.heading}>Congratulations!</Text>
-                <Text>You did a great job on the challenge</Text>
-                <Text>Your Final Score is <Text style={styles.bold}>{score}</Text></Text>
+                <Text style={styles.p}>You did a great job on the challenge</Text>
+                <Text style={styles.p}>Your Final Score is <Text style={styles.bold}>{score}</Text></Text>
                 <TouchableOpacity
                     onPress={() => {AdMobInterstitial.showAd(); navigation.navigate('Home')}}
                     style={styles.button}>
@@ -45,9 +45,7 @@ const styles = StyleSheet.create({
         paddingRight:20,
         paddingLeft:20,
         borderRadius:10,
-        marginTop:20,
-        borderWidth:1,
-        borderColor:'#eee'
+        marginTop:20
     },  
     text: {
         textAlign:'center',
@@ -55,14 +53,20 @@ const styles = StyleSheet.create({
         color:'#fff'
     },
     bold: {
-        fontFamily: 'SourceSansPro-Semibold'
+        fontFamily: 'SourceSansPro-Semibold',
+        color:"#fff",
+        fontSize:global.scaleFontSize(20)
     },
     heading: {
         fontFamily:'SourceSansPro-SemiBold',
         fontSize: global.scaleFontSize(28),
         marginTop:20,
-        marginBottom:10
+        marginBottom:10,
+        color:"#fff"
     },  
+    p: {
+        color:"#abb1be"
+    },
     image: {
         width:100,
         height:100, 

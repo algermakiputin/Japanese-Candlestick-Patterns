@@ -170,7 +170,7 @@ const App: () => Node = ({navigation}) => {
         ref={drawer}
         drawerWidth={300}
         drawerPosition='left'
-        renderNavigationView={() => navigationView()}
+        renderNavigationView={() => navigationView()} 
       >   
         <Stack.Navigator 
         initialRouteName='Home' 
