@@ -160,11 +160,11 @@ const styles = StyleSheet.create({
     lessonSub: {
         fontSize:global.scaleFontSize(16),
         fontFamily:'SourceSansPro-Regular',
-        color:"#fff"
+        color:"#abb1be"
     },  
     p: {
         marginBottom:25,
-        color:"#fff"
+        color:"#abb1be"
     },  
     imageWrapper: {  
         width:70,

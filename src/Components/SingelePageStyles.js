@@ -9,7 +9,7 @@ const Styles = StyleSheet.create({
     p: {
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
-        color:'#fff',
+        color:'#abb1be',
         marginBottom:15 
     },
     list: {
@@ -48,10 +48,10 @@ const Styles = StyleSheet.create({
                 
             }}>
             <View style={{width: 15}}>
-                <Text>{'\u2022' + " "}</Text>
+                <Text style={{color:"#abb1be"}}>{'\u2022' + " "}</Text>
                 </View>
                 <View style={{flex: 1}}>
-                <Text style={{lineHeight:24,color:"#fff"}}>{text}</Text>
+                <Text style={{lineHeight:24,color:"#abb1be"}}>{text}</Text>
             </View>
         </View>
         );

@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     },
     quizDescription: {
         marginBottom:20,
-        color:"#fff"
+        color:"#abb1be"
     },
     moduleContainer: { 
         borderRadius:20,
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#fff"
+        color:"#abb1be"
     }
 })
 

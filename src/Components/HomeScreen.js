@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
         marginBottom:30,
-        color:"#fff"
+        color:"#abb1be"
     },
     moduleContainer: { 
         borderRadius:20,
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#fff"
+        color:"#abb1be"
     }
     
 });

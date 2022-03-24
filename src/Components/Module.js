@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#fff"
+        color:"#abb1be"
     }
 });
 
