@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         marginBottom:20,
         height:50,
         paddingLeft:15,
-        color:"#09101D",
+        color:"#fff",
         marginTop:15
     },
     heading: {
