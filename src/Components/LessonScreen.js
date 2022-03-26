@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
         fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:10,
-        color:"#fff"
+        color:global.headerColor
     },
     subHeading: {
         fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:30,
         marginTop:15,
-        color:"#fff"
+        color:global.headerColor
     },  
     lessonWrapper: { 
         borderRadius:20,
@@ -155,16 +155,16 @@ const styles = StyleSheet.create({
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36,
         fontSize: global.scaleFontSize(22),
-        color:"#fff"
+        color:global.headerColor
     },
     lessonSub: {
         fontSize:global.scaleFontSize(16),
         fontFamily:'SourceSansPro-Regular',
-        color:"#abb1be"
+        color:global.paragraphColor
     },  
     p: {
         marginBottom:25,
-        color:"#abb1be"
+        color:global.paragraphColor
     },  
     imageWrapper: {  
         width:70,

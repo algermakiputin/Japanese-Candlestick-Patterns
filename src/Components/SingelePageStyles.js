@@ -26,7 +26,7 @@ const Styles = StyleSheet.create({
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:24,
         marginBottom:20,
-        color:"#fff"
+        color:global.headerColor
     },
     image: {
         width:'100%',
@@ -48,10 +48,10 @@ const Styles = StyleSheet.create({
                 
             }}>
             <View style={{width: 15}}>
-                <Text style={{color:"#abb1be"}}>{'\u2022' + " "}</Text>
+                <Text style={{color:global.paragraphColor}}>{'\u2022' + " "}</Text>
                 </View>
                 <View style={{flex: 1}}>
-                <Text style={{lineHeight:24,color:"#abb1be"}}>{text}</Text>
+                <Text style={{lineHeight:24,color:global.paragraphColor}}>{text}</Text>
             </View>
         </View>
         );

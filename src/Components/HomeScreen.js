@@ -149,19 +149,18 @@ const styles = StyleSheet.create({
         width:'50%', 
         paddingLeft:5
     },
-    lessonsHeading: { 
-        color:'#394452',
+    lessonsHeading: {  
         fontSize:global.scaleFontSize(26),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:36,
         marginBottom:22,
-        color:"#fff"
+        color: global.headerColor
     },
     p: { 
         fontSize:global.scaleFontSize(18),
         lineHeight:24,
         marginBottom:30,
-        color:"#abb1be"
+        color: global.paragraphColor
     },
     moduleContainer: { 
         borderRadius:20,
@@ -190,11 +189,11 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-        color:"#fff"
+        color:global.headerColor
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#abb1be"
+        color: global.paragraphColor
     }
     
 });

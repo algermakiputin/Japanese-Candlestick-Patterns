@@ -147,10 +147,10 @@ const ChallengeScreen = ({navigation, route}) => {
                 <Image style={styles.guessImage} source={Images[challenge.image]} />
                 <View style={styles.flexContainer}>
                     <View style={styles.column}>
-                        <Text style={{fontFamily:'SourceSansPro-SemiBold', color:"#fff"}}>Pattern #{parseInt(level) + 1}/{totalItems}</Text>
+                        <Text style={{fontFamily:'SourceSansPro-SemiBold', color:global.headerColor}}>Pattern #{parseInt(level) + 1}/{totalItems}</Text>
                     </View>
                     <View style={styles.column}>
-                        <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold',color:"#fff"}}>Score: {score}</Text>
+                        <Text style={{textAlign:'right',fontFamily:'SourceSansPro-SemiBold',color:global.headerColor}}>Score: {score}</Text>
                     </View>
                 </View>
                 <View style={{padding:20}}>
@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-        color:"#fff"
+        color:global.paragraphColor
     },
     optionTitleSuccess: {
         fontSize:global.scaleFontSize(19),

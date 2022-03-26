@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         fontSize:global.scaleFontSize(24), 
         fontFamily:'SourceSansPro-SemiBold',
         marginBottom:10,
-        color:"#fff"
+        color:global.headerColor
     },
     banner: {
         width:'100%',
@@ -112,11 +112,11 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-        color:"#fff"
+        color:global.headerColor
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#abb1be"
+        color:global.paragraphColor
     }
 })
 

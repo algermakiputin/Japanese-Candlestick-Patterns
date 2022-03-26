@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
         overflow:'hidden',
         maxWidth:260,
         fontFamily:'SourceSansPro-SemiBold',
-        color:"#fff"
+        color:global.headerColor
     },
     lessonSub: {
         fontSize:global.scaleFontSize(14),
-        color:"#abb1be"
+        color:global.paragraphColor
     }
 });
 

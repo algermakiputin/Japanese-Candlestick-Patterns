@@ -12,6 +12,8 @@ global.scaleFontSize = fontSize => {
 }
 
 global.counter = 0;
+global.headerColor = "rgba(255,255,255,0.70)";
+global.paragraphColor = "#abb1be";
 
 global.requestAd = () => {
 
