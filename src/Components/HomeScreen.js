@@ -68,13 +68,6 @@ const HomeScreen = ({navigation}) => {
                     <Text style={styles.p}>Candlestick patterns are used by technical traders to anticipate the future movement of a stock. Learn the different types of cadlestick patterns and become a stronger trader.</Text>
                     <HomeModule
                         navigation={navigation}
-                        location="Quiz"
-                        image={1}
-                        title="Guess the pattern"
-                        subTitle="Exercise your brain"
-                    />
-                    <HomeModule
-                        navigation={navigation}
                         location="Introduction"
                         image={0}
                         title="Basics of candlestick"
@@ -93,6 +86,13 @@ const HomeScreen = ({navigation}) => {
                         navigation={navigation}
                         showAd={true}
                     /> 
+                    <HomeModule
+                        navigation={navigation}
+                        location="Quiz"
+                        image={1}
+                        title="Guess the pattern"
+                        subTitle="Exercise your brain"
+                    />
                 </View>
                 <AdMobBanner
                     adSize="smartBannerLandscape"
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         color: global.headerColor
     },
     p: { 
-        fontSize:global.scaleFontSize(18),
+        fontSize:global.scaleFontSize(19),
         lineHeight:24,
         marginBottom:30,
         color: global.paragraphColor

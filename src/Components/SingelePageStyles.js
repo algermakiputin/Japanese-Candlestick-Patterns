@@ -7,7 +7,7 @@ const Styles = StyleSheet.create({
         padding:20, 
     },  
     p: {
-        fontSize:global.scaleFontSize(18),
+        fontSize:global.scaleFontSize(19),
         lineHeight:24,
         color:'#abb1be',
         marginBottom:15 
@@ -22,7 +22,7 @@ const Styles = StyleSheet.create({
        
     },
     subHeading: {
-        fontSize:global.scaleFontSize(22),
+        fontSize:global.scaleFontSize(24),
         fontFamily:'SourceSansPro-SemiBold',
         lineHeight:24,
         marginBottom:20,

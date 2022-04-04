@@ -164,7 +164,8 @@ const styles = StyleSheet.create({
     },  
     p: {
         marginBottom:25,
-        color:global.paragraphColor
+        color:global.paragraphColor,
+        fontSize:global.scaleFontSize(19)
     },  
     imageWrapper: {  
         width:70,
